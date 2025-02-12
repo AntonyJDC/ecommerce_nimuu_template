@@ -1,0 +1,106 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@application/*": [
+        "src/application/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@constants/*": [
+        "src/constants/*"
+      ],
+      "@core/*": [
+        "src/core/*"
+      ],
+      "@infrastructure/*": [
+        "src/infrastructure/*"
+      ],
+      "@lib/*": [
+        "src/lib/*"
+      ],
+      "@presentation/*": [
+        "src/presentation/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ],
+      "@assets/heroImages/*": [
+        "src/assets/heroImages/*"
+      ],
+      "@heroImages/*": [
+        "src/assets/heroImages/*"
+      ],
+      "@assets/navbarLogo/*": [
+        "src/assets/navbarLogo/*"
+      ],
+      "@navbarLogo/*": [
+        "src/assets/navbarLogo/*"
+      ],
+      "@assets/profile-pictures/*": [
+        "src/assets/profile-pictures/*"
+      ],
+      "@profile-pictures/*": [
+        "src/assets/profile-pictures/*"
+      ],
+      "@presentation/components/*": [
+        "src/presentation/components/*"
+      ],
+      "@components/*": [
+        "src/presentation/components/*"
+      ],
+      "@presentation/hooks/*": [
+        "src/presentation/hooks/*"
+      ],
+      "@hooks/*": [
+        "src/presentation/hooks/*"
+      ],
+      "@presentation/pages/*": [
+        "src/presentation/pages/*"
+      ],
+      "@pages/*": [
+        "src/presentation/pages/*"
+      ],
+      "@core/entities/*": [
+        "src/core/entities/*"
+      ],
+      "@entities/*": [
+        "src/core/entities/*"
+      ],
+      "@core/ports/*": [
+        "src/core/ports/*"
+      ],
+      "@ports/*": [
+        "src/core/ports/*"
+      ],
+      "@infrastructure/repositories/*": [
+        "src/infrastructure/repositories/*"
+      ],
+      "@repositories/*": [
+        "src/infrastructure/repositories/*"
+      ],
+      "@infrastructure/config/*": [
+        "src/infrastructure/config/*"
+      ],
+      "@config/*": [
+        "src/infrastructure/config/*"
+      ]
+    }
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
