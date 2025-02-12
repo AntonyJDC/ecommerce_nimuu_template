@@ -15,14 +15,14 @@ export const HomePage = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Nimutech | Sistema de Ventas y Facturación Electrónica</title>
+				<title>Nimuu | Sistema de Ventas y Facturación Electrónica</title>
 				<meta
 					name="description"
-					content="Nimutech es un sistema de ventas y facturación electrónica fácil de usar, ideal para puntos de venta. Mejora la gestión de tu negocio con nuestras soluciones POS."
+					content="Nimuu es un sistema de ventas y facturación electrónica fácil de usar, ideal para puntos de venta. Mejora la gestión de tu negocio con nuestras soluciones POS."
 				/>
 				<meta
 					name="keywords"
-					content="ventas, facturación electrónica, sistema POS, gestión de negocio, software de ventas, Sirius Nova, Nimutech, Nimutech Colombia, colombia"
+					content="ventas, facturación electrónica, sistema POS, gestión de negocio, software de ventas, Sirius Nova, Nimuu, Nimuu Colombia, colombia"
 				/>
 			</Helmet>
 			<div>

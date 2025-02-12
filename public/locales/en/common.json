@@ -1,290 +1,290 @@
 {
-  "nav": {
-    "button": {
-      "login": "Sign in",
-      "contact": "Contact"
-    }
-  },
-  "shared": {
-    "theme": {
-      "label": "Theme"
-    },
-    "locale": {
-      "en": "English",
-      "es": "Español",
-      "fr": "Français",
-      "esCO": "Español (CO)",
-      "esAR": "Español (AR)"
-    }
-  },
-  "homepage": {
-    "herosection": {
-      "title": "Everything your business needs in one place",
-      "subtitle": "Optimize your business with innovative solutions.",
-      "cta": {
-        "paragraph": "Try Sirius Nova for free as long as you want.",
-        "start_free": "Start Free",
-        "view_plans": "View Plans",
-        "sign_up": "Sign up free with email.",
-        "no_credit_card": "No credit card required"
-      },
-      "others": {
-        "or": "OR"
-      }
-    },
-    "herocontrol": {
-      "code": "Code",
-      "plan": "Plan",
-      "collaborate": "Collaborate",
-      "automate": "Automate",
-      "secure": "Secure"
-    },
-    "featuresection": {
-      "title": "A world of unlocked potential, where achieving more becomes the new standard.",
-      "animated_text": {
-        "text_one": "Effortless and Seamless",
-        "text_two": "A tangible reality",
-        "text_three": "Quick and Efficient",
-        "text_four": "Simple and Intuitive",
-        "text_five": "Easy and Rewarding"
-      },
-      "features": {
-        "electronic_billing": {
-          "title": "Electronic Billing",
-          "description_one": "Simplify compliance with seamless electronic invoice management.",
-          "description_two": "Automate fiscal processes by integrating with tax authorities.",
-          "description_three": "Stay on top of your finances with invoice due date reminders.",
-          "description_four": "Effortlessly validate and process electronic receipts."
-        },
-        "inventory_management": {
-          "title": "Inventory Management",
-          "description_one": "Take full control of your inventory with intuitive management tools.",
-          "description_two": "Automate restocking to keep your warehouse always ready.",
-          "description_three": "Get real-time insights into your product performance and stock levels."
-        },
-        "integrated_pos": {
-          "title": "Integrated POS",
-          "description_one": "Bridge your in-store and online sales seamlessly with a unified POS system.",
-          "description_two": "Offer fast, secure, and versatile payment options to your customers.",
-          "description_three": "Keep your inventory up to date with automatic synchronization"
-        },
-        "financial_reports": {
-          "title": "Financial Reports",
-          "description_one": "Make data-driven decisions with detailed, real-time financial insights.",
-          "description_two": "Save time with automated bank reconciliations.",
-          "description_three": "Stay audit-ready with efficient fiscal compliance tools."
-        },
-        "ecommerce_marketing": {
-          "title": "E-Commerce and Multichannel Marketing",
-          "description_one": "Manage your online store effortlessly with integrated e-commerce tools.",
-          "description_two": "Expand your reach by synchronizing with marketplaces and social platforms.",
-          "description_three": "Drive growth with tailored, automated marketing campaigns."
-        },
-        "payment_gateway": {
-          "title": "Payment Gateway",
-          "description_one": "Enable secure, fast, and flexible payments with ease.",
-          "description_two": "Offer diverse payment options, from credit cards to digital wallets.",
-          "description_three": "Streamline your transactions with trusted third-party integrations."
-        }
-      }
-    },
-    "workflow": {
-      "workflow_title": "Workflow",
-      "workflow_subtitle": "Swift",
-      "simplified_sales": {
-        "title": "Simplified Sales Consolidation",
-        "paragraph": "Facilitates the integration of sales from multiple points with centralized management."
-      },
-      "monitor_sales": {
-        "title": "Monitor Sales and Customer Behavior",
-        "paragraph": "Generates detailed reports to improve business decisions and enhance the customer experience."
-      },
-      "automate_streamline": {
-        "title": "Automate and Streamline Inventory Management",
-        "paragraph": "The system automates inventory updates and reports, saving time and reducing errors."
-      },
-      "share_reports": {
-        "title": "Share Reports in Minutes",
-        "paragraph": "Quickly generate and distribute sales and inventory reports to keep your team informed efficiently."
-      }
-    },
-    "pricing": {
-      "title": {
-        "title_start": "Pick the perfect",
-        "title_end": "for your team",
-        "plan": "plan"
-      },
-      "plans": {
-        "most_popular": "Most Popular!",
-        "title_free": "FREE",
-        "title_standard": "STANDARD",
-        "title_pro": "PRO",
-        "title_plus": "PLUS"
-      },
-      "subtitle_card": {
-        "free_card": "Ideal for entrepreneurs just starting out",
-        "standard_card": "For growing businesses",
-        "pro_card": "For established businesses",
-        "plus_card": "For businesses looking to scale"
-      },
-      "description_free": {
-        "description_one": "Unlimited electronic invoices",
-        "description_two": "1 user included",
-        "description_three": "Basic POS included",
-        "description_four": "Basic inventory management",
-        "description_five": "Basic online store",
-        "description_six": "Essential reports",
-        "description_seven": "Basic AI-powered KPIs",
-        "description_eight": "24/7 support"
-      },
-      "description_standard": {
-        "description_one": "Everything in Free plan",
-        "description_two": "3 users included",
-        "description_three": "POS with multiple registers",
-        "description_four": "Advanced inventory management",
-        "description_five": "Customizable online store",
-        "description_six": "Basic marketing automation",
-        "description_seven": "Advanced AI-powered KPIs",
-        "description_eight": "24/7 support"
-      },
-      "description_pro": {
-        "description_one": "Everything in Entrepreneur plan",
-        "description_two": "10 users included",
-        "description_three": "Multi-store POS",
-        "description_four": "Multi-warehouse management",
-        "description_five": "Advanced e-commerce",
-        "description_six": "Full marketing automation",
-        "description_seven": "Predictive and analytical AI",
-        "description_eight": "Unlimited integrations",
-        "description_nine": "API access",
-        "description_ten": "VIP 24/7 support"
-      },
-      "description_plus": {
-        "description_one": "Everything in Pro plan",
-        "description_two": "Unlimited users",
-        "description_three": "Multiple companies",
-        "description_four": "Advanced customization",
-        "description_five": "Personalized onboarding",
-        "description_six": "Dedicated account manager",
-        "description_seven": "Custom integration development",
-        "description_eight": "Early access to new features",
-        "description_nine": "VIP 24/7 support"
-      },
-      "card_button": {
-        "button": "Continue"
-      },
-      "plans_page": {
-        "title": "Plans tailored to your business",
-        "subtitle": "Scale your business with Sirius Nova",
-        "unlimited_invoices": "Unlimited invoices in all plans",
-        "partner_title": "PARTNER",
-        "partner_description": "Need a custom solution for your large enterprise? Contact us to create a tailored plan.",
-        "contact_sales": "Contact Sales"
-      }
-    }
-  },
-  "testimonials": {
-    "title": {
-      "part1": "Discover how we empower our ",
-      "highlight": "clients",
-      "part2": " to achieve the extraordinary."
-    },
-    "users": {
-      "user1": "Camilo Bolaños",
-      "user2": "Sebastian Marquez",
-      "user3": "Valentina Bofanti",
-      "user4": "Antony Dominguez",
-      "user5": "Mateo Rodriguez",
-      "user6": "Julian Velandia"
-    },
-    "companies": {
-      "company1": "Innova Labs",
-      "company2": "Vortex Corp",
-      "company3": "Solvia Tech",
-      "company4": "Terra Nova",
-      "company5": "Digi Prime",
-      "company6": "Nexa Cloud"
-    },
-    "texts": {
-      "text1": "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results that exceeded my expectations.",
-      "text2": "I couldn’t be happier with the outcome of our project. The creativity and problem-solving skills of the team were crucial in bringing our vision to life.",
-      "text3": "It was a pleasure working with this company. Their attention to detail and commitment to excellence are commendable. I would recommend them to anyone seeking top-quality service.",
-      "text4": "Working with this team was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than expected. We are incredibly grateful for their professionalism and expertise!",
-      "text5": "I am amazed by the level of professionalism and dedication shown by the team. They surpassed our expectations and delivered exceptional results.",
-      "text6": "The team went above and beyond to ensure our project was a success. Their expertise and commitment are unmatched. I look forward to working with them again in the future."
-    }
-  },
-  "footer": {
-    "solutions": "Solutions",
-    "useful_links": "Useful Links",
-    "educational_content": "Educational content",
-    "about_us": "About Us",
-    "cookie_message": "By browsing the websites owned by Nimutech, you accept the use of Cookies according to our",
-    "terms_and_conditions": "Terms and Conditions",
-    "resources": {
-      "accounting_software": "Accounting Software",
-      "accounting_solutions": "Accounting Solutions",
-      "electronic_invoicing": "Electronic Invoicing",
-      "electronic_payroll": "Electronic Payroll"
-    },
-    "platform": {
-      "contact_us": "Contact Us",
-      "community": "Nimutech Community",
-      "solution_status": "Solution Status",
-      "academy": "Nimutech Academy",
-      "release_notes": "Release Notes"
-    },
-    "community": {
-      "blog": "Blog",
-      "entrepreneur_school": "Entrepreneur School",
-      "stay_up_to_date": "Stay Up-to-date",
-      "help_center": "Help Center",
-      "webinars": "Webinars"
-    },
-    "about": {
-      "about_us": "About Us",
-      "press_center": "Press Center",
-      "work_with_us": "Work with Nimutech",
-      "foundations": "Nimutech for Foundations",
-      "terms_and_conditions": "Terms and Conditions"
-    }
-  },
-  "form": {
-    "full_name": "Full Name",
-    "email": "Email",
-    "phone_number": "Phone Number",
-    "subject": "Subject",
-    "message": "Tell us more...",
-    "sending": "Sending...",
-    "send": "Send",
-    "notification": "Notification",
-    "close": "Close",
-    "need_help": "Need Help?",
-    "contact_us": "Contact us with any questions or inquiries. Our team is ready to help you.",
-    "phone_number_value": "+57 456 7890",
-    "email_value": "contact@nimutech.com",
-    "address": "Main Avenue 123, City",
-    "send_message": "Send Us a Message",
-    "fill_form": "Fill out the form, and we’ll get back to you as soon as possible.",
-    "place_holder": "Tell us a bit more so we can provide a quicker response with the specialized team",
-    "select_options": {
-      "general_inquiry": "General Inquiry",
-      "technical_support": "Technical Support",
-      "quote_request": "Quote Request",
-      "partnership_inquiry": "Partnership Inquiry",
-      "suggestions": "Suggestions",
-      "complaints": "Complaints",
-      "others": "Others"
-    }
-  },
-  "contact": {
-    "title": "Contact",
-    "meta_description": "Nimutech is an easy-to-use sales and electronic invoicing system, ideal for points of sale. Improve your business management with our POS solutions.",
-    "meta_keywords": "contact, Nimutech contact, POS system, business management, sales software, Sirius Nova, Nimutech, Nimutech Colombia, Colombia",
-    "need_help": "Need help?",
-    "reach_out": "Don't hesitate to reach out.",
-    "complete_form": "Complete the form and we will get in touch with you immediately.",
-    "call_us": "If you prefer, call us at +57 456 7890.",
-    "leave_question": "Leave us your question, and we'll respond promptly!"
-  }
+	"nav": {
+		"button": {
+			"login": "Sign in",
+			"contact": "Contact"
+		}
+	},
+	"shared": {
+		"theme": {
+			"label": "Theme"
+		},
+		"locale": {
+			"en": "English",
+			"es": "Español",
+			"fr": "Français",
+			"esCO": "Español (CO)",
+			"esAR": "Español (AR)"
+		}
+	},
+	"homepage": {
+		"herosection": {
+			"title": "Everything your business needs in one place",
+			"subtitle": "Optimize your business with innovative solutions.",
+			"cta": {
+				"paragraph": "Try Sirius Nova for free as long as you want.",
+				"start_free": "Start Free",
+				"view_plans": "View Plans",
+				"sign_up": "Sign up free with email.",
+				"no_credit_card": "No credit card required"
+			},
+			"others": {
+				"or": "OR"
+			}
+		},
+		"herocontrol": {
+			"code": "Code",
+			"plan": "Plan",
+			"collaborate": "Collaborate",
+			"automate": "Automate",
+			"secure": "Secure"
+		},
+		"featuresection": {
+			"title": "A world of unlocked potential, where achieving more becomes the new standard.",
+			"animated_text": {
+				"text_one": "Effortless and Seamless",
+				"text_two": "A tangible reality",
+				"text_three": "Quick and Efficient",
+				"text_four": "Simple and Intuitive",
+				"text_five": "Easy and Rewarding"
+			},
+			"features": {
+				"electronic_billing": {
+					"title": "Electronic Billing",
+					"description_one": "Simplify compliance with seamless electronic invoice management.",
+					"description_two": "Automate fiscal processes by integrating with tax authorities.",
+					"description_three": "Stay on top of your finances with invoice due date reminders.",
+					"description_four": "Effortlessly validate and process electronic receipts."
+				},
+				"inventory_management": {
+					"title": "Inventory Management",
+					"description_one": "Take full control of your inventory with intuitive management tools.",
+					"description_two": "Automate restocking to keep your warehouse always ready.",
+					"description_three": "Get real-time insights into your product performance and stock levels."
+				},
+				"integrated_pos": {
+					"title": "Integrated POS",
+					"description_one": "Bridge your in-store and online sales seamlessly with a unified POS system.",
+					"description_two": "Offer fast, secure, and versatile payment options to your customers.",
+					"description_three": "Keep your inventory up to date with automatic synchronization"
+				},
+				"financial_reports": {
+					"title": "Financial Reports",
+					"description_one": "Make data-driven decisions with detailed, real-time financial insights.",
+					"description_two": "Save time with automated bank reconciliations.",
+					"description_three": "Stay audit-ready with efficient fiscal compliance tools."
+				},
+				"ecommerce_marketing": {
+					"title": "E-Commerce and Multichannel Marketing",
+					"description_one": "Manage your online store effortlessly with integrated e-commerce tools.",
+					"description_two": "Expand your reach by synchronizing with marketplaces and social platforms.",
+					"description_three": "Drive growth with tailored, automated marketing campaigns."
+				},
+				"payment_gateway": {
+					"title": "Payment Gateway",
+					"description_one": "Enable secure, fast, and flexible payments with ease.",
+					"description_two": "Offer diverse payment options, from credit cards to digital wallets.",
+					"description_three": "Streamline your transactions with trusted third-party integrations."
+				}
+			}
+		},
+		"workflow": {
+			"workflow_title": "Workflow",
+			"workflow_subtitle": "Swift",
+			"simplified_sales": {
+				"title": "Simplified Sales Consolidation",
+				"paragraph": "Facilitates the integration of sales from multiple points with centralized management."
+			},
+			"monitor_sales": {
+				"title": "Monitor Sales and Customer Behavior",
+				"paragraph": "Generates detailed reports to improve business decisions and enhance the customer experience."
+			},
+			"automate_streamline": {
+				"title": "Automate and Streamline Inventory Management",
+				"paragraph": "The system automates inventory updates and reports, saving time and reducing errors."
+			},
+			"share_reports": {
+				"title": "Share Reports in Minutes",
+				"paragraph": "Quickly generate and distribute sales and inventory reports to keep your team informed efficiently."
+			}
+		},
+		"pricing": {
+			"title": {
+				"title_start": "Pick the perfect",
+				"title_end": "for your team",
+				"plan": "plan"
+			},
+			"plans": {
+				"most_popular": "Most Popular!",
+				"title_free": "FREE",
+				"title_standard": "STANDARD",
+				"title_pro": "PRO",
+				"title_plus": "PLUS"
+			},
+			"subtitle_card": {
+				"free_card": "Ideal for entrepreneurs just starting out",
+				"standard_card": "For growing businesses",
+				"pro_card": "For established businesses",
+				"plus_card": "For businesses looking to scale"
+			},
+			"description_free": {
+				"description_one": "Unlimited electronic invoices",
+				"description_two": "1 user included",
+				"description_three": "Basic POS included",
+				"description_four": "Basic inventory management",
+				"description_five": "Basic online store",
+				"description_six": "Essential reports",
+				"description_seven": "Basic AI-powered KPIs",
+				"description_eight": "24/7 support"
+			},
+			"description_standard": {
+				"description_one": "Everything in Free plan",
+				"description_two": "3 users included",
+				"description_three": "POS with multiple registers",
+				"description_four": "Advanced inventory management",
+				"description_five": "Customizable online store",
+				"description_six": "Basic marketing automation",
+				"description_seven": "Advanced AI-powered KPIs",
+				"description_eight": "24/7 support"
+			},
+			"description_pro": {
+				"description_one": "Everything in Entrepreneur plan",
+				"description_two": "10 users included",
+				"description_three": "Multi-store POS",
+				"description_four": "Multi-warehouse management",
+				"description_five": "Advanced e-commerce",
+				"description_six": "Full marketing automation",
+				"description_seven": "Predictive and analytical AI",
+				"description_eight": "Unlimited integrations",
+				"description_nine": "API access",
+				"description_ten": "VIP 24/7 support"
+			},
+			"description_plus": {
+				"description_one": "Everything in Pro plan",
+				"description_two": "Unlimited users",
+				"description_three": "Multiple companies",
+				"description_four": "Advanced customization",
+				"description_five": "Personalized onboarding",
+				"description_six": "Dedicated account manager",
+				"description_seven": "Custom integration development",
+				"description_eight": "Early access to new features",
+				"description_nine": "VIP 24/7 support"
+			},
+			"card_button": {
+				"button": "Continue"
+			},
+			"plans_page": {
+				"title": "Plans tailored to your business",
+				"subtitle": "Scale your business with Sirius Nova",
+				"unlimited_invoices": "Unlimited invoices in all plans",
+				"partner_title": "PARTNER",
+				"partner_description": "Need a custom solution for your large enterprise? Contact us to create a tailored plan.",
+				"contact_sales": "Contact Sales"
+			}
+		}
+	},
+	"testimonials": {
+		"title": {
+			"part1": "Discover how we empower our ",
+			"highlight": "clients",
+			"part2": " to achieve the extraordinary."
+		},
+		"users": {
+			"user1": "Camilo Bolaños",
+			"user2": "Sebastian Marquez",
+			"user3": "Valentina Bofanti",
+			"user4": "Antony Dominguez",
+			"user5": "Mateo Rodriguez",
+			"user6": "Julian Velandia"
+		},
+		"companies": {
+			"company1": "Innova Labs",
+			"company2": "Vortex Corp",
+			"company3": "Solvia Tech",
+			"company4": "Terra Nova",
+			"company5": "Digi Prime",
+			"company6": "Nexa Cloud"
+		},
+		"texts": {
+			"text1": "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results that exceeded my expectations.",
+			"text2": "I couldn’t be happier with the outcome of our project. The creativity and problem-solving skills of the team were crucial in bringing our vision to life.",
+			"text3": "It was a pleasure working with this company. Their attention to detail and commitment to excellence are commendable. I would recommend them to anyone seeking top-quality service.",
+			"text4": "Working with this team was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than expected. We are incredibly grateful for their professionalism and expertise!",
+			"text5": "I am amazed by the level of professionalism and dedication shown by the team. They surpassed our expectations and delivered exceptional results.",
+			"text6": "The team went above and beyond to ensure our project was a success. Their expertise and commitment are unmatched. I look forward to working with them again in the future."
+		}
+	},
+	"footer": {
+		"solutions": "Solutions",
+		"useful_links": "Useful Links",
+		"educational_content": "Educational content",
+		"about_us": "About Us",
+		"cookie_message": "By browsing the websites owned by Nimuu, you accept the use of Cookies according to our",
+		"terms_and_conditions": "Terms and Conditions",
+		"resources": {
+			"accounting_software": "Accounting Software",
+			"accounting_solutions": "Accounting Solutions",
+			"electronic_invoicing": "Electronic Invoicing",
+			"electronic_payroll": "Electronic Payroll"
+		},
+		"platform": {
+			"contact_us": "Contact Us",
+			"community": "Nimuu Community",
+			"solution_status": "Solution Status",
+			"academy": "Nimuu Academy",
+			"release_notes": "Release Notes"
+		},
+		"community": {
+			"blog": "Blog",
+			"entrepreneur_school": "Entrepreneur School",
+			"stay_up_to_date": "Stay Up-to-date",
+			"help_center": "Help Center",
+			"webinars": "Webinars"
+		},
+		"about": {
+			"about_us": "About Us",
+			"press_center": "Press Center",
+			"work_with_us": "Work with Nimuu",
+			"foundations": "Nimuu for Foundations",
+			"terms_and_conditions": "Terms and Conditions"
+		}
+	},
+	"form": {
+		"full_name": "Full Name",
+		"email": "Email",
+		"phone_number": "Phone Number",
+		"subject": "Subject",
+		"message": "Tell us more...",
+		"sending": "Sending...",
+		"send": "Send",
+		"notification": "Notification",
+		"close": "Close",
+		"need_help": "Need Help?",
+		"contact_us": "Contact us with any questions or inquiries. Our team is ready to help you.",
+		"phone_number_value": "+57 456 7890",
+		"email_value": "contact@nimutech.com",
+		"address": "Main Avenue 123, City",
+		"send_message": "Send Us a Message",
+		"fill_form": "Fill out the form, and we’ll get back to you as soon as possible.",
+		"place_holder": "Tell us a bit more so we can provide a quicker response with the specialized team",
+		"select_options": {
+			"general_inquiry": "General Inquiry",
+			"technical_support": "Technical Support",
+			"quote_request": "Quote Request",
+			"partnership_inquiry": "Partnership Inquiry",
+			"suggestions": "Suggestions",
+			"complaints": "Complaints",
+			"others": "Others"
+		}
+	},
+	"contact": {
+		"title": "Contact",
+		"meta_description": "Nimuu is an easy-to-use sales and electronic invoicing system, ideal for points of sale. Improve your business management with our POS solutions.",
+		"meta_keywords": "contact, Nimuu contact, POS system, business management, sales software, Sirius Nova, Nimuu, Nimuu Colombia, Colombia",
+		"need_help": "Need help?",
+		"reach_out": "Don't hesitate to reach out.",
+		"complete_form": "Complete the form and we will get in touch with you immediately.",
+		"call_us": "If you prefer, call us at +57 456 7890.",
+		"leave_question": "Leave us your question, and we'll respond promptly!"
+	}
 }

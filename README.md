@@ -11,7 +11,7 @@ Asegúrate de tener instalado Node.js (versión 14 o superior) y npm en tu siste
 Para descargar el proyecto, ejecuta el siguiente comando en tu terminal:
 
 ```bash
-git clone git@github.com:Nimutech/nimuu-web.git
+git clone git@github.com:Nimuu/nimuu-web.git
 cd nimuu-web
 ```
 

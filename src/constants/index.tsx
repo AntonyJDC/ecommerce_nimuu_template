@@ -22,7 +22,7 @@ export const navItems = [
 	{ label: "Inicio", href: "#" },
 	{ label: "Productos y Funcionalidades", href: "#" },
 	{ label: "Planes y precios", href: "#" },
-	{ label: "Por que Nimutech", href: "#" },
+	{ label: "Por que Nimuu", href: "#" },
 	{ label: "Blog", href: "#" },
 ];
 

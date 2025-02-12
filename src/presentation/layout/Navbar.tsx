@@ -52,9 +52,9 @@ const Navbar: FC = () => {
 				>
 					<LogoIcon
 						className="h-10 w-10 mr-2 transition-transform duration-300 group-hover:scale-110"
-						aria-label="Nimutech Logo"
+						aria-label="Nimuu Logo"
 					/>
-					<span className="text-xl font-semibold">Nimutech</span>
+					<span className="text-xl font-semibold">Nimuu</span>
 				</button>
 				<nav className="flex-1 hidden lg:flex justify-center gap-6 text-base-content items-center">
 					<NavigationMenuDemo />

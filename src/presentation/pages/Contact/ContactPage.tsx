@@ -20,14 +20,14 @@ export const ContactPage = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Nimutech | Contact</title>
+				<title>Nimuu | Contact</title>
 				<meta
 					name="description"
-					content="Nimutech is an easy-to-use sales and electronic invoicing system, ideal for points of sale. Improve your business management with our POS solutions."
+					content="Nimuu is an easy-to-use sales and electronic invoicing system, ideal for points of sale. Improve your business management with our POS solutions."
 				/>
 				<meta
 					name="keywords"
-					content="contact, Nimutech contact, POS system, business management, sales software, Sirius Nova, Nimutech, Nimutech Colombia, Colombia"
+					content="contact, Nimuu contact, POS system, business management, sales software, Sirius Nova, Nimuu, Nimuu Colombia, Colombia"
 				/>
 			</Helmet>
 

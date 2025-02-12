@@ -100,14 +100,14 @@ export const ComingSoonPage = ({ title }: { title?: string }) => {
 					>
 						<LogoIcon
 							className="max-sm:w-14 max-sm:h-14 w-20 h-20 transition-transform duration-300 group-hover:scale-110"
-							aria-label="Nimutech Logo"
+							aria-label="Nimuu Logo"
 						/>
 					</m.div>
 					<m.h1
 						className="max-sm:text-4xl text-6xl font-bold tracking-tight"
 						variants={itemVariants}
 					>
-						Nimutech
+						Nimuu
 					</m.h1>
 					<m.div
 						className="absolute -top-0 -right-7"
