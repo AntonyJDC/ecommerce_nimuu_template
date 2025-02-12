@@ -1,0 +1,290 @@
+{
+	"nav": {
+		"button": {
+			"login": "Iniciar sesión",
+			"contact": "Contacto"
+		}
+	},
+	"shared": {
+		"theme": {
+			"label": "Tema"
+		},
+		"locale": {
+			"en": "Inglés",
+			"es": "Español",
+			"fr": "Francés",
+			"esCO": "Español (CO)",
+			"esAR": "Español (AR)"
+		}
+	},
+	"homepage": {
+		"herosection": {
+			"title": "Todo lo que tu negocio necesita en un solo lugar",
+			"subtitle": "Optimiza tu negocio con soluciones innovadoras.",
+			"cta": {
+				"paragraph": "Prueba Sirius Nova gratis todo el tiempo que quieras.",
+				"start_free": "Comienza gratis",
+				"view_plans": "Ver planes",
+				"sign_up": "Regístrate gratis con tu correo electrónico.",
+				"no_credit_card": "No se requiere tarjeta de crédito"
+			},
+			"others": {
+				"or": "O"
+			}
+		},
+		"herocontrol": {
+			"code": "Código",
+			"plan": "Plan",
+			"collaborate": "Colaborar",
+			"automate": "Automatizar",
+			"secure": "Seguro"
+		},
+		"featuresection": {
+			"title": "Un mundo de potencial desbloqueado, donde lograr más se convierte en el nuevo estándar.",
+			"animated_text": {
+				"text_one": "Sin esfuerzo y sin interrupciones",
+				"text_two": "Una realidad tangible",
+				"text_three": "Rápido y eficiente",
+				"text_four": "Simple e intuitivo",
+				"text_five": "Fácil y gratificante"
+			},
+			"features": {
+				"electronic_billing": {
+					"title": "Facturación electrónica",
+					"description_one": "Simplifica el cumplimiento con una gestión fluida de facturas electrónicas.",
+					"description_two": "Automatiza procesos fiscales integrándote con autoridades tributarias.",
+					"description_three": "Mantente al día con recordatorios de vencimiento de facturas.",
+					"description_four": "Valida y procesa recibos electrónicos sin esfuerzo."
+				},
+				"inventory_management": {
+					"title": "Gestión de inventario",
+					"description_one": "Toma el control total de tu inventario con herramientas de gestión intuitivas.",
+					"description_two": "Automatiza el reabastecimiento para mantener siempre listo tu almacén.",
+					"description_three": "Obtén información en tiempo real sobre el desempeño de tus productos y niveles de stock."
+				},
+				"integrated_pos": {
+					"title": "Punto de venta integrado",
+					"description_one": "Conecta tus ventas en tienda y en línea sin problemas con un sistema POS unificado.",
+					"description_two": "Ofrece opciones de pago rápidas, seguras y versátiles a tus clientes.",
+					"description_three": "Mantén actualizado tu inventario con sincronización automática."
+				},
+				"financial_reports": {
+					"title": "Informes financieros",
+					"description_one": "Toma decisiones basadas en datos con información financiera detallada y en tiempo real.",
+					"description_two": "Ahorra tiempo con conciliaciones bancarias automatizadas.",
+					"description_three": "Prepárate para auditorías con herramientas eficientes de cumplimiento fiscal."
+				},
+				"ecommerce_marketing": {
+					"title": "Comercio electrónico y marketing multicanal",
+					"description_one": "Gestiona tu tienda en línea fácilmente con herramientas de comercio electrónico integradas.",
+					"description_two": "Amplía tu alcance sincronizándote con marketplaces y plataformas sociales.",
+					"description_three": "Impulsa el crecimiento con campañas de marketing automatizadas y personalizadas."
+				},
+				"payment_gateway": {
+					"title": "Pasarela de pagos",
+					"description_one": "Habilita pagos seguros, rápidos y flexibles de manera sencilla.",
+					"description_two": "Ofrece diversas opciones de pago, desde tarjetas de crédito hasta billeteras digitales.",
+					"description_three": "Optimiza tus transacciones con integraciones confiables de terceros."
+				}
+			}
+		},
+		"workflow": {
+			"workflow_title": "Flujo de trabajo",
+			"workflow_subtitle": "Ágil",
+			"simplified_sales": {
+				"title": "Consolidación simplificada de ventas",
+				"paragraph": "Facilita la integración de ventas desde múltiples puntos con una gestión centralizada."
+			},
+			"monitor_sales": {
+				"title": "Monitorea ventas y comportamiento del cliente",
+				"paragraph": "Genera informes detallados para mejorar decisiones empresariales y la experiencia del cliente."
+			},
+			"automate_streamline": {
+				"title": "Automatiza y simplifica la gestión de inventario",
+				"paragraph": "El sistema automatiza las actualizaciones de inventario e informes, ahorrando tiempo y reduciendo errores."
+			},
+			"share_reports": {
+				"title": "Comparte informes en minutos",
+				"paragraph": "Genera y distribuye rápidamente informes de ventas e inventarios para mantener a tu equipo informado de manera eficiente."
+			}
+		},
+		"pricing": {
+			"title": {
+				"title_start": "Elige el",
+				"title_end": "perfecto para tu equipo",
+				"plan": "plan"
+			},
+			"plans": {
+				"most_popular": "¡Más popular!",
+				"title_free": "GRATIS",
+				"title_standard": "ESTÁNDAR",
+				"title_pro": "PRO",
+				"title_plus": "PLUS"
+			},
+			"subtitle_card": {
+				"free_card": "Ideal para emprendedores que recién comienzan",
+				"standard_card": "Para negocios en crecimiento",
+				"pro_card": "Para negocios establecidos",
+				"plus_card": "Para negocios en expansión"
+			},
+			"description_free": {
+				"description_one": "Facturas electrónicas ilimitadas",
+				"description_two": "1 usuario incluido",
+				"description_three": "POS básico incluido",
+				"description_four": "Gestión de inventario básica",
+				"description_five": "Tienda en línea básica",
+				"description_six": "Informes esenciales",
+				"description_seven": "KPIs básicos con IA",
+				"description_eight": "Soporte 24/7"
+			},
+			"description_standard": {
+				"description_one": "Todo en el plan Gratis",
+				"description_two": "3 usuarios incluidos",
+				"description_three": "POS con múltiples registros",
+				"description_four": "Gestión avanzada de inventario",
+				"description_five": "Tienda en línea personalizable",
+				"description_six": "Automatización básica de marketing",
+				"description_seven": "KPIs avanzados con IA",
+				"description_eight": "Soporte 24/7"
+			},
+			"description_pro": {
+				"description_one": "Todo en el plan Estándar",
+				"description_two": "10 usuarios incluidos",
+				"description_three": "POS para múltiples tiendas",
+				"description_four": "Gestión de múltiples almacenes",
+				"description_five": "Comercio electrónico avanzado",
+				"description_six": "Automatización completa de marketing",
+				"description_seven": "IA predictiva y analítica",
+				"description_eight": "Integraciones ilimitadas",
+				"description_nine": "Acceso a API",
+				"description_ten": "Soporte VIP 24/7"
+			},
+			"description_plus": {
+				"description_one": "Todo en el plan Pro",
+				"description_two": "Usuarios ilimitados",
+				"description_three": "Múltiples empresas",
+				"description_four": "Personalización avanzada",
+				"description_five": "Incorporación personalizada",
+				"description_six": "Gerente de cuenta dedicado",
+				"description_seven": "Desarrollo de integraciones personalizadas",
+				"description_eight": "Acceso anticipado a nuevas funciones",
+				"description_nine": "Soporte VIP 24/7"
+			},
+			"card_button": {
+				"button": "Continuar"
+			},
+			"plans_page": {
+				"title": "Planes hechos a la medida de tu negocio",
+				"subtitle": "Escala tu negocio con Sirius Nova",
+				"unlimited_invoices": "Facturas ilimitadas en todos los planes",
+				"partner_title": "SOCIO",
+				"partner_description": "¿Necesitas una solución personalizada para tu empresa? Contáctanos para crear un plan a medida.",
+				"contact_sales": "Contactar ventas"
+			}
+		}
+	},
+	"testimonials": {
+		"title": {
+			"part1": "Descubre cómo empoderamos a nuestros ",
+			"highlight": "clientes",
+			"part2": " para lograr lo extraordinario."
+		},
+		"users": {
+			"user1": "Camilo Bolaños",
+			"user2": "Sebastian Marquez",
+			"user3": "Valentina Bofanti",
+			"user4": "Antony Dominguez",
+			"user5": "Mateo Rodriguez",
+			"user6": "Julian Velandia"
+		},
+		"companies": {
+			"company1": "Innova Labs",
+			"company2": "Vortex Corp",
+			"company3": "Solvia Tech",
+			"company4": "Terra Nova",
+			"company5": "Digi Prime",
+			"company6": "Nexa Cloud"
+		},
+		"texts": {
+			"text1": "Estoy extremadamente satisfecho con los servicios proporcionados. El equipo fue receptivo, profesional y entregó resultados que superaron mis expectativas.",
+			"text2": "No podría estar más feliz con el resultado de nuestro proyecto. La creatividad y las habilidades para resolver problemas del equipo fueron cruciales para dar vida a nuestra visión.",
+			"text3": "Fue un placer trabajar con esta empresa. Su atención al detalle y compromiso con la excelencia son encomiables. Los recomendaría a cualquiera que busque un servicio de alta calidad.",
+			"text4": "Trabajar con este equipo fue un cambio radical para nuestro proyecto. Su atención al detalle y soluciones innovadoras nos ayudaron a alcanzar nuestros objetivos más rápido de lo esperado. ¡Estamos increíblemente agradecidos por su profesionalismo y experiencia!",
+			"text5": "Estoy asombrado por el nivel de profesionalismo y dedicación mostrado por el equipo. Superaron nuestras expectativas y entregaron resultados excepcionales.",
+			"text6": "El equipo hizo un esfuerzo adicional para garantizar el éxito de nuestro proyecto. Su experiencia y compromiso son incomparables. Espero trabajar con ellos nuevamente en el futuro."
+		}
+	},
+	"footer": {
+		"solutions": "Soluciones",
+		"useful_links": "Enlaces Útiles",
+		"educational_content": "Contenido Educativo",
+		"about_us": "Sobre Nosotros",
+		"cookie_message": "Al navegar por los sitios web propiedad de Nimuu, aceptas el uso de Cookies de acuerdo con nuestra",
+		"terms_and_conditions": "Términos y Condiciones",
+		"resources": {
+			"accounting_software": "Software de Contabilidad",
+			"accounting_solutions": "Soluciones Contables",
+			"electronic_invoicing": "Facturación Electrónica",
+			"electronic_payroll": "Nómina Electrónica"
+		},
+		"platform": {
+			"contact_us": "Contáctanos",
+			"community": "Comunidad Nimuu",
+			"solution_status": "Estado de la Solución",
+			"academy": "Academia Nimuu",
+			"release_notes": "Notas de la Versión"
+		},
+		"community": {
+			"blog": "Blog",
+			"entrepreneur_school": "Escuela de Emprendedores",
+			"stay_up_to_date": "Mantente al día",
+			"help_center": "Centro de Ayuda",
+			"webinars": "Webinars"
+		},
+		"about": {
+			"about_us": "Sobre Nosotros",
+			"press_center": "Centro de Prensa",
+			"work_with_us": "Trabaja con Nimuu",
+			"foundations": "Nimuu para Fundaciones",
+			"terms_and_conditions": "Términos y Condiciones"
+		}
+	},
+	"form": {
+		"full_name": "Nombre Completo",
+		"email": "Correo Electrónico",
+		"phone_number": "Número de Teléfono",
+		"subject": "Asunto",
+		"message": "Cuéntanos más...",
+		"sending": "Enviando...",
+		"send": "Enviar",
+		"notification": "Notificación",
+		"close": "Cerrar",
+		"need_help": "¿Necesitas Ayuda?",
+		"contact_us": "Contáctanos con cualquier pregunta o consulta. Nuestro equipo está listo para ayudarte.",
+		"phone_number_value": "+57 456 7890",
+		"email_value": "contacto@nimutech.com",
+		"address": "Avenida Principal 123, Ciudad",
+		"send_message": "Envíanos un Mensaje",
+		"fill_form": "Llena el formulario y te responderemos lo antes posible.",
+		"place_holder": "Cuéntenos un poco más para que el equipo especializado pueda darle una respuesta más rápida",
+		"select_options": {
+			"general_inquiry": "Consulta General",
+			"technical_support": "Soporte Técnico",
+			"quote_request": "Solicitud de Cotización",
+			"partnership_inquiry": "Consulta de Asociación",
+			"suggestions": "Sugerencias",
+			"complaints": "Quejas",
+			"others": "Otros"
+		}
+	},
+	"contact": {
+		"title": "Contacto",
+		"meta_description": "Nimuu es un sistema de ventas y facturación electrónica fácil de usar, ideal para puntos de venta. Mejora la gestión de tu negocio con nuestras soluciones POS.",
+		"meta_keywords": "contacto, contacto Nimuu, sistema POS, gestión empresarial, software de ventas, Sirius Nova, Nimuu, Nimuu Colombia, Colombia",
+		"need_help": "¿Necesitas ayuda?",
+		"reach_out": "No dudes en comunicarte con nosotros.",
+		"complete_form": "Completa el formulario y nos pondremos en contacto contigo de inmediato.",
+		"call_us": "Si prefieres, llámanos al +57 456 7890.",
+		"leave_question": "¡Déjanos tu pregunta y te responderemos pronto!"
+	}
+}

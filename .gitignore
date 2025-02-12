@@ -1,0 +1,28 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node modules and build artifacts
+node_modules/
+dist/
+dist-ssr/
+build/
+*.local
+.env
+
+# Editor directories and files
+.vscode/                  # Visual Studio Code settings
+!.vscode/extensions.json  # Keep extensions file
+.idea/                    # JetBrains IDE files
+.DS_Store                 # macOS file
+*.suo                     # Visual Studio Solution User Options
+*.ntvs*                   # Visual Studio Node.js Tools
+*.njsproj                 # Node.js project files for Visual Studio
+*.sln                     # Visual Studio Solution files
+*.swp                     # Swap files
+
