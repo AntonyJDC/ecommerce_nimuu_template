@@ -33,6 +33,17 @@ export const Sidebar: FC = () => {
 				<ScrollArea type="auto" className="flex-grow">
 					<nav className="flex-grow container">
 						<ul className="menu bg-base-100 rounded-box w-full text-xl">
+							<li key='home' className="py-0.5">
+								<NavLink
+									to='/home'
+									onClick={() => setIsSidebarOpen(false)}
+									className={({ isActive }) => {
+										return `${isActive ? "bg-primary/40 text-primary font-semibold" : "font-medium"}`;
+									}}
+								>
+									Home
+								</NavLink>
+							</li>
 							<li>
 								<details open>
 									<summary

@@ -54,7 +54,7 @@ const FormComponent = () => {
 
 					{/* Icono en la parte inferior */}
 					<m.div
-						className=" absolute bottom-0 right-5 md:bottom-10 md:-right-4"
+						className="flex items-center justify-center pt-10 sm:absolute bottom-0 right-5 md:bottom-10 md:-right-4"
 						initial={{ opacity: 0, scale: 0.8 }}
 						animate={
 							inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
@@ -67,7 +67,7 @@ const FormComponent = () => {
 
 				{/* Sección del formulario */}
 				<m.div
-					className="w-full md:w-1/2 p-4 lg:p-12"
+					className="w-full md:w-1/2 px-4 sm:p-4 lg:p-12"
 					initial={{ opacity: 0, x: 50 }}
 					animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
 					transition={{ duration: 0.5, delay: 0.3 }}
