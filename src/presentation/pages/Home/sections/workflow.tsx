@@ -17,7 +17,7 @@ const Workflow = () => {
 		<div className="container">
 			<h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
 				{t("homepage.workflow.workflow_title")}
-				<span className="ml-3 bg-gradient-to-r from-primary to-orange-800 text-transparent bg-clip-text">
+				<span className="ml-3 bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
 					{t("homepage.workflow.workflow_subtitle")}
 				</span>
 			</h2>
@@ -53,7 +53,7 @@ const Workflow = () => {
 							animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
 							transition={{ duration: 0.6, delay: index * 0.1 }} // Delay progresivo para cada item
 						>
-							<div className="text-primary mx-6 bg-base-content h-10 w-10 p-2 justify-center rounded-full">
+							<div className="text-primary mx-6 bg-primary/20 h-10 w-10 p-2 justify-center rounded-full">
 								<CheckCircle2 />
 							</div>
 							<div>

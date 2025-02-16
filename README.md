@@ -1,6 +1,6 @@
 # NimuTech Web
 
-Este proyecto es una landing page para la marca Sirius Nova, desarrollada con React, TypeScript, y Vite.
+Este proyecto es una landing page para la marca Nimuu, desarrollada con React, TypeScript, y Vite.
 
 ## Requisitos previos
 
@@ -444,7 +444,7 @@ Agradecemos tu interés en contribuir al proyecto nimuu-web. Para mantener un fl
 
 Recuerda que todas las contribuciones están sujetas al Código de Conducta del proyecto. Asegúrate de mantener un ambiente respetuoso y colaborativo en todas tus interacciones.
 
-¡Gracias por contribuir a Sirius Nova Ecommerce!
+¡Gracias por contribuir a Nimuu Ecommerce!
 
 ## Licencia
 

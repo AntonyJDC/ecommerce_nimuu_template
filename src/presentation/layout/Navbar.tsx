@@ -4,6 +4,7 @@ import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { LogoIcon } from "../components";
+import { LogoTitle } from "../components/logo";
 import { LanguageSelector, ThemeToggle } from "../components/shared";
 import { NavigationMenuDemo } from "./components/navigation-menu";
 
@@ -36,7 +37,7 @@ const Navbar: FC = () => {
 						}}
 						className=" bg-base-200 transition-colors duration-300 flex justify-end items-center overflow-hidden"
 					>
-						<div className="flex justify-start md:justify-end  container">
+						<div className="flex justify-end  container">
 							<LanguageSelector />
 							<ThemeToggle />
 						</div>
@@ -47,29 +48,30 @@ const Navbar: FC = () => {
 			<div className="flex items-center justify-between container h-20">
 				<button
 					type="button"
-					className="flex items-center gap-0 cursor-pointer"
+					className="flex items-center gap-0 cursor-pointer hover:scale-105 duration-300 transition-transform text-primary"
 					onClick={handleLogo}
 				>
-					<LogoIcon
-						className="h-10 w-10 mr-2 transition-transform duration-300 group-hover:scale-110"
-						aria-label="Nimuu Logo"
-					/>
-					<span className="text-xl font-semibold">Nimuu</span>
+					<LogoTitle className="h-7 w-28 mr-2" />
+					<LogoIcon className="h-7 w-7" aria-label="Nimuu Logo" />
 				</button>
-				<nav className="flex-1 hidden lg:flex justify-center gap-6 text-base-content items-center">
+				<nav
+					className="flex-1 hidden 
+				
+				lg:flex justify-center gap-6 text-base-content items-center"
+				>
 					<NavigationMenuDemo />
 				</nav>
 				<div className="flex items-center gap-4 max-lg:ml-auto">
 					<button
 						type="button"
 						onClick={() => navigate("/contact")}
-						className="py-2 px-3 border border-primary rounded-md transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-lg hover:shadow-primary/20 whitespace-nowrap max-lg:hidden"
+						className="py-2 px-3 border border-primary text-base-content rounded-md transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-lg hover:shadow-primary/40 whitespace-nowrap max-lg:hidden"
 					>
 						{t("nav.button.contact")}
 					</button>
 					<a
 						href="https://app.nimutech.com/auth/login"
-						className="bg-gradient-to-r from-primary to-orange-800 py-2 px-3 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-primary/40 whitespace-nowrap text-primary-content  max-sm:hidden"
+						className="bg-gradient-to-r from-primary to-secondary py-2 px-3 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-primary/40 whitespace-nowrap text-primary-content  max-sm:hidden"
 					>
 						{t("nav.button.login")}
 					</a>
@@ -91,12 +93,10 @@ const Navbar: FC = () => {
 								: "translate-y-[-6px] bg-base-content"
 						}`}
 						/>
-						{/* Línea media */}
 						<div
 							className={`absolute h-[2px] w-5 transform transition-all duration-300 bg-base-content
             ${isSidebarOpen ? "opacity-0" : "opacity-100"}`}
 						/>
-						{/* Línea inferior */}
 						<div
 							className={`absolute h-[2px] w-5 transform transition-all duration-300 
             ${

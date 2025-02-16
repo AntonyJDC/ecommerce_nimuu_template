@@ -31,7 +31,7 @@ const LanguageSelector: FC<Props> = ({ align = "center" }) => {
 					<button
 						type="button"
 						tabIndex={0}
-						className="btn min-h-[28px] h-[28px] btn-ghost border-transparent shadow-none px-2 gap-3 text-xs md:text-sm"
+						className="btn min-h-[28px] h-[28px] text-base-content btn-ghost border-transparent shadow-none px-2 gap-3 text-xs md:text-sm"
 					>
 						{localeSel.code.length === 2 ? (
 							<AiOutlineGlobal size={20} className="text-base-content" />
@@ -39,7 +39,6 @@ const LanguageSelector: FC<Props> = ({ align = "center" }) => {
 							<RenderTwemoji emoji={localeSel.icon} className="h-5 w-5" />
 						)}
 						{t(localeSel.title)}
-						{/* {localeSel.title} */}
 					</button>
 				</DropdownMenuTrigger>
 				<DropdownMenuContent

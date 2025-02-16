@@ -98,7 +98,7 @@ const HeroSection = memo(() => {
 					<div className="flex flex-col sm:flex-row items-center gap-3 w-full place-content-center">
 						<m.a
 							href="https://app.nimutech.com/auth/login"
-							className="h-14 inline-block py-2 px-3 max-sm:w-full sm:min-w-60 text-lg content-center bg-gradient-to-r from-primary to-orange-800 rounded-md whitespace-nowrap text-primary-content"
+							className="h-14 inline-block py-2 px-3 max-sm:w-full sm:min-w-60 text-lg content-center bg-gradient-to-r from-primary to-secondary rounded-md whitespace-nowrap text-primary-content hover:shadow-lg hover:shadow-primary/40"
 							variants={buttonVariants}
 							whileHover="hover"
 							whileTap="tap"
@@ -108,7 +108,7 @@ const HeroSection = memo(() => {
 
 						<m.button
 							onClick={() => navigate("/plans")}
-							className="h-14 py-2 px-3 text-lg max-sm:w-full sm:min-w-60 border border-primary rounded-md whitespace-nowrap"
+							className="h-14 py-2 px-3 text-lg max-sm:w-full sm:min-w-60 border border-primary rounded-md whitespace-nowrap hover:shadow-lg hover:shadow-primary/40"
 							variants={buttonVariants}
 							whileHover="hover"
 							whileTap="tap"

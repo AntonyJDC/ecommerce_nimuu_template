@@ -22,7 +22,7 @@ export const HomePage = () => {
 				/>
 				<meta
 					name="keywords"
-					content="ventas, facturación electrónica, sistema POS, gestión de negocio, software de ventas, Sirius Nova, Nimuu, Nimuu Colombia, colombia"
+					content="ventas, facturación electrónica, sistema POS, gestión de negocio, software de ventas, Nimuu, Nimuu, Nimuu Colombia, colombia"
 				/>
 			</Helmet>
 			<div>

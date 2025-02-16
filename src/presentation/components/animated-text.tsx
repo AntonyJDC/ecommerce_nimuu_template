@@ -31,7 +31,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ texts }) => {
 					animate={{ opacity: 1, scale: 1 }}
 					exit={{ opacity: 0, scale: 1.2 }}
 					transition={{ duration: 0.5, ease: "easeInOut" }}
-					className="text-xl sm:text-3xl lg:text-4xl text-center p-6 bg-gradient-to-r from-orange-500 to-red-800 bg-clip-text text-transparent"
+					className="text-xl sm:text-3xl lg:text-4xl text-center p-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
 				>
 					{t(texts[index])}
 				</m.div>

@@ -18,7 +18,7 @@ export const LogoSiriusNovaIcon: FC<Props> = ({
 			className={className}
 			{...props}
 		>
-			<title>Sirius Nova Logo</title>
+			<title>Nimuu Logo</title>
 			<defs>
 				<linearGradient
 					x1="108.34401"

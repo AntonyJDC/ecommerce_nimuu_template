@@ -1,5 +1,6 @@
+import { Pet } from "@/presentation/components/logo";
 import Form from "@pages/Home/components/form";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { m } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
@@ -22,9 +23,9 @@ const FormComponent = () => {
 				transition={{ duration: 0.6 }} // Duración de la animación
 			>
 				{/* Sección de contacto */}
-				<div className="w-full md:w-1/2 p-4 md:p-6 lg:p-12 flex flex-col justify-between">
+				<div className="relative w-full md:w-1/2 p-4 md:p-6 lg:p-12 flex flex-col justify-between">
 					<m.div
-						className="text-center mt-5 md:mt-20"
+						className="text-center mt-5 md:mt-0"
 						initial={{ opacity: 0, y: 30 }}
 						animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
 						transition={{ duration: 0.5, delay: 0.3 }}
@@ -53,14 +54,14 @@ const FormComponent = () => {
 
 					{/* Icono en la parte inferior */}
 					<m.div
-						className="hidden md:block mt-12"
+						className=" absolute bottom-0 right-5 md:bottom-10 md:-right-4"
 						initial={{ opacity: 0, scale: 0.8 }}
 						animate={
 							inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
 						}
 						transition={{ duration: 0.4, delay: 0.5 }}
 					>
-						<MessageCircle className="w-24 h-24 text-primary" />
+						<Pet className="text-primary md:w-60 md:h-60 lg:w-[20rem] lg:h-[20rem] xl:w-[21rem] xl:h-[21rem] 2xl:h-96 2xl:w-96	" />
 					</m.div>
 				</div>
 

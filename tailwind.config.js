@@ -68,32 +68,35 @@ module.exports = {
 		themes: [
 			{
 				light: {
-					primary: "#F2811D",
-					"--primary-focus": "64.25% 0.1621 51.46", // oklch(64.25% 0.1621 51.46)
+					primary: "#6B4BFF",
+					"--primary-focus": "47.89% 0.2851 282.25", // oklch(47.89% 0.2851 282.25)
 					"primary-content": "#FFFFFF",
 
 					secondary: "#4A90E2",
 					"--secondary-focus": "56.76% 0.1249 250.43", //oklch(56.76% 0.1249 250.43)
 					"secondary-content": "#FFFFFF",
 
-					accent: "#8E44AD",
+					accent: "#00D5C0",
 					"--accent-focus": "44.35% 0.1639 313.95", //oklch(44.35% 0.1639 313.95)
-					"accent-content": "#FFFFFF",
+					"accent-content": "#001F1B",
 
-					neutral: "#F7F9FB",
+					neutral: "#1F2937",
 					"--neutral-focus": "92.88% 0.0126 255.51", //oklch(92.88% 0.0126 255.51)
-					"neutral-content": "#2D3748",
+					"neutral-content": "#F9FAFB",
 
 					"base-100": "#FFFFFF",
-					"base-200": "#F1F5F9",
-					"base-300": "#E2E8F0",
-					"base-content": "#2D3748",
+					"base-200": "#F4F7FE",
+					"base-300": "#E8ECF8",
+					"base-content": "#1A1F36",
 
-					info: "#3ABFF8",
-					success: "#4CAF50",
-					warning: "#FF9800",
-					error: "#F44336",
-
+					info: "#2D5BFF",
+					"info-content": "#FFFFFF",
+					success: "#22c55e",
+					"success-content": "#001F1B",
+					warning: "#FFB800",
+					"warning-content": "#1F1600",
+					error: "#ef4444",
+					"error-content": "#FFFFFF",
 					"--rounded-box": "1rem",
 					"--rounded-btn": ".5rem",
 					"--rounded-badge": "1.9rem",
@@ -106,13 +109,13 @@ module.exports = {
 			},
 			{
 				dark: {
-					primary: "#F2811D",
-					"--primary-focus": "64.25% 0.1621 51.46", //oklch(64.25% 0.1621 51.46)
+					primary: "#6B4BFF",
+					"--primary-focus": "47.89% 0.2851 282.25", // oklch(47.89% 0.2851 282.25)
 					"primary-content": "#FFFFFF",
 
 					secondary: "#4A90E2",
-					"--secondary-focus": "56.76% 0.1249 250.43", // oklch(56.76% 0.1249 250.43)
-					"secondary-content": "#2D3748",
+					"--secondary-focus": "56.76% 0.1249 250.43", //oklch(56.76% 0.1249 250.43)
+					"secondary-content": "#FFFFFF",
 
 					accent: "#8E44AD",
 					"--accent-focus": "44.35% 0.1639 313.95", //oklch(44.35% 0.1639 313.95)
