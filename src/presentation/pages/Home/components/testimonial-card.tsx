@@ -35,7 +35,7 @@ export const TestimonialCard = ({
 			>
 				<div
 					className={`
-            absolute inset-0 bg-gradient-to-r from-purple-500/10 to-orange-500/10
+            absolute inset-0 bg-gradient-to-r from-secondary/10 to-primary/10
             rounded-md opacity-0 transition-opacity duration-500
             ${isHovered ? "opacity-100" : ""}
           `}

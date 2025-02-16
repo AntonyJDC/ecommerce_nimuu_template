@@ -1,6 +1,14 @@
-import { Code, Cpu, Rocket, Sparkles, Workflow } from "lucide-react";
+import {
+	BarChart3,
+	FileText,
+	Package,
+	Settings,
+	Sparkles,
+	Users,
+} from "lucide-react";
 import { Variants, m } from "motion/react";
 import { LogoIcon } from "./components";
+import { LogoTitle } from "./components/logo";
 
 export const ComingSoonPage = ({ title }: { title?: string }) => {
 	const containerVariants = {
@@ -29,7 +37,7 @@ export const ComingSoonPage = ({ title }: { title?: string }) => {
 	const floatingVariants: Variants = {
 		initial: { y: 0 },
 		animate: {
-			y: [-10, 10],
+			y: [-5, 5],
 			transition: {
 				duration: 3,
 				repeat: Number.POSITIVE_INFINITY,
@@ -73,9 +81,9 @@ export const ComingSoonPage = ({ title }: { title?: string }) => {
 					}}
 				>
 					{element.id % 2 === 0 ? (
-						<Cpu className="w-12 h-12 " />
+						<FileText className="w-12 h-12 " />
 					) : (
-						<Sparkles className="w-8 h-8 " />
+						<Package className="w-8 h-8 " />
 					)}
 				</m.div>
 			))}
@@ -92,6 +100,12 @@ export const ComingSoonPage = ({ title }: { title?: string }) => {
 					className="relative flex max-sm:flex-col items-center space-x-4 mb-8"
 					variants={itemVariants}
 				>
+					<m.h1
+						className="max-sm:text-4xl max-sm:mb-6 text-6xl font-bold tracking-tight text-primary"
+						variants={itemVariants}
+					>
+						<LogoTitle className="h-10 w-40" />
+					</m.h1>
 					<m.div
 						className="relative"
 						variants={floatingVariants}
@@ -99,16 +113,10 @@ export const ComingSoonPage = ({ title }: { title?: string }) => {
 						animate="animate"
 					>
 						<LogoIcon
-							className="max-sm:w-14 max-sm:h-14 w-20 h-20 transition-transform duration-300 group-hover:scale-110"
+							className="max-sm:w-14 text-primary max-sm:h-14 w-10 h-10 transition-transform duration-300 group-hover:scale-110 -translate-x-1 -translate-y-0.5"
 							aria-label="Nimuu Logo"
 						/>
 					</m.div>
-					<m.h1
-						className="max-sm:text-4xl text-6xl font-bold tracking-tight"
-						variants={itemVariants}
-					>
-						Nimuu
-					</m.h1>
 					<m.div
 						className="absolute -top-0 -right-7"
 						animate={{
@@ -121,7 +129,7 @@ export const ComingSoonPage = ({ title }: { title?: string }) => {
 							ease: "linear",
 						}}
 					>
-						<Sparkles className="w-6 h-6 text-warning" />
+						<Sparkles className="w-6 h-6 text-primary" />
 					</m.div>
 				</m.div>
 
@@ -131,7 +139,7 @@ export const ComingSoonPage = ({ title }: { title?: string }) => {
 						The Future is Now
 					</m.h2>
 					<m.p className="text-xl opacity-90 max-w-2xl" variants={itemVariants}>
-						Preparing a revolution in business technology with Sirius Nova
+						Preparing a revolution in business technology with Nimuu
 					</m.p>
 				</m.div>
 				{/* Feature Icons */}
@@ -140,9 +148,9 @@ export const ComingSoonPage = ({ title }: { title?: string }) => {
 					variants={containerVariants}
 				>
 					{[
-						{ Icon: Rocket, text: "Innovation" },
-						{ Icon: Code, text: "Technology" },
-						{ Icon: Workflow, text: "Integration" },
+						{ Icon: Users, text: "CRM Integration" },
+						{ Icon: BarChart3, text: "Analytics" },
+						{ Icon: Settings, text: "Customization" },
 					].map((feature) => (
 						<m.div
 							key={feature.text}

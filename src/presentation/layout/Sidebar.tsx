@@ -1,6 +1,6 @@
 import { useGlobalStore } from "@/store/global/global.store";
 import { FC } from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
 import { ScrollArea } from "../components/ui/scroll-area";
 
 const SOLUTIONS_MENU_ITEMS = [
@@ -17,7 +17,8 @@ export const Sidebar: FC = () => {
 	const isScrolled = useGlobalStore((state) => state.isScrolled);
 	const isSidebarOpen = useGlobalStore((state) => state.isSidebarOpen);
 	const setIsSidebarOpen = useGlobalStore((state) => state.setIsSidebarOpen);
-
+	const location = useLocation();
+	const isActive = location.pathname.startsWith("/solutions/");
 	return (
 		<div
 			className={`
@@ -34,16 +35,20 @@ export const Sidebar: FC = () => {
 						<ul className="menu bg-base-100 rounded-box w-full text-xl">
 							<li>
 								<details open>
-									<summary>Solutions</summary>
+									<summary
+										className={` font-medium ${isActive && "bg-primary/25 text-primary font-semibold"}`}
+									>
+										Solutions
+									</summary>
 									<ul>
 										{SOLUTIONS_MENU_ITEMS.map(({ icon, label, path }) => (
 											<li key={label} className="py-0.5 ">
 												<NavLink
 													to={path}
 													onClick={() => setIsSidebarOpen(false)}
-													className={({ isActive }) =>
-														isActive ? "bg-primary bg-text-primary" : ""
-													}
+													className={({ isActive }) => {
+														return `${isActive ? "bg-primary/25 text-primary font-semibold" : "font-medium"}`;
+													}}
 												>
 													{icon} {label}
 												</NavLink>
@@ -57,9 +62,9 @@ export const Sidebar: FC = () => {
 									<NavLink
 										to={`/${item.toLowerCase()}`}
 										onClick={() => setIsSidebarOpen(false)}
-										className={({ isActive }) =>
-											isActive ? "bg-primary bg-text-primary" : ""
-										}
+										className={({ isActive }) => {
+											return `${isActive ? "bg-primary/40 text-primary font-semibold" : "font-medium"}`;
+										}}
 									>
 										{item}
 									</NavLink>
@@ -80,7 +85,7 @@ export const Sidebar: FC = () => {
 					</Link>
 					<a
 						href="https://app.nimutech.com/auth/login"
-						className="bg-gradient-to-r from-primary to-orange-800 py-2 px-3 
+						className="bg-gradient-to-r from-primary to-primary-secondary py-2 px-3 
               rounded-md transition-all duration-300 hover:shadow-lg 
               hover:shadow-primary/40 whitespace-nowrap text-primary-content text-center"
 					>

@@ -22,7 +22,7 @@
 			"title": "Todo lo que tu negocio necesita en un solo lugar",
 			"subtitle": "Optimizá tu negocio con soluciones innovadoras.",
 			"cta": {
-				"paragraph": "Probá Sirius Nova gratis todo el tiempo que quieras.",
+				"paragraph": "Probá Nimuu gratis todo el tiempo que quieras.",
 				"start_free": "Empezá Gratis",
 				"view_plans": "Ver Planes",
 				"sign_up": "Registrate gratis con tu email.",
@@ -175,7 +175,7 @@
 			},
 			"plans_page": {
 				"title": "Planes hechos a medida para tu negocio",
-				"subtitle": "Escalá tu negocio con Sirius Nova",
+				"subtitle": "Escalá tu negocio con Nimuu",
 				"unlimited_invoices": "Facturas ilimitadas en todos los planes",
 				"partner_title": "SOCIO",
 				"partner_description": "¿Necesitás una solución personalizada para tu empresa? Contactanos para crear un plan a medida.",
@@ -262,7 +262,7 @@
 		"need_help": "¿Necesitas Ayuda?",
 		"contact_us": "Contáctanos con cualquier pregunta o consulta. Nuestro equipo está listo para ayudarte.",
 		"phone_number_value": "+57 456 7890",
-		"email_value": "contacto@nimutech.com",
+		"email_value": "contact@nimutech.com",
 		"address": "Avenida Principal 123, Ciudad",
 		"send_message": "Envíanos un Mensaje",
 		"fill_form": "Llena el formulario y te responderemos lo antes posible.",
@@ -280,7 +280,7 @@
 	"contact": {
 		"title": "Contacto",
 		"meta_description": "Nimuu es un sistema de ventas y facturación electrónica fácil de usar, ideal para puntos de venta. Mejora la gestión de tu negocio con nuestras soluciones POS.",
-		"meta_keywords": "contacto, contacto Nimuu, sistema POS, gestión empresarial, software de ventas, Sirius Nova, Nimuu, Nimuu Colombia, Colombia",
+		"meta_keywords": "contacto, contacto Nimuu, sistema POS, gestión empresarial, software de ventas, Nimuu, Nimuu, Nimuu Colombia, Colombia",
 		"need_help": "¿Necesitás ayuda?",
 		"reach_out": "No dudes en comunicarte con nosotros.",
 		"complete_form": "Completá el formulario y nos pondremos en contacto con vos de inmediato.",

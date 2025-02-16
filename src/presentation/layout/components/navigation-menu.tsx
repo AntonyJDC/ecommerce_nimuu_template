@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { LogoSiriusNovaIcon } from "@/presentation/components/logo/logo-sirius-nova-icon";
+import { LogoIcon } from "@/presentation/components";
 
 import {
 	NavigationMenu,
@@ -14,11 +14,28 @@ import React from "react";
 import { Link, NavLink, useLocation } from "react-router";
 
 export function NavigationMenuDemo() {
+	const location = useLocation();
+	const isActive = location.pathname.startsWith("/solutions/");
 	return (
 		<NavigationMenu>
 			<NavigationMenuList className="space-x-12">
 				<NavigationMenuItem>
-					<NavigationMenuTrigger className="flex gap-x-2 relative py-2 transition-colors duration-300 hover:text-primary items-center">
+					<NavLink
+						to="/home"
+						className={({ isActive }) =>
+							cn(
+								"text-base font-medium hover:text-primary",
+								isActive && "text-primary",
+							)
+						}
+					>
+						Home
+					</NavLink>
+				</NavigationMenuItem>
+				<NavigationMenuItem>
+					<NavigationMenuTrigger
+						className={`text-base font-medium flex gap-x-2 relative py-2 hover:text-primary items-center data-[state=open]:text-secondary ${isActive && "text-primary"}`}
+					>
 						Solutions
 					</NavigationMenuTrigger>
 					<NavigationMenuContent>
@@ -26,10 +43,8 @@ export function NavigationMenuDemo() {
 							<li className="row-span-3">
 								<NavigationMenuLink asChild>
 									<div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
-										<LogoSiriusNovaIcon className="h-14 w-14" />
-										<div className="mb-2 mt-4 text-lg font-medium">
-											Sirius Nova
-										</div>
+										<LogoIcon className="h-14 w-14 text-primary" />
+										<div className="mb-2 mt-4 text-lg font-medium">Nimuu</div>
 										<p className="text-sm leading-tight text-muted-foreground">
 											Integrated platform empowering businesses with AI-driven
 											tools for billing, inventory, sales, and analytics.
@@ -67,8 +82,8 @@ export function NavigationMenuDemo() {
 						to="/plans"
 						className={({ isActive }) =>
 							cn(
-								"flex gap-x-2 relative py-2 transition-colors duration-300 hover:text-primary",
-								isActive ? "text-primary" : "",
+								"text-base font-medium hover:text-primary",
+								isActive && "text-primary",
 							)
 						}
 					>
@@ -80,8 +95,8 @@ export function NavigationMenuDemo() {
 						to={"/company"}
 						className={({ isActive }) =>
 							cn(
-								"flex gap-x-2 relative py-2 transition-colors duration-300 hover:text-primary",
-								isActive ? "text-primary" : "",
+								"text-base font-medium hover:text-primary",
+								isActive && "text-primary",
 							)
 						}
 					>
@@ -93,8 +108,8 @@ export function NavigationMenuDemo() {
 						to={"/academy"}
 						className={({ isActive }) =>
 							cn(
-								"flex gap-x-2 relative py-2 transition-colors duration-300 hover:text-primary",
-								isActive ? "text-primary" : "",
+								"text-base font-medium hover:text-primary",
+								isActive && "text-primary",
 							)
 						}
 					>

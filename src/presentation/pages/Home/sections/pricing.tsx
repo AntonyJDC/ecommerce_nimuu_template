@@ -22,7 +22,7 @@ const Pricing = () => {
 		<div className="container mt-8">
 			<h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mb-16 tracking-wide">
 				{t("homepage.pricing.title.title_start")}
-				<span className="text-primary mx-3">
+				<span className="text-primary mx-3 bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
 					{t("homepage.pricing.title.plan")}
 				</span>
 				{t("homepage.pricing.title.title_end")}
@@ -45,7 +45,7 @@ const Pricing = () => {
 						{/* Etiqueta para el plan más popular */}
 						{option.plan === "homepage.pricing.plans.title_standard" && (
 							<div className="absolute max-lg:hidden -top-4 left-0 right-0 text-center">
-								<span className="bg-primary px-4 py-1 rounded-full text-sm font-medium">
+								<span className="bg-primary text-primary-content px-4 py-1 rounded-full text-sm font-medium">
 									{t("homepage.pricing.plans.most_popular")}
 								</span>
 							</div>

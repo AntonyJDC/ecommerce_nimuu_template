@@ -1,3 +1,4 @@
+import { Pet } from "@/presentation/components/logo";
 import { Circle, Clock, Phone } from "lucide-react";
 import { m } from "motion/react";
 import { Helmet } from "react-helmet-async";
@@ -27,7 +28,7 @@ export const ContactPage = () => {
 				/>
 				<meta
 					name="keywords"
-					content="contact, Nimuu contact, POS system, business management, sales software, Sirius Nova, Nimuu, Nimuu Colombia, Colombia"
+					content="contact, Nimuu contact, POS system, business management, sales software, Nimuu, Nimuu, Nimuu Colombia, Colombia"
 				/>
 			</Helmet>
 
@@ -47,6 +48,14 @@ export const ContactPage = () => {
 							{t("contact.reach_out")}
 						</li>
 					</ul>
+					<m.div
+						className=" bottom-0 right-5 md:bottom-10 md:-right-4"
+						initial={{ opacity: 0, scale: 0.8 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 0.4, delay: 0.5 }}
+					>
+						<Pet className="text-primary md:w-60 md:h-60 lg:w-[20rem] lg:h-[20rem] xl:w-[21rem] xl:h-[21rem] 2xl:h-80 2xl:w-80 	" />
+					</m.div>
 
 					<ul className="container space-y-4 w-full mt-10 lg:mr-5 text-left">
 						<li className="flex place-items-center space-x-4 text-primary--primary-focus">

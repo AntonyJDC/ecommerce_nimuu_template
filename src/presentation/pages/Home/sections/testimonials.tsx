@@ -15,7 +15,7 @@ const Testimonials = () => {
 		<div className="container tracking-wide">
 			<h2 className="text-3xl sm:text-5xl lg:text-3xl text-center my-10 lg:my-20">
 				{t("testimonials.title.part1")}
-				<span className="text-primary">
+				<span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
 					{t("testimonials.title.highlight")}
 				</span>
 				{t("testimonials.title.part2")}

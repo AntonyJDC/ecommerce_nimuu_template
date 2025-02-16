@@ -8,7 +8,7 @@ export const ThemeToggle = () => {
 	};
 
 	return (
-		<label className="btn min-h-[28px] h-[28px] btn-ghost btn-square  swap swap-rotate">
+		<label className="btn min-h-[28px] h-[28px] btn-ghost btn-square text-base-content  swap swap-rotate">
 			{/* this hidden checkbox controls the state */}
 			<input
 				type="checkbox"
