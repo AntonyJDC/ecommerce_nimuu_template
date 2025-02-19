@@ -70,7 +70,7 @@ const Navbar: FC = () => {
 						{t("nav.button.contact")}
 					</button>
 					<a
-						href="https://app.nimutech.com/auth/login"
+						href="https://app.nimuu.com/auth/login"
 						className="bg-gradient-to-r from-primary to-secondary py-2 px-3 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-primary/40 whitespace-nowrap text-primary-content  max-sm:hidden"
 					>
 						{t("nav.button.login")}

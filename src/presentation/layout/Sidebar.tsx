@@ -33,9 +33,9 @@ export const Sidebar: FC = () => {
 				<ScrollArea type="auto" className="flex-grow">
 					<nav className="flex-grow container">
 						<ul className="menu bg-base-100 rounded-box w-full text-xl">
-							<li key='home' className="py-0.5">
+							<li key="home" className="py-0.5">
 								<NavLink
-									to='/home'
+									to="/home"
 									onClick={() => setIsSidebarOpen(false)}
 									className={({ isActive }) => {
 										return `${isActive ? "bg-primary/40 text-primary font-semibold" : "font-medium"}`;
@@ -95,7 +95,7 @@ export const Sidebar: FC = () => {
 						Contact
 					</Link>
 					<a
-						href="https://app.nimutech.com/auth/login"
+						href="https://app.nimuu.com/auth/login"
 						className="bg-gradient-to-r from-primary to-primary-secondary py-2 px-3 
               rounded-md transition-all duration-300 hover:shadow-lg 
               hover:shadow-primary/40 whitespace-nowrap text-primary-content text-center"

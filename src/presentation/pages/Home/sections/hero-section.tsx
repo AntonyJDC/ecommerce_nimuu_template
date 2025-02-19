@@ -97,7 +97,7 @@ const HeroSection = memo(() => {
 				<m.div className="w-full flex flex-col" variants={itemVariants}>
 					<div className="flex flex-col sm:flex-row items-center gap-3 w-full place-content-center">
 						<m.a
-							href="https://app.nimutech.com/auth/login"
+							href="https://app.nimuu.com/auth/login"
 							className="h-14 inline-block py-2 px-3 max-sm:w-full sm:min-w-60 text-lg content-center bg-gradient-to-r from-primary to-secondary rounded-md whitespace-nowrap text-primary-content hover:shadow-lg hover:shadow-primary/40"
 							variants={buttonVariants}
 							whileHover="hover"
@@ -126,7 +126,7 @@ const HeroSection = memo(() => {
 						variants={itemVariants}
 					>
 						<m.a
-							href="https://app.nimutech.com/auth/register"
+							href="https://app.nimuu.com/auth/register"
 							className="link link-hover link-primary"
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
