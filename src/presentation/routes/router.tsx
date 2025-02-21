@@ -1,22 +1,8 @@
 import { Suspense, lazy } from "react";
 import { Navigate, createBrowserRouter } from "react-router";
 import { ErrorPage } from "../ErrorPage";
-import {
-	BillingPage,
-	ContactPage,
-	FinancialReportsPage,
-	HomePage,
-	InventoryManagementPage,
-	OnlineStorePage,
-	PaymentGatewayPage,
-	PointOfSalePage,
-	PrivacyPolicyPage,
-	TermsPage,
-} from "../pages";
-import { AcademyPage } from "../pages/Academy/AcademyPage";
-import { CompanyPage } from "../pages/Company/CompanyPage";
-import { LegalPage } from "../pages/Legal/LegalPage";
-import { PlansPage } from "../pages/Plans/PlansPage";
+import HomePage from "../pages/Home/HomePage";
+
 
 const LandingLayout = lazy(() => import("../layout/LandingLayout"));
 const NotFoundPage = lazy(() => import("../NotFoundPage"));
@@ -43,71 +29,12 @@ export const router = createBrowserRouter(
 					element: <HomePage />,
 					errorElement: <ErrorPage />,
 				},
-				{ path: "/plans", element: <PlansPage />, errorElement: <ErrorPage /> },
 
-				{
-					path: "/company",
-					element: <CompanyPage />,
-					errorElement: <ErrorPage />,
-				},
-				{
-					path: "/academy",
-					element: <AcademyPage />,
-					errorElement: <ErrorPage />,
-				},
-				{
-					path: "/contact",
-					element: <ContactPage />,
-					errorElement: <ErrorPage />,
-				},
-				{
-					path: "/legal",
-					element: <LegalPage />,
-					errorElement: <ErrorPage />,
-				},
-				{
-					path: "/legal/terms",
-					element: <TermsPage />,
-					errorElement: <ErrorPage />,
-				},
-				{
-					path: "/legal/privacy-policy",
-					element: <PrivacyPolicyPage />,
-					errorElement: <ErrorPage />,
-				},
+
 				{
 					path: "/solutions",
 					children: [
-						{
-							path: "billing",
-							element: <BillingPage />,
-							errorElement: <ErrorPage />,
-						},
-						{
-							path: "inventory-management",
-							element: <InventoryManagementPage />,
-							errorElement: <ErrorPage />,
-						},
-						{
-							path: "online-store",
-							element: <OnlineStorePage />,
-							errorElement: <ErrorPage />,
-						},
-						{
-							path: "point-of-sale",
-							element: <PointOfSalePage />,
-							errorElement: <ErrorPage />,
-						},
-						{
-							path: "financial-reports",
-							element: <FinancialReportsPage />,
-							errorElement: <ErrorPage />,
-						},
-						{
-							path: "payment-gateway",
-							element: <PaymentGatewayPage />,
-							errorElement: <ErrorPage />,
-						},
+
 					],
 				},
 				{
