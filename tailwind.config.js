@@ -13,7 +13,6 @@ module.exports = {
 				center: "true",
 				padding: {
 					DEFAULT: "20px",
-					xl: "80px",
 				},
 			},
 			boxShadow: {
@@ -67,84 +66,85 @@ module.exports = {
 	daisyui: {
 		themes: [
 			{
-				light: {
-					primary: "#6B4BFF",
-					"--primary-focus": "47.89% 0.2851 282.25", // oklch(47.89% 0.2851 282.25)
-					"primary-content": "#FFFFFF",
-
-					secondary: "#4A90E2",
-					"--secondary-focus": "56.76% 0.1249 250.43", //oklch(56.76% 0.1249 250.43)
-					"secondary-content": "#FFFFFF",
-
-					accent: "#00D5C0",
-					"--accent-focus": "44.35% 0.1639 313.95", //oklch(44.35% 0.1639 313.95)
-					"accent-content": "#001F1B",
-
-					neutral: "#1F2937",
-					"--neutral-focus": "92.88% 0.0126 255.51", //oklch(92.88% 0.0126 255.51)
-					"neutral-content": "#F9FAFB",
-
-					"base-100": "#FFFFFF",
-					"base-200": "#F4F7FE",
-					"base-300": "#E8ECF8",
-					"base-content": "#1A1F36",
-
-					info: "#2D5BFF",
-					"info-content": "#FFFFFF",
-					success: "#22c55e",
-					"success-content": "#001F1B",
-					warning: "#FFB800",
-					"warning-content": "#1F1600",
-					error: "#ef4444",
-					"error-content": "#FFFFFF",
-					"--rounded-box": "1rem",
-					"--rounded-btn": ".5rem",
-					"--rounded-badge": "1.9rem",
-					"--animation-btn": ".25s",
-					"--animation-input": ".2s",
-					"--btn-text-case": "uppercase",
-					"--navbar-padding": ".5rem",
-					"--border-btn": "1px",
-				},
+			  light: {
+				primary: "#6B4BFF",
+				"--primary-focus": "47.89% 0.2851 282.25",
+				"primary-content": "#FFFFFF",
+	  
+				secondary: "#4A90E2",
+				"--secondary-focus": "56.76% 0.1249 250.43",
+				"secondary-content": "#FFFFFF",
+	  
+				accent: "#00D5C0",
+				"--accent-focus": "44.35% 0.1639 313.95",
+				"accent-content": "#001F1B",
+	  
+				neutral: "#1F2937",
+				"--neutral-focus": "92.88% 0.0126 255.51",
+				"neutral-content": "#F9FAFB",
+	  
+				"base-100": "#FFFFFF",
+				"base-200": "#F4F7FE",
+				"base-300": "#E8ECF8",
+				"base-content": "#1A1F36",
+	  
+				info: "#2D5BFF",
+				"info-content": "#FFFFFF",
+				success: "#22c55e",
+				"success-content": "#001F1B",
+				warning: "#FFB800",
+				"warning-content": "#1F1600",
+				error: "#ef4444",
+				"error-content": "#FFFFFF",
+	  
+				"--rounded-box": "1rem",
+				"--rounded-btn": ".5rem",
+				"--rounded-badge": "1.9rem",
+				"--animation-btn": ".25s",
+				"--animation-input": ".2s",
+				"--btn-text-case": "uppercase",
+				"--navbar-padding": ".5rem",
+				"--border-btn": "1px",
+			  },
 			},
 			{
-				dark: {
-					primary: "#6B4BFF",
-					"--primary-focus": "47.89% 0.2851 282.25", // oklch(47.89% 0.2851 282.25)
-					"primary-content": "#FFFFFF",
-
-					secondary: "#4A90E2",
-					"--secondary-focus": "56.76% 0.1249 250.43", //oklch(56.76% 0.1249 250.43)
-					"secondary-content": "#FFFFFF",
-
-					accent: "#8E44AD",
-					"--accent-focus": "44.35% 0.1639 313.95", //oklch(44.35% 0.1639 313.95)
-					"accent-content": "#2D3748",
-
-					neutral: "#1A202C",
-					"--neutral-focus": "33.51% 0.0331 260.91", //oklch(33.51% 0.0331 260.91)
-					"neutral-content": "#E2E8F0",
-
-					"base-100": "#000000",
-					"base-200": "#2D3748",
-					"base-300": "#4A5568",
-					"base-content": "#FFFFFF",
-
-					info: "#3ABFF8",
-					success: "#4CAF50",
-					warning: "#FF9800",
-					error: "#F44336",
-
-					"--rounded-box": "1rem",
-					"--rounded-btn": ".5rem",
-					"--rounded-badge": "1.9rem",
-					"--animation-btn": ".25s",
-					"--animation-input": ".2s",
-					"--btn-text-case": "uppercase",
-					"--navbar-padding": ".5rem",
-					"--border-btn": "1px",
-				},
+			  dark: {
+				primary: "#6B4BFF",
+				"--primary-focus": "47.89% 0.2851 282.25",
+				"primary-content": "#FFFFFF",
+	  
+				secondary: "#4A90E2",
+				"--secondary-focus": "56.76% 0.1249 250.43",
+				"secondary-content": "#FFFFFF",
+	  
+				accent: "#8E44AD",
+				"--accent-focus": "44.35% 0.1639 313.95",
+				"accent-content": "#2D3748",
+	  
+				neutral: "#1A202C",
+				"--neutral-focus": "33.51% 0.0331 260.91",
+				"neutral-content": "#E2E8F0",
+	  
+				"base-100": "#0f172a",
+				"base-200": "#1e293b",
+				"base-300": "#4A5568",
+				"base-content": "#FFFFFF",
+	  
+				info: "#3ABFF8",
+				success: "#4CAF50",
+				warning: "#FF9800",
+				error: "#F44336",
+	  
+				"--rounded-box": "1rem",
+				"--rounded-btn": ".5rem",
+				"--rounded-badge": "1.9rem",
+				"--animation-btn": ".25s",
+				"--animation-input": ".2s",
+				"--btn-text-case": "uppercase",
+				"--navbar-padding": ".5rem",
+				"--border-btn": "1px",
+			  },
 			},
-		],
+		  ],
 	},
 };
