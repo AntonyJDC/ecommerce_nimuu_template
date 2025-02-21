@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useGlobalStore } from "@/store/global/global.store";
 import { Outlet, useLocation } from "react-router";
 import { useMediaQuery } from "../hooks/use-media-query";
-import Footer from "./Footer";
+import Footer from "./Footer/index";
 import Navbar from "./Navbar";
 import { Sidebar } from "./Sidebar";
 

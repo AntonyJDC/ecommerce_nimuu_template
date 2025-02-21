@@ -23,7 +23,7 @@ const Navbar: FC = () => {
 
 	return (
 		<nav
-			className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 bg-base-100 shadow-md shadow-base-content/10 ${isScrolled ? "h-20" : "h-28"}`}
+			className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 bg-base-100 shadow-md shadow-base/10 ${isScrolled ? "h-20" : "h-28"}`}
 		>
 			<AnimatePresence>
 				{!isScrolled && (
@@ -35,9 +35,9 @@ const Navbar: FC = () => {
 							duration: 0.3,
 							ease: "easeInOut",
 						}}
-						className=" bg-base-200 transition-colors duration-300 flex justify-end items-center overflow-hidden"
+						className="bg-base-200 transition-colors duration-300 flex justify-end items-center overflow-hidden"
 					>
-						<div className="flex justify-end  container">
+						<div className="flex justify-end container">
 							<LanguageSelector />
 							<ThemeToggle />
 						</div>
