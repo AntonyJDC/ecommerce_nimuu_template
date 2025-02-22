@@ -11,3 +11,9 @@ export function getFlagEmoji(iso2: string) {
 		(char) => String.fromCodePoint(127397 + char.charCodeAt(0)), // Asegurarse de pasar el índice 0
 	);
 }
+
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+export const compareArrays = (a: any[], b: any[]) => {
+	return a.toString() === b.toString();
+  };
+  

@@ -3,10 +3,9 @@ import { AnimatePresence, m } from "motion/react";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
-import { LogoIcon } from "../components";
-import { LogoTitle } from "../components/logo";
 import { LanguageSelector, ThemeToggle } from "../components/shared";
 import { NavigationMenuDemo } from "./components/navigation-menu";
+import CartBtn from "./CartBtn";
 
 const Navbar: FC = () => {
 	console.log("Render Navbar");
@@ -48,11 +47,10 @@ const Navbar: FC = () => {
 			<div className="flex items-center justify-between container h-20">
 				<button
 					type="button"
-					className="flex items-center gap-0 cursor-pointer hover:scale-105 duration-300 transition-transform text-primary"
+					className="flex items-center text-3xl font-extrabold gap-0 cursor-pointer hover:scale-105 duration-300 transition-transform text-primary"
 					onClick={handleLogo}
 				>
-					<LogoTitle className="h-7 w-28 mr-2" />
-					<LogoIcon className="h-7 w-7" aria-label="Nimuu Logo" />
+					LUMINADA
 				</button>
 				<nav
 					className="flex-1 hidden 
@@ -62,13 +60,7 @@ const Navbar: FC = () => {
 					<NavigationMenuDemo />
 				</nav>
 				<div className="flex items-center gap-4 max-lg:ml-auto">
-					<button
-						type="button"
-						onClick={() => navigate("/contact")}
-						className="py-2 px-3 border border-primary text-base-content rounded-md transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-lg hover:shadow-primary/40 whitespace-nowrap max-lg:hidden"
-					>
-						{t("nav.button.contact")}
-					</button>
+					<CartBtn />
 					<a
 						href="https://app.nimuu.com/auth/login"
 						className="bg-gradient-to-r from-primary to-secondary py-2 px-3 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-primary/40 whitespace-nowrap text-primary-content  max-sm:hidden"
@@ -87,11 +79,10 @@ const Navbar: FC = () => {
 						{/* Línea superior */}
 						<div
 							className={`absolute h-[2px] w-5 transform transition-all duration-300 
-            ${
-							isSidebarOpen
-								? "rotate-45 bg-error"
-								: "translate-y-[-6px] bg-base-content"
-						}`}
+            ${isSidebarOpen
+									? "rotate-45 bg-error"
+									: "translate-y-[-6px] bg-base-content"
+								}`}
 						/>
 						<div
 							className={`absolute h-[2px] w-5 transform transition-all duration-300 bg-base-content
@@ -99,11 +90,10 @@ const Navbar: FC = () => {
 						/>
 						<div
 							className={`absolute h-[2px] w-5 transform transition-all duration-300 
-            ${
-							isSidebarOpen
-								? "-rotate-45 bg-error"
-								: "translate-y-[6px] bg-base-content"
-						}`}
+            ${isSidebarOpen
+									? "-rotate-45 bg-error"
+									: "translate-y-[6px] bg-base-content"
+								}`}
 						/>
 					</div>
 				</button>
