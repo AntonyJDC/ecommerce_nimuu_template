@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { PaymentBadge, SocialNetworks } from "./footer.types";
+import { SocialNetworks } from "./footer.types";
 import { FaFacebookF, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import LinksSection from "./LinksSection";
 import NewsLetterSection from "./NewsLetterSection";
