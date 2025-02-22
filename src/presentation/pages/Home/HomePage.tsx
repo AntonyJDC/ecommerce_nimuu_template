@@ -17,6 +17,8 @@ export const newArrivalsData: Product[] = [
       percentage: 0,
     },
     rating: 4.5,
+    quantity: undefined,
+    attributes: undefined
   },
   {
     id: 2,
@@ -29,6 +31,8 @@ export const newArrivalsData: Product[] = [
       percentage: 20,
     },
     rating: 3.5,
+    quantity: undefined,
+    attributes: undefined
   },
   {
     id: 3,
@@ -41,6 +45,8 @@ export const newArrivalsData: Product[] = [
       percentage: 0,
     },
     rating: 4.5,
+    quantity: undefined,
+    attributes: undefined
   },
 ];
 
@@ -56,6 +62,8 @@ export const topSellingData: Product[] = [
       percentage: 20,
     },
     rating: 5.0,
+    quantity: undefined,
+    attributes: undefined
   },
   {
     id: 6,
@@ -68,6 +76,8 @@ export const topSellingData: Product[] = [
       percentage: 0,
     },
     rating: 4.0,
+    quantity: undefined,
+    attributes: undefined
   },
   {
     id: 7,
@@ -80,6 +90,8 @@ export const topSellingData: Product[] = [
       percentage: 0,
     },
     rating: 3.0,
+    quantity: undefined,
+    attributes: undefined
   },
 ];
 
@@ -95,6 +107,8 @@ export const relatedProductData: Product[] = [
       percentage: 20,
     },
     rating: 4.0,
+    quantity: undefined,
+    attributes: undefined
   },
   {
     id: 13,
@@ -107,6 +121,8 @@ export const relatedProductData: Product[] = [
       percentage: 0,
     },
     rating: 3.5,
+    quantity: undefined,
+    attributes: undefined
   },
   {
     id: 14,
@@ -119,6 +135,8 @@ export const relatedProductData: Product[] = [
       percentage: 0,
     },
     rating: 4.5,
+    quantity: undefined,
+    attributes: undefined
   },
   {
     id: 15,
@@ -131,6 +149,8 @@ export const relatedProductData: Product[] = [
       percentage: 30,
     },
     rating: 5.0,
+    quantity: undefined,
+    attributes: undefined
   },
 ];
 
