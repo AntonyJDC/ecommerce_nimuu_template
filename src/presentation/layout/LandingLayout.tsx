@@ -6,6 +6,7 @@ import { useMediaQuery } from "../hooks/use-media-query";
 import Footer from "./Footer/index";
 import Navbar from "./Navbar";
 import { Sidebar } from "./Sidebar";
+import Providers from "@/providers";
 
 // Main Layout Component
 const LandingLayout = () => {
@@ -15,9 +16,11 @@ const LandingLayout = () => {
 		<div className="flex flex-col min-h-screen transition-all duration-300 bg-base-100">
 			<Navbar />
 			<Sidebar />
-			<main className=" flex-grow mt-24 md:mt-28 pl-0">
-				<Outlet />
-			</main>
+			<Providers>
+				<main className=" flex-grow mt-24 md:mt-28 pl-0">
+					<Outlet />
+				</main>
+			</Providers>
 			<Footer />
 			<UseEffectLayout />
 		</div>
