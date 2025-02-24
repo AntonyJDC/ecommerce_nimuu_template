@@ -1,4 +1,5 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 type Category = {
   title: string;
@@ -32,14 +33,14 @@ const CategoriesSection = () => {
   return (
     <div className="flex flex-col space-y-0.5 text-base-content/60">
       {categoriesData.map((category, idx) => (
-        <a
+        <NavLink
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
           key={idx}
-          href={category.slug}
+          to={category.slug}
           className="flex items-center justify-between py-2"
         >
           {category.title} <MdKeyboardArrowRight />
-        </a>
+        </NavLink>
       ))}
     </div>
   );

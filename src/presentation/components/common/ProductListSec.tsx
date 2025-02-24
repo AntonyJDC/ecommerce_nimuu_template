@@ -7,6 +7,7 @@ import {
 } from "@/presentation/components/ui/carousel";
 import ProductCard from "./ProductCard";
 import { Product } from "@/types/product.types";
+import { NavLink } from "react-router-dom";
 
 type ProductListSecProps = {
   title: string;
@@ -41,13 +42,13 @@ const ProductListSec = ({ title, description, data, viewAllLink }: ProductListSe
 
             {viewAllLink && (
               <div className="w-full px-4 sm:px-0 text-center space-y-8 flex justify-center lg:justify-start items-center lg:items-start">
-                <a
+                <NavLink
                   type="button"
-                  href={viewAllLink}
+                  to={viewAllLink}
                   className="inline-block text-sm mb-5 px-16 py-2 border border-transparent rounded-full bg-primary text-primary-content transition-all font-medium hover:scale-105"
                 >
                   View All
-                </a>
+                </NavLink>
               </div>
             )}
           </motion.div>

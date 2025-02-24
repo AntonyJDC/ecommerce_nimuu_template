@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const NotFoundPage = () => {
 	return (
 		<main className="grid min-h-dvh bg-base-100 w-full place-items-center px-6 py-24 sm:py-32 lg:px-8">
@@ -14,12 +16,12 @@ const NotFoundPage = () => {
 							Sorry, we can't find that page. You'll find lots to explore on the
 							home page.{" "}
 						</p>
-						<a
-							href="/"
+						<NavLink
+							to="/"
 							className="inline-flex bg-primary-600 hover:bg-primary hover:text-primary-content focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center my-4"
 						>
 							Back to Homepage
-						</a>
+						</NavLink>
 					</div>
 				</div>
 			</section>

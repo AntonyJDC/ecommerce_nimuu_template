@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,13 +14,13 @@ const BreadcrumbProduct = ({ title }: { title: string }) => {
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
-            <a href="/">Home</a>
+            <NavLink to="/">Home</NavLink>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
-            <a href="/shop">Shop</a>
+            <NavLink to="/shop">Shop</NavLink>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />

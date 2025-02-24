@@ -12,6 +12,7 @@ import React from "react";
 import { RootState } from "../../../lib/store";
 import { useAppSelector } from "../../hooks/redux";
 import { CartItem } from "@/lib/features/carts/cartsSlice";
+import { NavLink } from "react-router-dom";
 
 export default function CartPage() {
   const { cart, totalPrice, adjustedTotalPrice } = useAppSelector(
@@ -113,7 +114,7 @@ export default function CartPage() {
             <TbBasketExclamation strokeWidth={1} className="text-6xl" />
             <span className="block mb-4">Your shopping cart is empty.</span>
             <Button className="rounded-full w-24" asChild>
-              <a href="/shop">Shop</a>
+              <NavLink to="/shop">Shop</NavLink>
             </Button>
           </div>
         )}

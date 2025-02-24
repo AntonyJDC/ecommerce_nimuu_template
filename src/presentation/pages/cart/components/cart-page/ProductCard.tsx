@@ -8,6 +8,7 @@ import {
   removeCartItem,
 } from "../../../../../lib/features/carts/cartsSlice";
 import { useAppDispatch } from "../../../../hooks/redux";
+import { NavLink } from "react-router-dom";
 
 type ProductCardProps = {
   data: CartItem;
@@ -18,8 +19,8 @@ const ProductCard = ({ data }: ProductCardProps) => {
 
   return (
     <div className="flex items-start space-x-4">
-      <a
-        href={`/shop/product/${data.id}/${data.name.split(" ").join("-")}`}
+      <NavLink
+        to={`/shop/product/${data.id}/${data.name.split(" ").join("-")}`}
         className="bg-base-200 rounded-lg w-full min-w-[100px] max-w-[100px] sm:max-w-[124px] aspect-square overflow-hidden"
       >
         <img
@@ -29,15 +30,15 @@ const ProductCard = ({ data }: ProductCardProps) => {
           className="rounded-md w-full h-full object-cover hover:scale-110 transition-all duration-500"
           alt={data.name}
         />
-      </a>
+      </NavLink>
       <div className="flex w-full self-stretch flex-col">
         <div className="flex items-center justify-between">
-          <a
-            href={`/shop/product/${data.id}/${data.name.split(" ").join("-")}`}
+          <NavLink
+            to={`/shop/product/${data.id}/${data.name.split(" ").join("-")}`}
             className="text-base-content font-bold text-base xl:text-xl"
           >
             {data.name}
-          </a>
+          </NavLink>
           <Button
             variant="ghost"
             size="icon"

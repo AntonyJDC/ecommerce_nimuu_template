@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
@@ -40,14 +41,14 @@ const DressStyleSection = () => {
         <AccordionContent className="pt-4 pb-0">
           <div className="flex flex-col text-base-content/60 space-y-0.5">
             {dressStylesData.map((dStyle, idx) => (
-              <a
+              <NavLink
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 key={idx}
-                href={dStyle.slug}
+                to={dStyle.slug}
                 className="flex items-center justify-between py-2"
               >
                 {dStyle.title} <MdKeyboardArrowRight />
-              </a>
+              </NavLink>
             ))}
           </div>
         </AccordionContent>
