@@ -16,9 +16,11 @@ export const newArrivalsData: Product[] = [
       amount: 0,
       percentage: 0,
     },
+    colors: false,
     rating: 4.5,
-    quantity: undefined,
-    attributes: undefined
+    quantity: 0,
+    attributes: undefined,
+    sizes: ["Small", "Medium"],
   },
   {
     id: 2,
@@ -32,7 +34,9 @@ export const newArrivalsData: Product[] = [
     },
     rating: 3.5,
     quantity: undefined,
-    attributes: undefined
+    attributes: undefined,
+    colors: false,
+    sizes: []
   },
   {
     id: 3,
@@ -46,7 +50,9 @@ export const newArrivalsData: Product[] = [
     },
     rating: 4.5,
     quantity: undefined,
-    attributes: undefined
+    attributes: undefined,
+    colors: false,
+    sizes: []
   },
 ];
 
@@ -63,7 +69,9 @@ export const topSellingData: Product[] = [
     },
     rating: 5.0,
     quantity: undefined,
-    attributes: undefined
+    attributes: undefined,
+    colors: false,
+    sizes: []
   },
   {
     id: 6,
@@ -77,7 +85,9 @@ export const topSellingData: Product[] = [
     },
     rating: 4.0,
     quantity: undefined,
-    attributes: undefined
+    attributes: undefined,
+    colors: false,
+    sizes: []
   },
   {
     id: 7,
@@ -91,7 +101,9 @@ export const topSellingData: Product[] = [
     },
     rating: 3.0,
     quantity: undefined,
-    attributes: undefined
+    attributes: undefined,
+    colors: false,
+    sizes: []
   },
 ];
 
@@ -108,7 +120,9 @@ export const relatedProductData: Product[] = [
     },
     rating: 4.0,
     quantity: undefined,
-    attributes: undefined
+    attributes: undefined,
+    colors: false,
+    sizes: []
   },
   {
     id: 13,
@@ -122,7 +136,9 @@ export const relatedProductData: Product[] = [
     },
     rating: 3.5,
     quantity: undefined,
-    attributes: undefined
+    attributes: undefined,
+    colors: false,
+    sizes: []
   },
   {
     id: 14,
@@ -136,7 +152,9 @@ export const relatedProductData: Product[] = [
     },
     rating: 4.5,
     quantity: undefined,
-    attributes: undefined
+    attributes: undefined,
+    colors: false,
+    sizes: []
   },
   {
     id: 15,
@@ -150,7 +168,9 @@ export const relatedProductData: Product[] = [
     },
     rating: 5.0,
     quantity: undefined,
-    attributes: undefined
+    attributes: undefined,
+    colors: false,
+    sizes: []
   },
 ];
 

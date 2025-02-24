@@ -4,11 +4,18 @@ import { setSizeSelection } from "@/lib/features/products/productsSlice";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { RootState } from "@/lib/store";
 import { cn } from "@/lib/utils";
-const SizeSelection = () => {
+
+interface SizeSelectionProps {
+  sizes: string[]; // Prop para recibir las tallas del producto
+}
+
+const SizeSelection = ({ sizes }: SizeSelectionProps) => {
   const { sizeSelection } = useAppSelector(
     (state: RootState) => state.products
   );
   const dispatch = useAppDispatch();
+
+  if (!sizes || sizes.length === 0) return null; // No renderizar si no hay tallas
 
   return (
     <div className="flex flex-col">
@@ -16,7 +23,7 @@ const SizeSelection = () => {
         Choose Size
       </span>
       <div className="flex items-center flex-wrap lg:space-x-3">
-        {["Small", "Medium", "Large", "X-Large"].map((size, index) => (
+        {sizes.map((size, index) => (
           <button
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={index}

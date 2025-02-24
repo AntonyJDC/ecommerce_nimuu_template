@@ -9,6 +9,8 @@ export type Product = {
   id: number;
   title: string;
   srcUrl: string;
+  colors: boolean;
+  sizes: string[];
   gallery?: string[];
   price: number;
   discount: Discount;

@@ -62,10 +62,26 @@ const Header = ({ data }: { data: Product }) => {
             This graphic t-shirt which is perfect for any occasion. Crafted from
             a soft and breathable fabric, it offers superior comfort and style.
           </p>
-          <hr className="h-[1px] border-t-base-content/10 mb-5" />
-          <ColorSelection />
           <hr className="h-[1px] border-t-base-content/10 my-5" />
-          <SizeSelection />
+          {data.colors === true ? (
+            <div>
+              <ColorSelection />
+            </div>
+          ) : (
+            <span className="font-medium text-[10px] sm:text-xs">
+              Este producto no tiene colores disponibles
+            </span>
+          )}
+          <hr className="h-[1px] border-t-base-content/10 my-5" />
+          {data.sizes.length > 0 ? (
+            <div>
+              <SizeSelection sizes={data.sizes} />
+            </div>
+          ) : (
+            <span className="font-medium text-[10px] sm:text-xs">
+              Este producto no tiene tamaños disponibles
+            </span>
+          )}
           <hr className="hidden md:block h-[1px] border-t-base-content/10 my-5" />
           <AddToCardSection data={data} />
         </div>
