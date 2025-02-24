@@ -5,6 +5,8 @@ import HomePage from "../pages/Home/HomePage";
 import CartPage from "../pages/cart/page";
 import ShopPage from "../pages/shop/page";
 import ProductPage from "../pages/shop/product/[...slug]/page"; // ✅ Importación de la página de producto
+import { BookingPage } from "../pages/Booking/BookingPage";
+import { ContactPage } from "../pages/Contact/ContactPage";
 
 const LandingLayout = lazy(() => import("../layout/LandingLayout"));
 const NotFoundPage = lazy(() => import("../NotFoundPage"));
@@ -42,8 +44,18 @@ export const router = createBrowserRouter(
           errorElement: <ErrorPage />,
         },
         {
-          path: "/shop/product/:id/:slug", // ✅ Ruta dinámica con parámetros
+          path: "/shop/product/:id/:slug",
           element: <ProductPage />,
+          errorElement: <ErrorPage />,
+        },
+        {
+          path: "book-appointment",
+          element: <BookingPage />,
+          errorElement: <ErrorPage />,
+        },
+        {
+          path: "contact-us",
+          element: <ContactPage />,
           errorElement: <ErrorPage />,
         },
         {

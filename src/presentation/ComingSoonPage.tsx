@@ -6,9 +6,8 @@ import {
 	Sparkles,
 	Users,
 } from "lucide-react";
-import { Variants, m } from "motion/react";
+import { m, Variants } from "motion/react";
 import { LogoIcon } from "./components";
-import { LogoTitle } from "./components/logo";
 
 export const ComingSoonPage = ({ title }: { title?: string }) => {
 	const containerVariants = {
@@ -37,7 +36,7 @@ export const ComingSoonPage = ({ title }: { title?: string }) => {
 	const floatingVariants: Variants = {
 		initial: { y: 0 },
 		animate: {
-			y: [-5, 5],
+			y: [-3, 3],
 			transition: {
 				duration: 3,
 				repeat: Number.POSITIVE_INFINITY,
@@ -101,22 +100,24 @@ export const ComingSoonPage = ({ title }: { title?: string }) => {
 					variants={itemVariants}
 				>
 					<m.h1
-						className="max-sm:text-4xl max-sm:mb-6 text-6xl font-bold tracking-tight text-primary"
+						className="flex max-sm:text-4xl max-sm:mb-6 text-6xl items-center font-bold tracking-tight text-primary"
 						variants={itemVariants}
 					>
-						<LogoTitle className="h-10 w-40" />
+						L
+						<m.div
+							className="relative"
+							variants={floatingVariants}
+							initial="initial"
+							animate="animate"
+						>
+							<LogoIcon
+								className="max-sm:w-7 text-primary max-sm:h-7 w-12 h-12"
+								aria-label="Nimuu Logo"
+							/>
+						</m.div>
+						MINADA
 					</m.h1>
-					<m.div
-						className="relative"
-						variants={floatingVariants}
-						initial="initial"
-						animate="animate"
-					>
-						<LogoIcon
-							className="max-sm:w-14 text-primary max-sm:h-14 w-10 h-10 transition-transform duration-300 group-hover:scale-110 -translate-x-1 -translate-y-0.5"
-							aria-label="Nimuu Logo"
-						/>
-					</m.div>
+
 					<m.div
 						className="absolute -top-0 -right-7"
 						animate={{
