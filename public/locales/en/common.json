@@ -2,7 +2,30 @@
 	"nav": {
 		"button": {
 			"login": "Sign in",
-			"contact": "Contact"
+			"contact": "Contact",
+			"home": "Home",
+			"products": {
+				"label": "Products",
+				"relax": {
+					"title": "🕯️ Relax",
+					"description": "Products designed to give you moments of calm and well-being."
+				},
+				"facial_care": {
+					"title": "💆‍♀️ Facial Care",
+					"description": "Explore treatments and products to keep your face radiant and healthy."
+				},
+				"body_care": {
+					"title": "🧴 Body Care",
+					"description": "Discover options to nourish, hydrate, and revitalize your skin."
+				},
+				"hair_care": {
+					"title": "💇‍♂️ Hair Care",
+					"description": "Find solutions to strengthen, repair, and beautify your hair."
+				}
+			},
+			"shop": "Shop",
+			"appointment": "Book Appointment",
+			"contact_us": "Contact Us"
 		}
 	},
 	"shared": {

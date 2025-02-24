@@ -6,6 +6,7 @@ import { useNavigate } from "react-router";
 import { LanguageSelector, ThemeToggle } from "../components/shared";
 import { NavigationMenuDemo } from "./components/navigation-menu";
 import CartBtn from "./CartBtn";
+import { LogoIcon } from "../components";
 
 const Navbar: FC = () => {
 	console.log("Render Navbar");
@@ -47,10 +48,12 @@ const Navbar: FC = () => {
 			<div className="flex items-center justify-between container h-20">
 				<button
 					type="button"
-					className="flex items-center text-3xl font-extrabold gap-0 cursor-pointer hover:scale-105 duration-300 transition-transform text-primary"
+					className="flex items-center text-3xl font-extrabold gap-0.5 cursor-pointer hover:scale-105 duration-300 transition-transform text-primary"
 					onClick={handleLogo}
 				>
-					LUMINADA
+					L
+					<LogoIcon className="w-6 h-6" />
+					MINADA
 				</button>
 				<nav
 					className="flex-1 hidden 
@@ -59,7 +62,7 @@ const Navbar: FC = () => {
 				>
 					<NavigationMenuDemo />
 				</nav>
-				<div className="flex items-center gap-4 max-lg:ml-auto">
+				<div className="flex items-center gap-2 max-lg:ml-auto">
 					<CartBtn />
 					<a
 						href="https://app.nimuu.com/auth/login"

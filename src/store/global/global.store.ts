@@ -33,9 +33,6 @@ export interface GlobalState {
 const locales: LocaleProps = {
 	en: { code: "en", title: "shared.locale.en", icon: "🌐" },
 	es: { code: "es", title: "shared.locale.es", icon: "🌐" },
-	fr: { code: "fr", title: "shared.locale.fr", icon: "🌐" },
-	esCO: { code: "es-CO", title: "shared.locale.esCO", icon: "🇨🇴" },
-	esAR: { code: "es-AR", title: "shared.locale.esAR", icon: "🇦🇷" },
 };
 
 // Función para obtener el tema inicial

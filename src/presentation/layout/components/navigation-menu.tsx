@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { LogoIcon } from "@/presentation/components";
-
+import { useTranslation } from "react-i18next";
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -14,11 +14,12 @@ import React from "react";
 import { Link, NavLink, useLocation } from "react-router";
 
 export function NavigationMenuDemo() {
+	const { t } = useTranslation();
 	const location = useLocation();
 	const isActive = location.pathname.startsWith("/solutions/");
 	return (
 		<NavigationMenu>
-			<NavigationMenuList className="space-x-12">
+			<NavigationMenuList className="space-x-10">
 				<NavigationMenuItem>
 					<NavLink
 						to="/home"
@@ -29,57 +30,45 @@ export function NavigationMenuDemo() {
 							)
 						}
 					>
-						Home
+						{t("nav.button.home")}
 					</NavLink>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
 					<NavigationMenuTrigger
 						className={`text-base font-medium flex gap-x-2 relative py-2 hover:text-primary items-center data-[state=open]:text-secondary ${isActive && "text-primary"}`}
 					>
-						Solutions
+						{t("nav.button.products.label")}
 					</NavigationMenuTrigger>
 					<NavigationMenuContent>
-						<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[700px] lg:grid-cols-3">
+						<ul className="grid gap-3 p-6 md:w-[450px] lg:w-[650px] lg:grid-cols-3">
 							<li className="row-span-3">
 								<NavigationMenuLink asChild>
-									<div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
-										<LogoIcon className="h-14 w-14 text-primary" />
-										<div className="mb-2 mt-4 text-lg font-medium">Nimuu</div>
-										<p className="text-sm leading-tight text-muted-foreground">
-											Integrated platform empowering businesses with AI-driven
-											tools for billing, inventory, sales, and analytics.
-										</p>
+									<div className="flex h-full w-full select-none flex-col justify-center items-center rounded-md bg-gradient-to-b from-muted/50 to-muted no-underline outline-none focus:shadow-md">
+										<LogoIcon className="h-20 w-20 text-primary" />
 									</div>
 								</NavigationMenuLink>
 							</li>
 
-							<ListItem title="🧾 Billing" href="/solutions/billing">
-								Create and manage electronic invoices easily.
+							<ListItem title={t("nav.button.products.relax.title")} href="/shop">
+								{t("nav.button.products.relax.description")}
 							</ListItem>
-							<ListItem
-								title="📦 Inventory"
-								href="/solutions/inventory-management"
-							>
-								Track and control inventory in real-time.
+							<ListItem title={t("nav.button.products.facial_care.title")} href="/shop">
+								{t("nav.button.products.facial_care.description")}
 							</ListItem>
-							<ListItem title="🛒 Online Store" href="/solutions/online-store">
-								Build and sell through your e-commerce platform.
+							<ListItem title={t("nav.button.products.body_care.title")} href="/shop">
+								{t("nav.button.products.body_care.description")}
 							</ListItem>
-							<ListItem title="🏬 POS" href="/solutions/point-of-sale">
-								Sync in-store and online sales seamlessly.
+							<ListItem title={t("nav.button.products.hair_care.title")} href="/shop">
+								{t("nav.button.products.hair_care.description")}
 							</ListItem>
-							<ListItem title="📊 Reports" href="/solutions/financial-reports">
-								Get actionable insights powered by AI.
-							</ListItem>
-							<ListItem title="💳 Payments" href="/solutions/payment-gateway">
-								Accept multiple payment methods securely.
-							</ListItem>
+
+
 						</ul>
 					</NavigationMenuContent>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
 					<NavLink
-						to="/plans"
+						to="/shop"
 						className={({ isActive }) =>
 							cn(
 								"text-base font-medium hover:text-primary",
@@ -87,12 +76,12 @@ export function NavigationMenuDemo() {
 							)
 						}
 					>
-						Plans
+						{t("nav.button.shop")}
 					</NavLink>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
 					<NavLink
-						to={"/company"}
+						to={"/book-appointment"}
 						className={({ isActive }) =>
 							cn(
 								"text-base font-medium hover:text-primary",
@@ -100,12 +89,12 @@ export function NavigationMenuDemo() {
 							)
 						}
 					>
-						Company
+						{t("nav.button.appointment")}
 					</NavLink>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
 					<NavLink
-						to={"/academy"}
+						to={"/contact-us"}
 						className={({ isActive }) =>
 							cn(
 								"text-base font-medium hover:text-primary",
@@ -113,7 +102,7 @@ export function NavigationMenuDemo() {
 							)
 						}
 					>
-						Academy
+						{t("nav.button.contact_us")}
 					</NavLink>
 				</NavigationMenuItem>
 			</NavigationMenuList>
@@ -133,7 +122,7 @@ const ListItem = React.forwardRef<
 				<Link
 					ref={ref}
 					className={cn(
-						"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-primary-content focus:bg-primary focus:text-primary-content",
+						"block select-none space-y-2 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-primary-content focus:bg-primary focus:text-primary-content",
 						className,
 						isActive && "bg-primary text-primary-content",
 					)}
@@ -141,7 +130,7 @@ const ListItem = React.forwardRef<
 					{...props}
 				>
 					<div className="text-sm font-medium leading-none">{title}</div>
-					<p className="line-clamp-2 text-sm leading-snug">{children}</p>
+					<p className="line-clamp-3 text-sm leading-snug">{children}</p>
 				</Link>
 			</NavigationMenuLink>
 		</li>

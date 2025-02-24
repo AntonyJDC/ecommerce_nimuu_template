@@ -2,7 +2,30 @@
 	"nav": {
 		"button": {
 			"login": "Iniciar sesión",
-			"contact": "Contacto"
+			"contact": "Contacto",
+			"home": "Inicio",
+			"products": {
+				"label": "Productos",
+				"relax": {
+					"title": "🕯️ Relax",
+					"description": "Productos diseñados para brindarte momentos de calma y bienestar."
+				},
+				"facial_care": {
+					"title": "💆‍♀️ Cuidado facial",
+					"description": "Explora tratamientos y productos para mantener tu rostro radiante y saludable."
+				},
+				"body_care": {
+					"title": "🧴 Cuidado corporal",
+					"description": "Descubre opciones para nutrir, hidratar y revitalizar tu piel."
+				},
+				"hair_care": {
+					"title": "💇‍♂️ Cuidado capilar",
+					"description": "Encuentra soluciones para fortalecer, reparar y embellecer tu cabello."
+				}
+			},
+			"shop": "Tienda",
+			"appointment": "Agendar cita",
+			"contact_us": "Contáctanos"
 		}
 	},
 	"shared": {
