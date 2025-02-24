@@ -1,4 +1,5 @@
 import { Product } from "@/types/product.types";
+import { NavLink } from "react-router-dom";
 
 type ProductCardProps = {
   data: Product;
@@ -7,8 +8,8 @@ type ProductCardProps = {
 const ProductCard = ({ data }: ProductCardProps) => {
   const isOutOfStock = data.quantity === 0;
   return (
-    <a
-      href={`/shop/product/${data.id}/${data.title.split(" ").join("-")}`}
+    <NavLink
+      to={`/shop/product/${data.id}/${data.title.split(" ").join("-")}`}
       className="flex flex-col items-start aspect-auto"
     >
       <div className="relative bg-base-200 rounded-[13px] lg:rounded-[20px] w-full lg:max-w-[295px] aspect-square mb-2.5 xl:mb-4 overflow-hidden">
@@ -68,7 +69,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
           )
         )}
       </div>
-    </a>
+    </NavLink>
   );
 };
 
