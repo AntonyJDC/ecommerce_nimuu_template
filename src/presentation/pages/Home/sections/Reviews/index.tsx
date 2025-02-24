@@ -11,7 +11,6 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/presentation/components/ui/carousel";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useIsClient, useMediaQuery } from "usehooks-ts";
 import ReviewCard from "@/presentation/components/common/ReviewCard";
 import { Review } from "@/types/review.types";
