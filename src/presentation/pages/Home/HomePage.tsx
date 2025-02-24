@@ -55,7 +55,7 @@ export const topSellingData: Product[] = [
     id: 5,
     title: "Vertical Striped Shirt",
     srcUrl: "/images/pic5.png",
-    gallery: ["/images/pic5.png", "/images/pic10.png", "/images/pic11.png"],
+    gallery: ["/images/pic5.png"],
     price: 232,
     discount: {
       amount: 0,
@@ -69,7 +69,7 @@ export const topSellingData: Product[] = [
     id: 6,
     title: "Courage Graphic T-shirt",
     srcUrl: "/images/pic6.png",
-    gallery: ["/images/pic6.png", "/images/pic10.png", "/images/pic11.png"],
+    gallery: ["/images/pic6.png"],
     price: 145,
     discount: {
       amount: 0,
@@ -100,7 +100,7 @@ export const relatedProductData: Product[] = [
     id: 12,
     title: "Polo with Contrast Trims",
     srcUrl: "/images/pic12.png",
-    gallery: ["/images/pic12.png", "/images/pic10.png", "/images/pic11.png"],
+    gallery: ["/images/pic12.png"],
     price: 242,
     discount: {
       amount: 0,
@@ -114,7 +114,7 @@ export const relatedProductData: Product[] = [
     id: 13,
     title: "Gradient Graphic T-shirt",
     srcUrl: "/images/pic13.png",
-    gallery: ["/images/pic13.png", "/images/pic10.png", "/images/pic11.png"],
+    gallery: ["/images/pic13.png"],
     price: 145,
     discount: {
       amount: 0,
@@ -208,7 +208,7 @@ export default function HomePage() {
         <ProductListSec
           title="New arrivals"
           description="Discover the latest additions to our collection."
-          data={topSellingData}
+          data={newArrivalsData}
           viewAllLink="/shop#new-arrivals"
         />
         <div className="container">

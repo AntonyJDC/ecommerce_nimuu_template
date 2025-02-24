@@ -7,21 +7,21 @@ import { Pause, Play } from "lucide-react";
 const slides = [
   {
     image: "/images/slide-bg-01.jpg",
-    title: "Something for everyone",
+    title: "Descubre tu mejor versión",
     description:
-      "Don't miss out on exclusive offers across our best-selling products. Shop today and save big on the items you love.",
+      "Productos diseñados para cuidar, nutrir y realzar la belleza natural de tu piel. ¡Renueva tu rutina hoy!",
   },
   {
     image: "/images/slide-bg.jpg",
-    title: "Bring nature indoors",
+    title: "Cuida tu piel de forma natural",
     description:
-      "Transform your space with our collection of beautiful indoor plants. Find the perfect green companion for your home.",
+      "Limpieza suave y efectiva para una piel fresca y radiante. Redescubre el poder de lo natural en cada aplicación.",
   },
   {
     image: "/images/slide-bg-03.jpg",
-    title: "Expert plant care",
+    title: "Cuidado experto para tu piel",
     description:
-      "Get everything you need to keep your plants thriving. From premium soil to specialized tools, we've got you covered.",
+      "Hidrata, protege y realza tu belleza natural con productos diseñados para cada necesidad de tu piel.",
   },
 ];
 

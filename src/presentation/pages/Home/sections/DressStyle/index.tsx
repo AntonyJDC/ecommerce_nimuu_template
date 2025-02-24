@@ -15,7 +15,7 @@ const DressStyle = () => {
             "text-[32px] leading-[36px] text-base-content md:text-4xl mb-8 md:mb-14 uppercase font-bold",
           ])}
         >
-          Browse by dress style
+          Selecciona tu estilo de bienestar
         </motion.h2>
 
         {/* Grid principal */}
@@ -28,28 +28,44 @@ const DressStyle = () => {
         >
           {/* Casual (1 columna en móviles, 1 en grandes) */}
           <DressStyleCard
-            title="Casual"
+             title={
+              <>
+                Relax
+              </>
+            }
             url="/shop#casual"
             className="col-span-1 md:col-span-1 row-span-1 w-full min-h-[200px] md:min-h-[300px] bg-[url('/images/dress-style-1.png')] bg-cover bg-center rounded-xl"
           />
 
           {/* Formal (1 columna en móviles, 2 en grandes) */}
           <DressStyleCard
-            title="Formal"
+             title={
+              <>
+                Cuidado<br />Facial
+              </>
+            }
             url="/shop#formal"
             className="col-span-1 md:col-span-2 row-span-1 w-full min-h-[200px] md:min-h-[300px] bg-[url('/images/dress-style-2.png')] bg-cover bg-center rounded-xl"
           />
 
           {/* Party (1 columna en móviles, 2 en grandes) */}
           <DressStyleCard
-            title="Party"
+             title={
+              <>
+                Cuidado<br />Corporal
+              </>
+            }
             url="/shop#party"
             className="col-span-1 md:col-span-2 row-span-1 w-full min-h-[200px] md:min-h-[300px] bg-[url('/images/dress-style-3.png')] bg-cover bg-center rounded-xl"
           />
 
           {/* Gym (1 columna en móviles, 1 en grandes) */}
           <DressStyleCard
-            title="Gym"
+             title={
+              <>
+                Cuidado<br />Capilar
+              </>
+            }
             url="/shop#gym"
             className="col-span-1 md:col-span-1 row-span-1 w-full min-h-[200px] md:min-h-[300px] bg-[url('/images/dress-style-4.png')] bg-cover bg-center rounded-xl"
           />
