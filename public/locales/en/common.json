@@ -24,8 +24,8 @@
 				}
 			},
 			"shop": "Shop",
-			"appointment": "Book Appointment",
-			"contact_us": "Contact Us"
+			"book-appointment": "Book Appointment",
+			"contact-us": "Contact Us"
 		}
 	},
 	"shared": {

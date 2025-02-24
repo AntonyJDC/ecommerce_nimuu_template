@@ -2,14 +2,13 @@ import { useGlobalStore } from "@/store/global/global.store";
 import { FC } from "react";
 import { Link, NavLink, useLocation } from "react-router";
 import { ScrollArea } from "../components/ui/scroll-area";
+import { useTranslation } from "react-i18next";
 
 const SOLUTIONS_MENU_ITEMS = [
-	{ icon: "🧾", label: "Billing", path: "/solutions/billing" },
-	{ icon: "📦", label: "Inventory", path: "/solutions/inventory-management" },
-	{ icon: "🛒", label: "Online Store", path: "/solutions/online-store" },
-	{ icon: "🏬", label: "POS", path: "/solutions/point-of-sale" },
-	{ icon: "📊", label: "Reports", path: "/solutions/financial-reports" },
-	{ icon: "💳", label: "Payments", path: "/solutions/payment-gateway" },
+	{ label: "nav.button.products.relax.title", path: "/shop" },
+	{ label: "nav.button.products.facial_care.title", path: "/shop" },
+	{ label: "nav.button.products.body_care.title", path: "/shop" },
+	{ label: "nav.button.products.hair_care.title", path: "/shop" },
 ];
 
 export const Sidebar: FC = () => {
@@ -19,6 +18,8 @@ export const Sidebar: FC = () => {
 	const setIsSidebarOpen = useGlobalStore((state) => state.setIsSidebarOpen);
 	const location = useLocation();
 	const isActive = location.pathname.startsWith("/solutions/");
+	const { t } = useTranslation();
+
 	return (
 		<div
 			className={`
@@ -41,7 +42,7 @@ export const Sidebar: FC = () => {
 										return `${isActive ? "bg-primary/40 text-primary font-semibold" : "font-medium"}`;
 									}}
 								>
-									Home
+									{t("nav.button.home")}
 								</NavLink>
 							</li>
 							<li>
@@ -49,10 +50,10 @@ export const Sidebar: FC = () => {
 									<summary
 										className={` font-medium ${isActive && "bg-primary/25 text-primary font-semibold"}`}
 									>
-										Solutions
+										{t("nav.button.products.label")}
 									</summary>
 									<ul>
-										{SOLUTIONS_MENU_ITEMS.map(({ icon, label, path }) => (
+										{SOLUTIONS_MENU_ITEMS.map(({ label, path }) => (
 											<li key={label} className="py-0.5 ">
 												<NavLink
 													to={path}
@@ -61,14 +62,14 @@ export const Sidebar: FC = () => {
 														return `${isActive ? "bg-primary/25 text-primary font-semibold" : "font-medium"}`;
 													}}
 												>
-													{icon} {label}
+													{t(label)}
 												</NavLink>
 											</li>
 										))}
 									</ul>
 								</details>
 							</li>
-							{["Plans", "Company", "Academy"].map((item) => (
+							{["shop", "book-appointment", "contact-us"].map((item) => (
 								<li key={item} className="py-0.5">
 									<NavLink
 										to={`/${item.toLowerCase()}`}
@@ -77,7 +78,7 @@ export const Sidebar: FC = () => {
 											return `${isActive ? "bg-primary/40 text-primary font-semibold" : "font-medium"}`;
 										}}
 									>
-										{item}
+										{t(`nav.button.${item}`)}
 									</NavLink>
 								</li>
 							))}

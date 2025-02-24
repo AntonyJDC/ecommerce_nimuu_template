@@ -89,7 +89,7 @@ export function NavigationMenuDemo() {
 							)
 						}
 					>
-						{t("nav.button.appointment")}
+						{t("nav.button.book-appointment")}
 					</NavLink>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
@@ -102,7 +102,7 @@ export function NavigationMenuDemo() {
 							)
 						}
 					>
-						{t("nav.button.contact_us")}
+						{t("nav.button.contact-us")}
 					</NavLink>
 				</NavigationMenuItem>
 			</NavigationMenuList>

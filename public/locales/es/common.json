@@ -24,8 +24,8 @@
 				}
 			},
 			"shop": "Tienda",
-			"appointment": "Agendar cita",
-			"contact_us": "Contáctanos"
+			"book-appointment": "Agendar cita",
+			"contact-us": "Contáctanos"
 		}
 	},
 	"shared": {
