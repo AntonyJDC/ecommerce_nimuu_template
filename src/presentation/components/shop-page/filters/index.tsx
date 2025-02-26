@@ -1,5 +1,4 @@
 import CategoriesSection from "../../../components/shop-page/filters/CategoriesSection";
-import ColorsSection from "../../../components/shop-page/filters/ColorsSection";
 import DressStyleSection from "../../../components/shop-page/filters/DressStyleSection";
 import PriceSection from "../../../components/shop-page/filters/PriceSection";
 import SizeSection from "../../../components/shop-page/filters/SizeSection";
@@ -12,8 +11,6 @@ const Filters = () => {
       <CategoriesSection />
       <hr className="border-t-base-content/10" />
       <PriceSection />
-      <hr className="border-t-base-content/10" />
-      <ColorsSection />
       <hr className="border-t-base-content/10" />
       <SizeSection />
       <hr className="border-t-base-content/10" />

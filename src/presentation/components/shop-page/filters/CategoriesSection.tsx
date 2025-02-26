@@ -8,26 +8,55 @@ type Category = {
 
 const categoriesData: Category[] = [
   {
-    title: "T-shirts",
-    slug: "/shop?category=t-shirts",
+    title: "Accesorios",
+    slug: "/shop?category=accesorios",
   },
   {
-    title: "Shorts",
-    slug: "/shop?category=shorts",
+    title: "Artículos Electrónicos de Belleza",
+    slug: "/shop?category=articulos-electronicos-de-belleza",
   },
   {
-    title: "Shirts",
-    slug: "/shop?category=shirts",
+    title: "Baño y Cuerpo",
+    slug: "/shop?category=bano-y-cuerpo",
   },
   {
-    title: "Hoodie",
-    slug: "/shop?category=hoodie",
+    title: "Bioseguridad",
+    slug: "/shop?category=bioseguridad",
   },
   {
-    title: "Jeans",
-    slug: "/shop?category=jeans",
+    title: "Cabello",
+    slug: "/shop?category=cabello",
+  },
+  {
+    title: "Cuidado facial",
+    slug: "/shop?category=cuidado-facial",
+  },
+  {
+    title: "Hombre",
+    slug: "/shop?category=hombre",
+  },
+  {
+    title: "Kit",
+    slug: "/shop?category=kit",
+  },
+  {
+    title: "Maquillaje",
+    slug: "/shop?category=maquillaje",
+  },
+  {
+    title: "Perfumes y fragancias",
+    slug: "/shop?category=perfumes-y-fragancias",
+  },
+  {
+    title: "Tratamientos",
+    slug: "/shop?category=tratamientos",
+  },
+  {
+    title: "Uñas",
+    slug: "/shop?category=unas",
   },
 ];
+
 
 const CategoriesSection = () => {
   return (
