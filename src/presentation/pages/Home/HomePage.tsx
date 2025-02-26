@@ -8,39 +8,47 @@ import { Review } from "@/types/review.types";
 export const newArrivalsData: Product[] = [
   {
     id: 1,
-    title: "T-shirt with Tape Details",
+    title: "Pestañina A Prueba de Agua",
+    description:
+      "Su fórmula resistente al agua y al sudor proporciona un volumen intenso y duradero sin grumos ni manchas.",
     srcUrl: "/images/pic1.png",
     gallery: ["/images/pic1.png", "/images/pic10.png", "/images/pic11.png"],
     price: 120,
     discount: {
       amount: 0,
-      percentage: 0,
+      percentage: 12, // Antes: 15 de descuento fijo en 120
     },
-    colors: false,
+    colors: ["Dorado", "Gris Plata", "Aguacate"],
     rating: 4.5,
     quantity: 0,
     attributes: undefined,
-    sizes: ["Small", "Medium"],
+    sizes: ["250ml", "500ml"],
+    stock: 8,
   },
   {
     id: 2,
-    title: "Skinny Fit Jeans",
+    title: "Gel Limpiador Facial",
+    description:
+      "Gel limpiador suave que elimina impurezas y el exceso de grasa sin resecar la piel. Ideal para pieles sensibles.",
     srcUrl: "/images/pic2.png",
     gallery: ["/images/pic2.png"],
     price: 260,
     discount: {
       amount: 0,
-      percentage: 20,
+      percentage: 20, // Antes: 52 de descuento fijo en 260
     },
-    rating: 3.5,
+    rating: 4.0,
     quantity: undefined,
     attributes: undefined,
-    colors: false,
-    sizes: []
+    colors: [],
+    sizes: ["100ml"],
+    stock: 5,
   },
   {
     id: 3,
-    title: "Chechered Shirt",
+    title: "Crema Corporal Nutritiva",
+    description:
+      "Crema corporal enriquecida con manteca de karité que nutre profundamente, dejando la piel suave y flexible.",
     srcUrl: "/images/pic3.png",
     gallery: ["/images/pic3.png"],
     price: 180,
@@ -48,34 +56,40 @@ export const newArrivalsData: Product[] = [
       amount: 0,
       percentage: 0,
     },
-    rating: 4.5,
+    rating: 4.2,
     quantity: undefined,
     attributes: undefined,
-    colors: false,
-    sizes: []
+    colors: [],
+    sizes: ["200ml", "400ml"],
+    stock: 12,
   },
 ];
 
 export const topSellingData: Product[] = [
   {
     id: 5,
-    title: "Vertical Striped Shirt",
+    title: "Acondicionador Fortificante",
+    description:
+      "Fortalece y repara el cabello dañado, reduciendo la rotura y mejorando la elasticidad.",
     srcUrl: "/images/pic5.png",
     gallery: ["/images/pic5.png"],
     price: 232,
     discount: {
       amount: 0,
-      percentage: 20,
+      percentage: 20, // Antes: 46 de descuento fijo en 232
     },
-    rating: 5.0,
+    rating: 4.8,
     quantity: undefined,
     attributes: undefined,
-    colors: false,
-    sizes: []
+    colors: [],
+    sizes: ["250ml"],
+    stock: 7,
   },
   {
     id: 6,
-    title: "Courage Graphic T-shirt",
+    title: "Sérum Reparador Facial",
+    description:
+      "Sérum facial de rápida absorción que reduce líneas de expresión y mejora la textura de la piel.",
     srcUrl: "/images/pic6.png",
     gallery: ["/images/pic6.png"],
     price: 145,
@@ -83,15 +97,18 @@ export const topSellingData: Product[] = [
       amount: 0,
       percentage: 0,
     },
-    rating: 4.0,
+    rating: 4.5,
     quantity: undefined,
     attributes: undefined,
-    colors: false,
-    sizes: []
+    colors: [],
+    sizes: ["30ml"],
+    stock: 0,
   },
   {
     id: 7,
-    title: "Loose Fit Bermuda Shorts",
+    title: "Exfoliante Corporal Natural",
+    description:
+      "Exfoliante con ingredientes naturales que eliminan células muertas y dejan la piel suave al tacto.",
     srcUrl: "/images/pic7.png",
     gallery: ["/images/pic7.png"],
     price: 80,
@@ -99,34 +116,40 @@ export const topSellingData: Product[] = [
       amount: 0,
       percentage: 0,
     },
-    rating: 3.0,
+    rating: 4.0,
     quantity: undefined,
     attributes: undefined,
-    colors: false,
-    sizes: []
+    colors: [],
+    sizes: ["150ml"],
+    stock: 3,
   },
 ];
 
 export const relatedProductData: Product[] = [
   {
     id: 12,
-    title: "Polo with Contrast Trims",
+    title: "Mascarilla Capilar Revitalizante",
+    description:
+      "Tratamiento intensivo que nutre y revitaliza el cabello seco y maltratado, aportando brillo y fuerza.",
     srcUrl: "/images/pic12.png",
     gallery: ["/images/pic12.png"],
     price: 242,
     discount: {
       amount: 0,
-      percentage: 20,
+      percentage: 20, // Antes: 48 de descuento fijo en 242
     },
-    rating: 4.0,
+    rating: 4.6,
     quantity: undefined,
     attributes: undefined,
-    colors: false,
-    sizes: []
+    colors: [],
+    sizes: ["250ml"],
+    stock: 6,
   },
   {
     id: 13,
-    title: "Gradient Graphic T-shirt",
+    title: "Tónico Facial Refrescante",
+    description:
+      "Tónico que ayuda a cerrar poros y refrescar la piel, manteniéndola hidratada durante todo el día.",
     srcUrl: "/images/pic13.png",
     gallery: ["/images/pic13.png"],
     price: 145,
@@ -134,45 +157,53 @@ export const relatedProductData: Product[] = [
       amount: 0,
       percentage: 0,
     },
-    rating: 3.5,
+    rating: 4.1,
     quantity: undefined,
     attributes: undefined,
-    colors: false,
-    sizes: []
+    colors: [],
+    sizes: ["150ml"],
+    stock: 0,
   },
   {
     id: 14,
-    title: "Polo with Tipping Details",
+    title: "Aceite Corporal Relajante",
+    description:
+      "Aceite con efecto relajante que hidrata profundamente la piel, ideal para masajes corporales.",
     srcUrl: "/images/pic14.png",
     gallery: ["/images/pic14.png"],
     price: 180,
     discount: {
       amount: 0,
-      percentage: 0,
+      percentage: 10, // Antes: 18 de descuento fijo en 180
     },
-    rating: 4.5,
+    rating: 4.7,
     quantity: undefined,
     attributes: undefined,
-    colors: false,
-    sizes: []
+    colors: [],
+    sizes: ["200ml"],
+    stock: 9,
   },
   {
     id: 15,
-    title: "Black Striped T-shirt",
+    title: "Bálsamo Labial Hidratante",
+    description:
+      "Bálsamo que protege e hidrata los labios, ideal para climas fríos o secos.",
     srcUrl: "/images/pic15.png",
     gallery: ["/images/pic15.png"],
     price: 150,
     discount: {
       amount: 0,
-      percentage: 30,
+      percentage: 30, // Antes: 45 de descuento fijo en 150
     },
     rating: 5.0,
     quantity: undefined,
     attributes: undefined,
-    colors: false,
-    sizes: []
+    colors: [],
+    sizes: ["15ml"],
+    stock: 10,
   },
 ];
+
 
 export const reviewsData: Review[] = [
   {

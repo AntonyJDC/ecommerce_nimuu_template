@@ -6,7 +6,7 @@ type ProductCardProps = {
 };
 
 const ProductCard = ({ data }: ProductCardProps) => {
-  const isOutOfStock = data.quantity === 0;
+  const isOutOfStock = data.stock === 0;
   return (
     <NavLink
       to={`/shop/product/${data.id}/${data.title.split(" ").join("-")}`}

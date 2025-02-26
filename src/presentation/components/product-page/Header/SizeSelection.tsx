@@ -1,12 +1,13 @@
 "use client";
 
+import { useEffect } from "react";
 import { setSizeSelection } from "@/lib/features/products/productsSlice";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { RootState } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 interface SizeSelectionProps {
-  sizes: string[]; // Prop para recibir las tallas del producto
+  sizes: string[];
 }
 
 const SizeSelection = ({ sizes }: SizeSelectionProps) => {
@@ -15,7 +16,14 @@ const SizeSelection = ({ sizes }: SizeSelectionProps) => {
   );
   const dispatch = useAppDispatch();
 
-  if (!sizes || sizes.length === 0) return null; // No renderizar si no hay tallas
+  // Seleccionar por defecto el primer tamaño al renderizar
+  useEffect(() => {
+    if (sizes && sizes.length > 0 && sizeSelection === "") {
+      dispatch(setSizeSelection(sizes[0]));
+    }
+  }, [sizes, sizeSelection, dispatch]);
+
+  if (!sizes || sizes.length === 0) return null;
 
   return (
     <div className="flex flex-col">
@@ -28,10 +36,12 @@ const SizeSelection = ({ sizes }: SizeSelectionProps) => {
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={index}
             type="button"
-            className={cn([
-              "bg-[#F0F0F0] text-black/70 flex items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 text-sm lg:text-base rounded-full m-1 lg:m-0 max-h-[46px]",
-              sizeSelection === size && "bg-primary font-medium text-primary-content",
-            ])}
+            className={cn(
+              "bg-[#F0F0F0] text-black/70 flex items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 text-sm lg:text-base rounded-full m-1 lg:m-0 max-h-[46px] transition-all",
+              sizeSelection === size
+                ? "bg-primary text-white font-semibold"
+                : "hover:bg-primary/10"
+            )}
             onClick={() => dispatch(setSizeSelection(size))}
           >
             {size}

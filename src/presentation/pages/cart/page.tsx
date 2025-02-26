@@ -113,7 +113,7 @@ export default function CartPage() {
           <div className="flex items-center flex-col text-base-content mt-32">
             <TbBasketExclamation strokeWidth={1} className="text-6xl" />
             <span className="block mb-4">Your shopping cart is empty.</span>
-            <Button className="rounded-full w-24" asChild>
+            <Button className="rounded-full w-24 text-white" asChild>
               <NavLink to="/shop">Shop</NavLink>
             </Button>
           </div>
