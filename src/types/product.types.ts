@@ -3,18 +3,22 @@ export type Discount = {
   percentage: number;
 };
 
+export type SizeDetail = {
+  price: number;
+  discount: Discount;
+};
+
 export type Product = {
   quantity: number | undefined;
   stock: number;
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   attributes: any;
   id: number;
   title: string;
   description: string;
   srcUrl: string;
   colors: string[];
-  sizes: string[];
+  sizes: Record<string, SizeDetail>; // Ahora cada tamaño tiene su propio precio y descuento
   gallery?: string[];
-  price: number;
-  discount: Discount;
   rating: number;
 };

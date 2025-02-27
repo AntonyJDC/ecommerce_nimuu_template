@@ -40,7 +40,7 @@ const Tabs = () => {
             variant={active === tab.id ? "default" : "ghost"}
             className={cn([
               active === tab.id
-                ? "border-base-content border-b-2 font-medium text-primary-content"
+                ? "border-primary/10 shadow-md border-b-2 font-medium text-primary-content"
                 : "border-b border-base-content/10 text-base-content/60 font-normal hover:bg-transparent",
               "p-5 sm:p-6 rounded-none flex-1",
             ])}

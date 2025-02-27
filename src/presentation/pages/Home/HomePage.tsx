@@ -13,16 +13,14 @@ export const newArrivalsData: Product[] = [
       "Su fórmula resistente al agua y al sudor proporciona un volumen intenso y duradero sin grumos ni manchas.",
     srcUrl: "/images/pic1.png",
     gallery: ["/images/pic1.png", "/images/pic10.png", "/images/pic11.png"],
-    price: 120,
-    discount: {
-      amount: 0,
-      percentage: 12, // Antes: 15 de descuento fijo en 120
-    },
     colors: ["Dorado", "Gris Plata", "Aguacate"],
     rating: 4.5,
     quantity: 0,
     attributes: undefined,
-    sizes: ["250ml", "500ml"],
+    sizes: {
+      "250ml": { price: 120, discount: { amount: 0, percentage: 20 } },
+      "500ml": { price: 200, discount: { amount: 0, percentage: 15 } },
+    },
     stock: 8,
   },
   {
@@ -32,16 +30,13 @@ export const newArrivalsData: Product[] = [
       "Gel limpiador suave que elimina impurezas y el exceso de grasa sin resecar la piel. Ideal para pieles sensibles.",
     srcUrl: "/images/pic2.png",
     gallery: ["/images/pic2.png"],
-    price: 260,
-    discount: {
-      amount: 0,
-      percentage: 20, // Antes: 52 de descuento fijo en 260
-    },
     rating: 4.0,
     quantity: undefined,
     attributes: undefined,
     colors: [],
-    sizes: ["100ml"],
+    sizes: {
+      "100ml": { price: 260, discount: { amount: 0, percentage: 20 } },
+    },
     stock: 5,
   },
   {
@@ -49,18 +44,16 @@ export const newArrivalsData: Product[] = [
     title: "Crema Corporal Nutritiva",
     description:
       "Crema corporal enriquecida con manteca de karité que nutre profundamente, dejando la piel suave y flexible.",
-    srcUrl: "/images/pic3.png",
-    gallery: ["/images/pic3.png"],
-    price: 180,
-    discount: {
-      amount: 0,
-      percentage: 0,
-    },
+    srcUrl: "/images/pic10.png",
+    gallery: ["/images/pic10.png"],
     rating: 4.2,
     quantity: undefined,
     attributes: undefined,
     colors: [],
-    sizes: ["200ml", "400ml"],
+    sizes: {
+      "200ml": { price: 18000, discount: { amount: 0, percentage: 0 } },
+      "400ml": { price: 32000, discount: { amount: 0, percentage: 15 } },
+    },
     stock: 12,
   },
 ];
@@ -73,16 +66,13 @@ export const topSellingData: Product[] = [
       "Fortalece y repara el cabello dañado, reduciendo la rotura y mejorando la elasticidad.",
     srcUrl: "/images/pic5.png",
     gallery: ["/images/pic5.png"],
-    price: 232,
-    discount: {
-      amount: 0,
-      percentage: 20, // Antes: 46 de descuento fijo en 232
-    },
     rating: 4.8,
     quantity: undefined,
     attributes: undefined,
     colors: [],
-    sizes: ["250ml"],
+    sizes: {
+      "250ml": { price: 232, discount: { amount: 0, percentage: 20 } },
+    },
     stock: 7,
   },
   {
@@ -92,16 +82,13 @@ export const topSellingData: Product[] = [
       "Sérum facial de rápida absorción que reduce líneas de expresión y mejora la textura de la piel.",
     srcUrl: "/images/pic6.png",
     gallery: ["/images/pic6.png"],
-    price: 145,
-    discount: {
-      amount: 0,
-      percentage: 0,
-    },
     rating: 4.5,
     quantity: undefined,
     attributes: undefined,
     colors: [],
-    sizes: ["30ml"],
+    sizes: {
+      "30ml": { price: 145, discount: { amount: 0, percentage: 0 } },
+    },
     stock: 0,
   },
   {
@@ -111,16 +98,13 @@ export const topSellingData: Product[] = [
       "Exfoliante con ingredientes naturales que eliminan células muertas y dejan la piel suave al tacto.",
     srcUrl: "/images/pic7.png",
     gallery: ["/images/pic7.png"],
-    price: 80,
-    discount: {
-      amount: 0,
-      percentage: 0,
-    },
     rating: 4.0,
     quantity: undefined,
     attributes: undefined,
     colors: [],
-    sizes: ["150ml"],
+    sizes: {
+      "150ml": { price: 80, discount: { amount: 0, percentage: 0 } },
+    },
     stock: 3,
   },
 ];
@@ -133,16 +117,13 @@ export const relatedProductData: Product[] = [
       "Tratamiento intensivo que nutre y revitaliza el cabello seco y maltratado, aportando brillo y fuerza.",
     srcUrl: "/images/pic12.png",
     gallery: ["/images/pic12.png"],
-    price: 242,
-    discount: {
-      amount: 0,
-      percentage: 20, // Antes: 48 de descuento fijo en 242
-    },
     rating: 4.6,
     quantity: undefined,
     attributes: undefined,
     colors: [],
-    sizes: ["250ml"],
+    sizes: {
+      "250ml": { price: 242, discount: { amount: 0, percentage: 20 } },
+    },
     stock: 6,
   },
   {
@@ -152,16 +133,13 @@ export const relatedProductData: Product[] = [
       "Tónico que ayuda a cerrar poros y refrescar la piel, manteniéndola hidratada durante todo el día.",
     srcUrl: "/images/pic13.png",
     gallery: ["/images/pic13.png"],
-    price: 145,
-    discount: {
-      amount: 0,
-      percentage: 0,
-    },
     rating: 4.1,
     quantity: undefined,
     attributes: undefined,
     colors: [],
-    sizes: ["150ml"],
+    sizes: {
+      "150ml": { price: 145, discount: { amount: 0, percentage: 0 } },
+    },
     stock: 0,
   },
   {
@@ -171,16 +149,13 @@ export const relatedProductData: Product[] = [
       "Aceite con efecto relajante que hidrata profundamente la piel, ideal para masajes corporales.",
     srcUrl: "/images/pic14.png",
     gallery: ["/images/pic14.png"],
-    price: 180,
-    discount: {
-      amount: 0,
-      percentage: 10, // Antes: 18 de descuento fijo en 180
-    },
     rating: 4.7,
     quantity: undefined,
     attributes: undefined,
     colors: [],
-    sizes: ["200ml"],
+    sizes: {
+      "200ml": { price: 180, discount: { amount: 0, percentage: 10 } },
+    },
     stock: 9,
   },
   {
@@ -190,16 +165,13 @@ export const relatedProductData: Product[] = [
       "Bálsamo que protege e hidrata los labios, ideal para climas fríos o secos.",
     srcUrl: "/images/pic15.png",
     gallery: ["/images/pic15.png"],
-    price: 150,
-    discount: {
-      amount: 0,
-      percentage: 30, // Antes: 45 de descuento fijo en 150
-    },
     rating: 5.0,
     quantity: undefined,
     attributes: undefined,
     colors: [],
-    sizes: ["15ml"],
+    sizes: {
+      "15ml": { price: 150, discount: { amount: 0, percentage: 30 } },
+    },
     stock: 10,
   },
 ];
