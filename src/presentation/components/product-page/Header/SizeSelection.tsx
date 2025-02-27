@@ -1,27 +1,21 @@
 "use client";
 
 import { useEffect } from "react";
-import { setSizeSelection } from "@/lib/features/products/productsSlice";
-import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
-import { RootState } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 interface SizeSelectionProps {
   sizes: string[];
+  selectedSize: string; // ✅ Ahora recibe el tamaño seleccionado
+  onSizeChange: (size: string) => void; // ✅ Ahora recibe la función para cambiar el tamaño
 }
 
-const SizeSelection = ({ sizes }: SizeSelectionProps) => {
-  const { sizeSelection } = useAppSelector(
-    (state: RootState) => state.products
-  );
-  const dispatch = useAppDispatch();
-
-  // Seleccionar por defecto el primer tamaño al renderizar
+const SizeSelection = ({ sizes, selectedSize, onSizeChange }: SizeSelectionProps) => {
+  // Seleccionar por defecto el primer tamaño solo si no hay uno seleccionado
   useEffect(() => {
-    if (sizes && sizes.length > 0 && sizeSelection === "") {
-      dispatch(setSizeSelection(sizes[0]));
+    if (sizes.length > 0 && !selectedSize) {
+      onSizeChange(sizes[0]);
     }
-  }, [sizes, sizeSelection, dispatch]);
+  }, [sizes, selectedSize, onSizeChange]);
 
   if (!sizes || sizes.length === 0) return null;
 
@@ -31,18 +25,19 @@ const SizeSelection = ({ sizes }: SizeSelectionProps) => {
         Choose Size
       </span>
       <div className="flex items-center flex-wrap lg:space-x-3">
-        {sizes.map((size, index) => (
+        {sizes.map((size) => (
           <button
-            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-            key={index}
+            key={size}
             type="button"
             className={cn(
               "bg-[#F0F0F0] text-black/70 flex items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 text-sm lg:text-base rounded-full m-1 lg:m-0 max-h-[46px] transition-all",
-              sizeSelection === size
+              selectedSize === size
                 ? "bg-primary text-white font-semibold"
-                : "hover:bg-primary/10"
+                : "hover:bg-primary/40 hover:text-primary-content"
             )}
-            onClick={() => dispatch(setSizeSelection(size))}
+            onClick={() => {
+              onSizeChange(size);
+            }}
           >
             {size}
           </button>

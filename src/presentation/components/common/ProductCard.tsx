@@ -1,12 +1,21 @@
 import { Product } from "@/types/product.types";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 type ProductCardProps = {
   data: Product;
 };
 
 const ProductCard = ({ data }: ProductCardProps) => {
+  // Obtener el primer tamaño disponible como predeterminado
+  const defaultSize = Object.keys(data.sizes)[0] || "";
+  const [selectedSize] = useState(defaultSize);
+
+  // Obtener datos del tamaño seleccionado
+  const sizeDetails = data.sizes[selectedSize];
+
   const isOutOfStock = data.stock === 0;
+
   return (
     <NavLink
       to={`/shop/product/${data.id}/${data.title.split(" ").join("-")}`}
@@ -26,45 +35,49 @@ const ProductCard = ({ data }: ProductCardProps) => {
           alt={data.title}
         />
       </div>
-      <strong className="text-base-content truncate w-full text-base sm:text-base md:text-md lg:text-lg xl:text-xl" title={data.title}>
+
+      <strong
+        className="text-base-content truncate w-full text-base sm:text-base md:text-md lg:text-lg xl:text-xl"
+        title={data.title}
+      >
         {data.title}
       </strong>
-      <div className="flex items-end mb-1 xl:mb-2">
-      </div>
-      <div className="flex items-center space-x-[5px] xl:space-x-2.5">
-        {data.discount.percentage > 0 ? (
+
+      {/* Precios y descuentos */}
+      <div className="flex items-center space-x-[5px] xl:space-x-2.5 mt-2">
+        {sizeDetails?.discount.percentage > 0 ? (
           <span className="font-medium text-base-content text-lg xl:text-xl">
-            {`$${Math.round(data.price - (data.price * data.discount.percentage) / 100)}`}
+            {`$${Math.round(sizeDetails.price - (sizeDetails.price * sizeDetails.discount.percentage) / 100)}`}
           </span>
-        ) : data.discount.amount > 0 ? (
+        ) : sizeDetails?.discount.amount > 0 ? (
           <span className="font-medium text-base-content text-lg xl:text-xl">
-            {`$${data.price - data.discount.amount}`}
+            {`$${sizeDetails.price - sizeDetails.discount.amount}`}
           </span>
         ) : (
           <span className="font-medium text-base-content text-lg xl:text-xl">
-            ${data.price}
+            ${sizeDetails.price}
           </span>
         )}
 
-        {data.discount.percentage > 0 && (
+        {sizeDetails?.discount.percentage > 0 && (
           <span className="font-medium text-base-content/40 line-through text-sm xl:text-lg">
-            ${data.price}
+            ${sizeDetails.price}
           </span>
         )}
-        {data.discount.amount > 0 && (
+        {sizeDetails?.discount.amount > 0 && (
           <span className="font-medium text-base-content/40 line-through text-sm xl:text-lg">
-            ${data.price}
+            ${sizeDetails.price}
           </span>
         )}
 
-        {data.discount.percentage > 0 ? (
+        {sizeDetails?.discount.percentage > 0 ? (
           <span className="font-light text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
-            {`-${data.discount.percentage}%`}
+            {`-${sizeDetails.discount.percentage}%`}
           </span>
         ) : (
-          data.discount.amount > 0 && (
+          sizeDetails?.discount.amount > 0 && (
             <span className="font-light text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
-              {`-$${data.discount.amount}`}
+              {`-$${sizeDetails.discount.amount}`}
             </span>
           )
         )}

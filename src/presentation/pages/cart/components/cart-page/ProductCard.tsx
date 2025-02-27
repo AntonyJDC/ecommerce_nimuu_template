@@ -49,6 +49,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
                   id: data.id,
                   attributes: data.attributes,
                   quantity: data.quantity,
+                  size: data.size,
                 })
               )
             }
@@ -68,45 +69,37 @@ const ProductCard = ({ data }: ProductCardProps) => {
             {data.attributes[1]}
           </span>
         </div>
+        
+        {/* ✅ SECCIÓN DE PRECIOS CORREGIDA */}
         <div className="flex items-center flex-wrap justify-between">
           <div className="flex items-center space-x-[5px] xl:space-x-2.5">
-            {data.discount.percentage > 0 ? (
-              <span className="font-bold text-base-content text-xl xl:text-2xl">
-                {`$${Math.round(
-                  data.price - (data.price * data.discount.percentage) / 100
-                )}`}
-              </span>
-            ) : data.discount.amount > 0 ? (
-              <span className="font-bold text-base-content text-xl xl:text-2xl">
-                {`$${data.price - data.discount.amount}`}
-              </span>
-            ) : (
-              <span className="font-bold text-base-content text-xl xl:text-2xl">
-                ${data.price}
-              </span>
-            )}
-            {data.discount.percentage > 0 && (
+            {/* ✅ Mostramos el precio final sin recalcularlo */}
+            <span className="font-bold text-base-content text-xl xl:text-2xl">
+              ${data.price}
+            </span>
+
+            {/* ✅ Mostrar el precio original tachado si hay descuento */}
+            {(data.discount.percentage > 0 || data.discount.amount > 0) && (
               <span className="font-bold text-base-content/40 line-through text-xl xl:text-2xl">
-                ${data.price}
+                ${data.discount.percentage > 0
+                  ? Math.round(data.price / (1 - data.discount.percentage / 100))
+                  : data.price + data.discount.amount}
               </span>
             )}
-            {data.discount.amount > 0 && (
-              <span className="font-bold text-base-content/40 line-through text-xl xl:text-2xl">
-                ${data.price}
-              </span>
-            )}
+
+            {/* ✅ Mostrar la etiqueta de descuento */}
             {data.discount.percentage > 0 ? (
               <span className="font-medium text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
                 {`-${data.discount.percentage}%`}
               </span>
-            ) : (
-              data.discount.amount > 0 && (
-                <span className="font-medium text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
-                  {`-$${data.discount.amount}`}
-                </span>
-              )
-            )}
+            ) : data.discount.amount > 0 ? (
+              <span className="font-medium text-[10px] xl:text-xs py-1.5 px-3.5 rounded-full bg-[#FF3333]/10 text-[#FF3333]">
+                {`-$${data.discount.amount}`}
+              </span>
+            ) : null}
           </div>
+
+          {/* ✅ CONTADOR DE CANTIDAD EN EL CARRITO */}
           <CartCounter
             initialValue={data.quantity}
             onAdd={() => dispatch(addToCart({ ...data, quantity: 1 }))}
@@ -117,10 +110,14 @@ const ProductCard = ({ data }: ProductCardProps) => {
                       id: data.id,
                       attributes: data.attributes,
                       quantity: data.quantity,
+                      size: data.size
                     })
                   )
                 : dispatch(
-                    removeCartItem({ id: data.id, attributes: data.attributes })
+                    removeCartItem({
+                      id: data.id, attributes: data.attributes,
+                      size: data.size
+                    })
                   )
             }
             isZeroDelete

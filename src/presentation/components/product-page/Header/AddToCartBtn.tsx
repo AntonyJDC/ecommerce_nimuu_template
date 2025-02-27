@@ -1,46 +1,57 @@
 import { useState } from "react";
 import { addToCart } from "@/lib/features/carts/cartsSlice";
-import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
-import { RootState } from "@/lib/store";
+import { useAppDispatch } from "../../../hooks/redux";
 import { Product } from "@/types/product.types";
 
-const AddToCartBtn = ({ data }: { data: Product }) => {
-  const dispatch = useAppDispatch();
-  const { sizeSelection, colorSelection } = useAppSelector(
-    (state: RootState) => state.products
-  );
+interface AddToCartBtnProps {
+  data: Product;
+  selectedSize: string;
+  selectedColor: string;
+}
 
+const AddToCartBtn = ({ data, selectedSize, selectedColor }: AddToCartBtnProps) => {
+  const dispatch = useAppDispatch();
   const [quantity] = useState(1);
   const isOutOfStock = data.stock === 0;
 
-  const calculateDiscountedPrice = () => {
-    if (data.discount.percentage > 0) {
-      return Math.round(data.price - (data.price * data.discount.percentage) / 100);
-    }if (data.discount.amount > 0) {
-      return data.price - data.discount.amount;
-    }
-    return data.price;
-  };
+  // Obtener los datos del tamaño seleccionado
+  const sizeDetails = selectedSize ? data.sizes[selectedSize] : null;
 
   const handleAddToCart = () => {
+    if (!selectedSize || !sizeDetails) {
+      alert("Por favor, selecciona un tamaño antes de añadir al carrito.");
+      return;
+    }
+  
+    if (!selectedColor) {
+      alert("Por favor, selecciona un color antes de añadir al carrito.");
+      return;
+    }
+  
+    // ✅ Calcular el precio con descuento ANTES de agregar al carrito
+    let finalPrice = sizeDetails.price;
+    if (sizeDetails.discount.percentage > 0) {
+      finalPrice = Math.round(sizeDetails.price - (sizeDetails.price * sizeDetails.discount.percentage) / 100);
+    } else if (sizeDetails.discount.amount > 0) {
+      finalPrice = sizeDetails.price - sizeDetails.discount.amount;
+    }
+  
     if (!isOutOfStock && quantity <= data.stock) {
-      const size = data.sizes.length > 0 ? sizeSelection : "N/A";
-      const color = data.colors.length > 0 ? colorSelection.name : "N/A";
-      const finalPrice = calculateDiscountedPrice();
-
       dispatch(
         addToCart({
           id: data.id,
           name: data.title,
           srcUrl: data.srcUrl,
-          price: finalPrice, // Precio con descuento aplicado
-          attributes: [size, color],
-          discount: data.discount,
+          size: selectedSize,
+          color: selectedColor,
+          price: finalPrice, // ✅ Guardamos el precio con descuento aplicado
+          attributes: [selectedSize, selectedColor],
+          discount: data.sizes[selectedSize].discount, // 🔍 Puede ser útil para mostrarlo, pero no para recalcular
           quantity: data.quantity ? data.quantity : quantity,
         })
       );
     }
-  };
+  };  
 
   return (
     <button
