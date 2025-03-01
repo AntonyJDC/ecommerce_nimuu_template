@@ -14,7 +14,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
   // Obtener datos del tamaño seleccionado
   const sizeDetails = data.sizes[selectedSize];
 
-  const isOutOfStock = data.stock === 0;
+  const isOutOfStock = Object.values(data.sizes).every((size) => size.stock === 0);
 
   return (
     <NavLink
