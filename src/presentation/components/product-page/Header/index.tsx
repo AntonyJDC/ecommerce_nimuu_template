@@ -179,7 +179,7 @@ const Header = ({ data }: { data: Product }) => {
         <hr className="h-[1px] border-t-base-content/10 my-5" />
         <p className="text-base-content/60">
           <span className="font-bold text-base-content">Stock: </span>{" "}
-          {data.stock}
+          {sizeDetails?.stock || 0}
         </p>
         <hr className="h-[1px] border-t-base-content/10 my-5" />
 

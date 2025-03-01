@@ -12,46 +12,58 @@ interface AddToCartBtnProps {
 const AddToCartBtn = ({ data, selectedSize, selectedColor }: AddToCartBtnProps) => {
   const dispatch = useAppDispatch();
   const [quantity] = useState(1);
-  const isOutOfStock = data.stock === 0;
 
   // Obtener los datos del tamaño seleccionado
-  const sizeDetails = selectedSize ? data.sizes[selectedSize] : null;
+  const sizeDetails = selectedSize && data.sizes[selectedSize] ? data.sizes[selectedSize] : null;
+
+  // Verificar si la talla seleccionada está agotada
+  const isOutOfStock = sizeDetails ? sizeDetails.stock === 0 : false;
 
   const handleAddToCart = () => {
     if (!selectedSize || !sizeDetails) {
-      alert("Por favor, selecciona un tamaño antes de añadir al carrito.");
+      alert("⚠️ Por favor, selecciona un tamaño antes de añadir al carrito.");
       return;
     }
   
     if (!selectedColor) {
-      alert("Por favor, selecciona un color antes de añadir al carrito.");
+      alert("⚠️ Por favor, selecciona un color antes de añadir al carrito.");
       return;
     }
-  
-    // ✅ Calcular el precio con descuento ANTES de agregar al carrito
+
+    // Validar stock del tamaño seleccionado
+    if (isOutOfStock) {
+      alert("❌ El tamaño seleccionado está agotado.");
+      return;
+    }
+
+    // Evitar que la cantidad sea mayor que el stock disponible
+    if (quantity > sizeDetails.stock) {
+      alert(`⚠️ Solo hay ${sizeDetails.stock} unidades disponibles.`);
+      return;
+    }
+
+    // ✅ Calcular el precio con descuento antes de agregar al carrito
     let finalPrice = sizeDetails.price;
     if (sizeDetails.discount.percentage > 0) {
       finalPrice = Math.round(sizeDetails.price - (sizeDetails.price * sizeDetails.discount.percentage) / 100);
     } else if (sizeDetails.discount.amount > 0) {
       finalPrice = sizeDetails.price - sizeDetails.discount.amount;
     }
-  
-    if (!isOutOfStock && quantity <= data.stock) {
-      dispatch(
-        addToCart({
-          id: data.id,
-          name: data.title,
-          srcUrl: data.srcUrl,
-          size: selectedSize,
-          color: selectedColor,
-          price: finalPrice, // ✅ Guardamos el precio con descuento aplicado
-          attributes: [selectedSize, selectedColor],
-          discount: data.sizes[selectedSize].discount, // 🔍 Puede ser útil para mostrarlo, pero no para recalcular
-          quantity: data.quantity ? data.quantity : quantity,
-        })
-      );
-    }
-  };  
+
+    dispatch(
+      addToCart({
+        id: data.id,
+        name: data.title,
+        srcUrl: data.srcUrl,
+        size: selectedSize,
+        color: selectedColor,
+        price: finalPrice, // ✅ Precio final con descuento aplicado
+        attributes: [selectedSize, selectedColor],
+        discount: sizeDetails.discount, // 🔍 Se mantiene por si se necesita mostrarlo
+        quantity: quantity,
+      })
+    );
+  };
 
   return (
     <button
