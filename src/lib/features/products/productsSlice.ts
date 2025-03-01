@@ -13,7 +13,7 @@ interface ProductsState {
 
 const initialState: ProductsState = {
   colorSelection: {
-    name: "Brown",
+    name: "",
     hex: "bg-[#4F4631]",
   },
   sizeSelection: "", // Mantener el estado inicial vacío

@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import PhotoSection from "./PhotoSection";
 import { Product } from "@/types/product.types";
 import { cn } from "@/lib/utils";
 import ColorSelection from "./ColorSelection";
 import SizeSelection from "./SizeSelection";
 import AddToCardSection from "./AddToCardSection";
-import { setSizeSelection } from "@/lib/features/products/productsSlice";
+import { setColorSelection, setSizeSelection } from "@/lib/features/products/productsSlice";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import colorsData from "public/colors.json";
+import { AnimatePresence, motion } from "framer-motion";
 
 // ✅ Formateador de moneda en COP sin mostrar "COP"
 const formatPrice = (price: number) => {
@@ -134,8 +134,16 @@ const Header = ({ data }: { data: Product }) => {
   // ✅ Filtrar los colores disponibles
   const availableColors = mapProductColors(data.colors ?? []);
   const selectedColor = useAppSelector(
-    (state) => state.products.colorSelection?.name || "N/A"
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    (state: any) => state.products?.colorSelection?.name || "N/A"
   );
+
+  // ✅ Si el producto no tiene colores disponibles, asegurar que se seleccione "N/A"
+  useEffect(() => {
+    if (availableColors.length === 0) {
+      dispatch(setColorSelection({ name: "N/A", hex: "#000000" }));
+    }
+  }, [availableColors, dispatch]);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -189,6 +197,7 @@ const Header = ({ data }: { data: Product }) => {
 
         <hr className="h-[1px] border-t-base-content/10 my-5" />
 
+        {/* ✅ Selector de color */}
         {availableColors.length > 0 ? (
           <ColorSelection availableColors={availableColors} />
         ) : (
@@ -226,3 +235,4 @@ const Header = ({ data }: { data: Product }) => {
 };
 
 export default Header;
+
