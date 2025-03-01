@@ -196,7 +196,7 @@ const Header = ({ data }: { data: Product }) => {
         {/* ✅ Selector de tamaño */}
         {sizeKeys.length > 0 ? (
           <SizeSelection
-            sizes={sizeKeys}
+            sizes={data.sizes}
             selectedSize={selectedSize}
             onSizeChange={(size) => {
               setSelectedSize(size);
