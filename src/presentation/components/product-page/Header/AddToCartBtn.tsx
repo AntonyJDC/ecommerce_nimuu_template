@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { addToCart } from "@/lib/features/carts/cartsSlice";
 import { useAppDispatch } from "../../../hooks/redux";
 import { Product } from "@/types/product.types";
@@ -11,7 +10,7 @@ interface AddToCartBtnProps {
 
 const AddToCartBtn = ({ data, selectedSize, selectedColor }: AddToCartBtnProps) => {
   const dispatch = useAppDispatch();
-  const [quantity] = useState(1);
+  const quantity = data.quantity ?? 0;
 
   // Obtener los datos del tamaño seleccionado
   const sizeDetails = selectedSize && data.sizes[selectedSize] ? data.sizes[selectedSize] : null;
@@ -74,7 +73,7 @@ const AddToCartBtn = ({ data, selectedSize, selectedColor }: AddToCartBtnProps) 
       onClick={handleAddToCart}
       disabled={isOutOfStock}
     >
-      {isOutOfStock ? "Out of Stock" : "Add to Cart"}
+      {isOutOfStock ? "Agotado" : "Añadir al carrito"}
     </button>
   );
 };

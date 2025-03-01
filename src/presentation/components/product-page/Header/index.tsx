@@ -177,10 +177,16 @@ const Header = ({ data }: { data: Product }) => {
           {data.description}
         </p>
         <hr className="h-[1px] border-t-base-content/10 my-5" />
-        <p className="text-base-content/60">
+        <p className="text-base-content/60 flex items-center gap-2">
           <span className="font-bold text-base-content">Stock: </span>{" "}
           {sizeDetails?.stock || 0}
+          {(!sizeDetails?.stock || sizeDetails?.stock === 0) && (
+            <span className="ml-5 bg-red-500 text-white text-xs px-2 py-1 rounded flex items-center">
+              Agotado
+            </span>
+          )}
         </p>
+
         <hr className="h-[1px] border-t-base-content/10 my-5" />
 
         {availableColors.length > 0 ? (
