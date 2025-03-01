@@ -6,6 +6,7 @@ export type Discount = {
 export type SizeDetail = {
   price: number;
   discount: Discount;
+  stock: number;
 };
 
 export type Product = {
