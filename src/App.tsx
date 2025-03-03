@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router";
 import MotionLazyContainer from "./presentation/components/animate/motion-lazy-container";
 import { router } from "./presentation/routes/router";
 import Providers from "./providers";
+import { Toaster } from 'sonner';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         {/* ✅ Redux y Redux Persist envuelven toda la app */}
         <Providers>
           <MotionLazyContainer>
+            <Toaster />
             <RouterProvider router={router} />
           </MotionLazyContainer>
         </Providers>
