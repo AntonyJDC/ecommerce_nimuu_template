@@ -18,8 +18,8 @@ export const newArrivalsData: Product[] = [
     quantity: 0,
     attributes: undefined,
     sizes: {
-      "250ml": { price: 120, discount: { amount: 0, percentage: 20 }, stock: 10  },
-      "500ml": { price: 200, discount: { amount: 0, percentage: 15 }, stock: 10  },
+      "250ml": { price: 12000, discount: { amount: 0, percentage: 20 }, stock: 5  },
+      "500ml": { price: 20000, discount: { amount: 0, percentage: 15 }, stock: 0  },
     },
     stock: 8,
   },
@@ -35,7 +35,7 @@ export const newArrivalsData: Product[] = [
     attributes: undefined,
     colors: [],
     sizes: {
-      "100ml": { price: 260, discount: { amount: 0, percentage: 20 }, stock: 10  },
+      "100ml": { price: 26000, discount: { amount: 0, percentage: 20 }, stock: 7  },
     },
     stock: 5,
   },
@@ -51,8 +51,8 @@ export const newArrivalsData: Product[] = [
     attributes: undefined,
     colors: [],
     sizes: {
-      "200ml": { price: 18000, discount: { amount: 0, percentage: 0 }, stock: 10 },
-      "400ml": { price: 32000, discount: { amount: 0, percentage: 15 }, stock: 10  },
+      "200ml": { price: 18000, discount: { amount: 0, percentage: 0 }, stock: 0 },
+      "400ml": { price: 32000, discount: { amount: 0, percentage: 15 }, stock: 8  },
     },
     stock: 12,
   },
@@ -71,7 +71,7 @@ export const topSellingData: Product[] = [
     attributes: undefined,
     colors: [],
     sizes: {
-      "250ml": { price: 232, discount: { amount: 0, percentage: 20 }, stock: 10  },
+      "250ml": { price: 23200, discount: { amount: 0, percentage: 20 }, stock: 0  },
     },
     stock: 7,
   },
@@ -87,7 +87,7 @@ export const topSellingData: Product[] = [
     attributes: undefined,
     colors: [],
     sizes: {
-      "30ml": { price: 145, discount: { amount: 0, percentage: 0 }, stock: 10  },
+      "30ml": { price: 14500, discount: { amount: 0, percentage: 0 }, stock: 10  },
     },
     stock: 0,
   },
@@ -103,7 +103,7 @@ export const topSellingData: Product[] = [
     attributes: undefined,
     colors: [],
     sizes: {
-      "150ml": { price: 80, discount: { amount: 0, percentage: 0 }, stock: 10  },
+      "150ml": { price: 8000, discount: { amount: 0, percentage: 0 }, stock: 19  },
     },
     stock: 3,
   },
@@ -122,7 +122,7 @@ export const relatedProductData: Product[] = [
     attributes: undefined,
     colors: [],
     sizes: {
-      "250ml": { price: 242, discount: { amount: 0, percentage: 20 }, stock: 10  },
+      "250ml": { price: 24200, discount: { amount: 0, percentage: 20 }, stock: 15  },
     },
     stock: 6,
   },
@@ -138,7 +138,7 @@ export const relatedProductData: Product[] = [
     attributes: undefined,
     colors: [],
     sizes: {
-      "150ml": { price: 145, discount: { amount: 0, percentage: 0 }, stock: 10  },
+      "150ml": { price: 14500, discount: { amount: 0, percentage: 0 }, stock: 10  },
     },
     stock: 0,
   },
@@ -154,7 +154,7 @@ export const relatedProductData: Product[] = [
     attributes: undefined,
     colors: [],
     sizes: {
-      "200ml": { price: 180, discount: { amount: 0, percentage: 10 }, stock: 10  },
+      "200ml": { price: 18000, discount: { amount: 0, percentage: 10 }, stock: 10  },
     },
     stock: 9,
   },
@@ -170,7 +170,8 @@ export const relatedProductData: Product[] = [
     attributes: undefined,
     colors: [],
     sizes: {
-      "15ml": { price: 150, discount: { amount: 0, percentage: 30 }, stock: 10  },
+      "15ml": { price: 15000, discount: { amount: 0, percentage: 30 }, stock: 0  },
+      "30ml": { price: 30000, discount: { amount: 0, percentage: 30 }, stock: 0  },
     },
     stock: 10,
   },
