@@ -19,7 +19,7 @@ function App() {
         {/* ✅ Redux y Redux Persist envuelven toda la app */}
         <Providers>
           <MotionLazyContainer>
-            <Toaster />
+            <Toaster richColors expand closeButton />
             <RouterProvider router={router} />
           </MotionLazyContainer>
         </Providers>
