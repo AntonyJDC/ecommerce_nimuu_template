@@ -1,6 +1,7 @@
 import { addToCart } from "@/lib/features/carts/cartsSlice";
 import { useAppDispatch } from "../../../hooks/redux";
 import { Product } from "@/types/product.types";
+import { toast } from "sonner";
 
 interface AddToCartBtnProps {
   data: Product;
@@ -20,24 +21,25 @@ const AddToCartBtn = ({ data, selectedSize, selectedColor }: AddToCartBtnProps) 
 
   const handleAddToCart = () => {
     if (!selectedSize || !sizeDetails) {
-      alert("⚠️ Por favor, selecciona un tamaño antes de añadir al carrito.");
-      return;
-    }
-  
-    if (!selectedColor) {
-      alert("⚠️ Por favor, selecciona un color antes de añadir al carrito.");
+      toast.error("Selecciona un tamaño antes de añadir al carrito.");
       return;
     }
 
+    if (data.colors.length > 0 && (!selectedColor || selectedColor === "N/A")) {
+      toast.error("Selecciona un color antes de añadir al carrito.");
+      return;
+    }
+
+
     // Validar stock del tamaño seleccionado
     if (isOutOfStock) {
-      alert("❌ El tamaño seleccionado está agotado.");
+      toast.info("Lo sentimos, este tamaño está agotado.");
       return;
     }
 
     // Evitar que la cantidad sea mayor que el stock disponible
     if (quantity > sizeDetails.stock) {
-      alert(`⚠️ Solo hay ${sizeDetails.stock} unidades disponibles.`);
+      toast.error(`Solo hay ${sizeDetails.stock} unidades disponibles.`);
       return;
     }
 
@@ -67,9 +69,8 @@ const AddToCartBtn = ({ data, selectedSize, selectedColor }: AddToCartBtnProps) 
   return (
     <button
       type="button"
-      className={`bg-primary w-full ml-3 sm:ml-5 rounded-full h-11 md:h-[52px] text-sm sm:text-base text-primary-content hover:scale-105 transition-all ${
-        isOutOfStock ? "opacity-50 cursor-not-allowed" : ""
-      }`}
+      className={`bg-primary w-full ml-3 sm:ml-5 rounded-full h-11 md:h-[52px] text-sm sm:text-base text-primary-content hover:scale-105 transition-all ${isOutOfStock ? "opacity-50 cursor-not-allowed" : ""
+        }`}
       onClick={handleAddToCart}
       disabled={isOutOfStock}
     >
