@@ -7,7 +7,7 @@ import SizeSelection from "./SizeSelection";
 import AddToCardSection from "./AddToCardSection";
 import { setColorSelection, setSizeSelection } from "@/lib/features/products/productsSlice";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
-import colorsData from "public/colors.json";
+import colorsData from "src/assets/colors.json";
 import { AnimatePresence, motion } from "framer-motion";
 
 // ✅ Formateador de moneda en COP sin mostrar "COP"
@@ -135,7 +135,7 @@ const Header = ({ data }: { data: Product }) => {
   const availableColors = mapProductColors(data.colors ?? []);
   const selectedColor = useAppSelector(
     // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-    (state: any) => state.products?.colorSelection?.name || "N/A"
+    (state: any) => state.products?.colorSelection?.name || null
   );
 
   // ✅ Si el producto no tiene colores disponibles, asegurar que se seleccione "N/A"
