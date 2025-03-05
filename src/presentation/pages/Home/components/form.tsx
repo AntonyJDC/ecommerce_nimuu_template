@@ -1,8 +1,7 @@
 import { selectOptions } from "@/constants";
 import { activeOption, subject } from "@/core/types";
-import { InputSelectFO, Textarea } from "@/presentation/components/rhf";
+import { InputSelectFO, TextareaFilled } from "@/presentation/components/rhf";
 import { InputCountryPhoneFO } from "@/presentation/components/rhf/InputCountryPhone/inputfo-country-phone";
-import { InputFO } from "@/presentation/components/rhf/inputfo";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PhoneNumberUtil } from "google-libphonenumber";
 import { Loader2, Send } from "lucide-react";
@@ -10,6 +9,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import z, { zodAlwaysRefine } from "../../../../infrastructure/config/z";
+import { InputFilled } from "@/presentation/components/rhf/input-ifta";
 
 const phoneUtil = PhoneNumberUtil.getInstance();
 
@@ -128,9 +128,9 @@ const Form: React.FC = () => {
 	return (
 		<form
 			onSubmit={handleSubmit(onSubmit)}
-			className="relative w-full md:max-w-md lg:max-w-lg md:mx-auto mt-10 md:mt-10 space-y-6 px-0 text-primary text-left"
+			className="relative w-full md:max-w-md lg:max-w-lg md:mx-auto mt-10 md:mt-10 space-y-4 px-0 text-primary text-left"
 		>
-			<InputFO
+			<InputFilled
 				autoComplete="name"
 				aria-label="full name"
 				className="bg-base-100"
@@ -142,10 +142,9 @@ const Form: React.FC = () => {
 				type="text"
 				control={control}
 				required
-				classNameLabel="bg-base-100 text-lg"
 			/>
 
-			<InputFO
+			<InputFilled
 				autoComplete="email"
 				aria-label="email"
 				className="bg-base-100"
@@ -157,7 +156,6 @@ const Form: React.FC = () => {
 				placeholder="example@email.com"
 				type="email"
 				control={control}
-				classNameLabel="bg-base-100 text-lg"
 			/>
 
 			<InputCountryPhoneFO
@@ -187,7 +185,7 @@ const Form: React.FC = () => {
 				closeMenuOnSelect={true}
 			/>
 
-			<Textarea
+			<TextareaFilled
 				autoComplete="message"
 				aria-label="inquiry"
 				className="h-32 min-h-32 bg-base-100"
@@ -197,9 +195,7 @@ const Form: React.FC = () => {
 				label={t("form.message")}
 				name="message"
 				placeholder={t("form.place_holder")}
-				type="text"
 				control={control}
-				classNameLabel="bg-base-100 text-lg"
 			/>
 
 			<button

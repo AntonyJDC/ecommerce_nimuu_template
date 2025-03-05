@@ -23,14 +23,14 @@ export const ContactPage = () => {
 
 			<div className="relative container flex flex-col lg:flex-row items-center justify-center mt-8 lg:justify-between px-4 sm:px-6 lg:px-12 pb-6 gap-6">
 				<m.div
-					className="flex-1 w-full lg:w-1/2 flex flex-col place-items-center p-6 text-center"
+					className="flex-1 w-full lg:w-1/2 flex flex-col place-items-center p-6 "
 					initial="initial"
 					animate="animate"
 					variants={fadeInUp}
 					transition={{ duration: 0.6 }}
 				>
 					<ul className="container space-y-6 w-full mb-6 sm:mb-6 p-4 sm:p-5">
-						<li className="place-items-center text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
+						<li className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
 							<AnimatedText text={t("contact.need_help")} />
 						</li>
 						<li className="text-lg sm:text-xl lg:text-2xl text-primary--primary-focus">
