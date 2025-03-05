@@ -1,12 +1,13 @@
 import { cn } from "@/lib/utils";
 import { type VariantProps, cva } from "class-variance-authority";
-import type { TextareaHTMLAttributes } from "react";
+import { type InputHTMLAttributes, useState } from "react";
 import { type Control, Controller, type FieldValues } from "react-hook-form";
+import { ElEyeClose, ElEyeOpen } from "../icons";
 import { TooltipResponsive } from "../ui";
 import { ErrorMessageAdapter } from "./error-message-adapter";
 
 const inputVariants = cva(
-	"w-full px-3 pt-1.5 pb-1.5 text-base font-medium border placeholder:text-base-content/50 bg-inherit border-base-content/65 rounded-xl focus:outline focus:outline-2 focus:outline-offset-2 focus:hover:ring-0 hover:ring-1 peer transition duration-200",
+	"w-full h-[60px] px-3 pt-6 pb-1.5 text-base font-medium placeholder:text-base-content/50  border bg-inherit border-base-content/65 rounded-xl focus:outline focus:outline-2 focus:outline-offset-2 focus:hover:ring-0 hover:ring-1 peer transition duration-200",
 	{
 		variants: {
 			variant: {
@@ -29,7 +30,7 @@ const inputVariants = cva(
 );
 
 const labelVariants = cva(
-	"flex items-center transition-colors duration-200 text-sm font-semibold truncate w-full",
+	"transition-colors duration-200 absolute left-0 px-3 top-1.5 text-sm font-semibold truncate w-full ",
 	{
 		variants: {
 			variant: {
@@ -52,7 +53,7 @@ const labelVariants = cva(
 );
 
 export interface InputProps
-	extends TextareaHTMLAttributes<HTMLTextAreaElement>,
+	extends InputHTMLAttributes<HTMLInputElement>,
 		VariantProps<typeof inputVariants> {
 	name: string;
 	control: unknown;
@@ -62,7 +63,7 @@ export interface InputProps
 	label: string;
 }
 
-const TextareaFilled = ({
+const InputFilled = ({
 	className,
 	control,
 	required = false,
@@ -72,10 +73,11 @@ const TextareaFilled = ({
 	tooltip = false,
 	isMultipleError = false,
 	label,
+	type,
 	variant,
 	...props
 }: InputProps) => {
-	console.log("Render Input", name);
+	console.log("Render InputFO", name);
 
 	return (
 		<div className="relative">
@@ -86,25 +88,58 @@ const TextareaFilled = ({
 					field: { name, value, onChange, onBlur, ref, disabled },
 					formState: { errors },
 				}) => {
+					const [showPassword, setShowPassword] = useState(false);
+
+					const togglePasswordVisibility = () => {
+						setShowPassword(!showPassword);
+					};
 					return (
 						<>
-							<div className="relative flex flex-col-reverse space-y-reverse space-y-2 ">
-								<textarea
+							<div className={`relative ${className}`}>
+								<div className="absolute top-1/2 right-4 -translate-y-1/2 flex flex-row space-x-2 z-10">
+									{type === "password" && (
+										<button
+											type="button"
+											onClick={togglePasswordVisibility}
+											className="btn btn-circle btn-sm focus:outline-none "
+										>
+											{showPassword ? (
+												<ElEyeClose className="w-5 h-5" />
+											) : (
+												<ElEyeOpen className="w-5 h-5" />
+											)}
+										</button>
+									)}
+									{tooltip && (
+										<TooltipResponsive
+											className=" text-blue-gray-500 w-6 h-6"
+											textTooltip={textTooltip}
+										/>
+									)}
+								</div>
+
+								<input
 									id={id}
 									className={cn(
 										inputVariants({
 											variant: errors[name] ? "error" : variant,
-											className,
 										}),
+										{
+											"pr-14":
+												(type === "password" || tooltip) &&
+												!(type === "password" && tooltip),
+											"pr-24": type === "password" && tooltip,
+										},
 									)}
-									name={name}
 									ref={ref}
 									value={value || ""}
 									onChange={onChange}
 									onBlur={onBlur}
 									disabled={disabled}
 									{...props}
+									type={showPassword ? "text" : type}
 								/>
+
 								<label
 									htmlFor={id}
 									className={cn(
@@ -115,12 +150,6 @@ const TextareaFilled = ({
 								>
 									{label}
 									{required && <span className="text-error ml-1">*</span>}
-									{tooltip && (
-										<TooltipResponsive
-											className="ml-2"
-											textTooltip={textTooltip}
-										/>
-									)}
 								</label>
 							</div>
 							<ErrorMessageAdapter
@@ -136,6 +165,6 @@ const TextareaFilled = ({
 	);
 };
 
-TextareaFilled.displayName = "InputFilled";
+InputFilled.displayName = "InputFilled";
 
-export { TextareaFilled };
+export { InputFilled };

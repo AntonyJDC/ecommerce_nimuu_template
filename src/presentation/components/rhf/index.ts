@@ -1,3 +1,3 @@
 export { InputFO } from "./inputfo";
-export { Textarea } from "./textareafo";
+export { TextareaFilled } from "./textareafo";
 export { InputSelectFO } from "./inputfo-select";
