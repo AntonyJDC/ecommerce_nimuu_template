@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import z, { zodAlwaysRefine } from "../../../../infrastructure/config/z";
 import { InputFilled } from "@/presentation/components/rhf/input-ifta";
+import { InputSelectFilled } from "@/presentation/components/rhf/input-select-ifta";
 
 const phoneUtil = PhoneNumberUtil.getInstance();
 
@@ -171,7 +172,7 @@ const Form: React.FC = () => {
 				control={control}
 				classNameLabel="bg-base-100 text-lg"
 			/>
-			<InputSelectFO
+			<InputSelectFilled
 				id="subject"
 				name="subject"
 				control={control}
