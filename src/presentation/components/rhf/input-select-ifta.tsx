@@ -156,7 +156,7 @@ const DropdownIndicator = <Option, IsMulti extends boolean>(
 		<components.DropdownIndicator
 			{...props}
 			className={cn(
-				"absolute cursor-pointer top-1/4 right-2 p-1 bg-base-300 hover:text-base-300 rounded-md",
+				"absolute cursor-pointer top-1/4 right-2 p-1 bg-primary text-primary-content hover:text-base-300 rounded-md",
 				isError ? "hover:bg-error text-error" : "hover:bg-base-content",
 				menuIsOpen
 					? isError
@@ -173,7 +173,7 @@ const Menu = ({ children, ...rest }: MenuProps) => {
 		//@ts-ignore
 		<components.Menu
 			className={cn(
-				"mb-2.5 p-1 mt-1 border border-base-content/30 bg-inherit rounded-md animate-in fade-in duration-500 ",
+				"mb-2.5 p-1 mt-1 border border-base-content/30 bg-base-100 rounded-md animate-in fade-in duration-500 ",
 			)}
 			{...rest}
 		>
@@ -297,7 +297,7 @@ const InputSelectFilled = ({
 								hideSelectedOptions={false}
 								blurInputOnSelect={false}
 								unstyled
-								className=" rounded-xl bg-base-100"
+								className="rounded-xl bg-base-100"
 								menuPlacement="auto"
 								name={name}
 								isError={isError}
