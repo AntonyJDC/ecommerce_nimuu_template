@@ -38,10 +38,12 @@ export function Slideshow() {
     setProgress(0);
   }, []);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     if (!isPlaying) return;
 
     let startTime = Date.now();
+    setProgress(0);
 
     const progressInterval = setInterval(() => {
       const elapsedTime = Date.now() - startTime;
@@ -50,13 +52,14 @@ export function Slideshow() {
       if (newProgress >= 100) {
         nextSlide();
         startTime = Date.now();
+        setProgress(0);
       } else {
         setProgress(newProgress);
       }
     }, PROGRESS_UPDATE_INTERVAL);
 
     return () => clearInterval(progressInterval);
-  }, [isPlaying, nextSlide]);
+  }, [isPlaying, nextSlide, currentSlide]);
 
   const handleSlideClick = (index: number) => {
     setCurrentSlide(index);
