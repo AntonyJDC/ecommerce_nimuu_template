@@ -6,7 +6,12 @@ import {
 } from "../../../components/ui/accordion";
 import { Slider } from "../../../components/ui/slider";
 
-const PriceSection = () => {
+interface PriceSectionProps {
+  priceRange: number[];
+  onChange: (value: number[]) => void;
+}
+
+const PriceSection: React.FC<PriceSectionProps> = ({ priceRange, onChange }) => {
   return (
     <Accordion type="single" collapsible defaultValue="filter-price">
       <AccordionItem value="filter-price" className="border-none">
@@ -14,13 +19,22 @@ const PriceSection = () => {
           Price
         </AccordionTrigger>
         <AccordionContent className="pt-4 mx-3">
+          {/* Rango de precios seleccionado */}
+          <div className="flex justify-between text-sm text-base-content/60 mb-2">
+            <span>${priceRange[0]}</span>
+            <span>${priceRange[1]}</span>
+          </div>
+
+          {/* Slider con el relleno visible desde el inicio */}
           <Slider
-            defaultValue={[50, 200]}
+            value={priceRange}
+            onValueChange={onChange}
             min={0}
-            max={250}
+            max={50000} // Ajusta el máximo según tus productos
             step={1}
             label="$"
           />
+          
           <div className="mb-3" />
         </AccordionContent>
       </AccordionItem>
