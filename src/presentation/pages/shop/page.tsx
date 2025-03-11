@@ -5,9 +5,7 @@ import MobileFilters from "../../components/shop-page/filters/MobileFilters";
 import ProductCard from "../../components/common/ProductCard";
 import { FiSliders } from "react-icons/fi";
 import {
-  newArrivalsData,
-  relatedProductData,
-  topSellingData,
+  productPage,
 } from "../../pages/Home/HomePage";
 import {
   Pagination,
@@ -21,19 +19,18 @@ import {
 import { Boxes } from "lucide-react";
 
 export default function ShopPage() {
-  const [priceRange, setPriceRange] = useState([0, 50000]);
+  const [priceRange, setPriceRange] = useState([0, 100000]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 10;
 
-  // Todos los productos
-  const allProducts = [
-    ...relatedProductData,
-    ...newArrivalsData,
-    ...topSellingData,
-  ];
+  const allProducts = Array.from(new Set([...productPage])).map(product => ({
+    ...product,
+    rating: Number(product.rating)
+  }));
 
-  // Filtrar productos por precio mínimo basado en los tamaños disponibles
+  // Filtrar productos por precio
   const filteredProducts = allProducts.filter((product) => {
     const availableSizes = Object.values(product.sizes || {});
-
     if (availableSizes.length === 0) return false;
 
     const minPrice = Math.min(
@@ -45,6 +42,26 @@ export default function ShopPage() {
 
     return minPrice >= priceRange[0] && minPrice <= priceRange[1];
   });
+
+  // Calcular total de páginas
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
+  // Obtener productos de la página actual correctamente
+  const startIndex = (currentPage - 1) * productsPerPage;
+  const endIndex = Math.min(startIndex + productsPerPage, filteredProducts.length);
+  const currentProducts = filteredProducts.slice(startIndex, endIndex);
+
+  // Cambiar página
+  const goToPage = (page: number) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
+
+  console.log("Total de productos filtrados:", filteredProducts.length);
+  console.log("Total de páginas:", totalPages);
+  console.log("Página actual:", currentPage);
+  console.log("Mostrando productos:", startIndex, "a", endIndex);
 
   return (
     <section className="pb-20 mt-8 container">
@@ -67,77 +84,66 @@ export default function ShopPage() {
           </div>
 
           <div className="w-full grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-5">
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((product) => (
+            {currentProducts.length > 0 ? (
+              currentProducts.map((product) => (
                 <ProductCard key={product.id} data={product} />
               ))
             ) : (
               <p className="text-base-content/60 text-lg text-center flex flex-col items-center justify-center col-span-full py-8">
-                <Boxes className="w-28 h-28 mb-4"/>
+                <Boxes className="w-28 h-28 mb-4" />
                 No products found in this price range.
               </p>
             )}
           </div>
 
-          <Pagination className="justify-between">
-            <PaginationPrevious href="#" className="border border-base-content/10" />
-            <PaginationContent>
-              <PaginationItem>
-                <PaginationLink
-                  href="#"
-                  className="text-base-content/50 font-medium text-sm"
-                  isActive
-                >
-                  1
-                </PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink
-                  href="#"
-                  className="text-base-content/50 font-medium text-sm"
-                >
-                  2
-                </PaginationLink>
-              </PaginationItem>
-              <PaginationItem className="hidden lg:block">
-                <PaginationLink
-                  href="#"
-                  className="text-base-content/50 font-medium text-sm"
-                >
-                  3
-                </PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationEllipsis className="text-base-content/50 font-medium text-sm" />
-              </PaginationItem>
-              <PaginationItem className="hidden lg:block">
-                <PaginationLink
-                  href="#"
-                  className="text-base-content/50 font-medium text-sm"
-                >
-                  8
-                </PaginationLink>
-              </PaginationItem>
-              <PaginationItem className="hidden sm:block">
-                <PaginationLink
-                  href="#"
-                  className="text-base-content/50 font-medium text-sm"
-                >
-                  9
-                </PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink
-                  href="#"
-                  className="text-base-content/50 font-medium text-sm"
-                >
-                  10
-                </PaginationLink>
-              </PaginationItem>
-            </PaginationContent>
+          {/* Paginación */}
+          {totalPages > 1 && (
+            <Pagination className="justify-between mt-8">
+              <PaginationPrevious
+                href="#"
+                onClick={() => goToPage(currentPage - 1)}
+                className={`border border-base-content/10 hover:bg-primary ${currentPage === 1 ? 'disabled' : ''}`}
+              />
 
-            <PaginationNext href="#" className="border border-base-content/10" />
-          </Pagination>
+              <PaginationContent className="flex items-center gap-1">
+                {Array.from({ length: totalPages }, (_, index) => index + 1)
+                  .filter((page) => {
+                    if (totalPages < 10) return true;
+                    if (page === 1 || page === totalPages || Math.abs(page - currentPage) <= 2) {
+                      return true;
+                    }
+                    return false;
+                  })
+                  .map((page, index, array) => (
+                    <PaginationItem key={page} className="flex items-center">
+                      <PaginationLink
+                        href="#"
+                        className={`w-9 h-9 flex items-center justify-center hover:bg-primary border border-base-content/10 rounded-md text-sm font-medium transition ${currentPage === page
+                          ? "bg-primary text-primary-content font-bold"
+                          : "hover:bg-primary/20 text-base-content/50 hover:border-primary/50"
+                          }`}
+                        onClick={() => goToPage(page)}
+                      >
+                        {page}
+                      </PaginationLink>
+                      {array[index + 1] !== undefined && array[index + 1] !== page + 1 && (
+                        <PaginationEllipsis className="text-base-content/50 font-medium text-sm" />
+                      )}
+                    </PaginationItem>
+                  ))}
+              </PaginationContent>
+
+              <PaginationNext
+                href="#"
+                className="border border-base-content/10 hover:bg-primary"
+                onClick={() => {
+                  if (currentPage < totalPages) {
+                    goToPage(currentPage + 1);
+                  }
+                }}
+              />
+            </Pagination>
+          )}
         </div>
       </div>
     </section>
