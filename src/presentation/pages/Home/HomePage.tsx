@@ -7,7 +7,7 @@ import { Review } from "@/types/review.types";
 
 export const newArrivalsData: Product[] = [
   {
-    id: 1,
+    id: 31,
     title: "Pestañina A Prueba de Agua",
     description:
       "Su fórmula resistente al agua y al sudor proporciona un volumen intenso y duradero sin grumos ni manchas.",
@@ -24,7 +24,7 @@ export const newArrivalsData: Product[] = [
     stock: 8,
   },
   {
-    id: 2,
+    id: 32,
     title: "Gel Limpiador Facial",
     description:
       "Gel limpiador suave que elimina impurezas y el exceso de grasa sin resecar la piel. Ideal para pieles sensibles.",
@@ -40,8 +40,25 @@ export const newArrivalsData: Product[] = [
     stock: 5,
   },
   {
-    id: 3,
+    id: 33,
     title: "Crema Corporal Nutritiva",
+    description:
+      "Crema corporal enriquecida con manteca de karité que nutre profundamente, dejando la piel suave y flexible.",
+    srcUrl: "/images/pic10.png",
+    gallery: ["/images/pic10.png"],
+    rating: 4.2,
+    quantity: undefined,
+    attributes: undefined,
+    colors: [],
+    sizes: {
+      "200ml": { price: 18000, discount: { amount: 0, percentage: 0 }, stock: 0 },
+      "400ml": { price: 32000, discount: { amount: 0, percentage: 15 }, stock: 8  },
+    },
+    stock: 12,
+  },
+  {
+    id: 34,
+    title: "Crema Corporal 2",
     description:
       "Crema corporal enriquecida con manteca de karité que nutre profundamente, dejando la piel suave y flexible.",
     srcUrl: "/images/pic10.png",
@@ -60,7 +77,7 @@ export const newArrivalsData: Product[] = [
 
 export const topSellingData: Product[] = [
   {
-    id: 5,
+    id: 35,
     title: "Acondicionador Fortificante",
     description:
       "Fortalece y repara el cabello dañado, reduciendo la rotura y mejorando la elasticidad.",
@@ -76,7 +93,7 @@ export const topSellingData: Product[] = [
     stock: 7,
   },
   {
-    id: 6,
+    id: 36,
     title: "Sérum Reparador Facial",
     description:
       "Sérum facial de rápida absorción que reduce líneas de expresión y mejora la textura de la piel.",
@@ -92,7 +109,7 @@ export const topSellingData: Product[] = [
     stock: 0,
   },
   {
-    id: 7,
+    id: 37,
     title: "Exfoliante Corporal Natural",
     description:
       "Exfoliante con ingredientes naturales que eliminan células muertas y dejan la piel suave al tacto.",
@@ -111,7 +128,7 @@ export const topSellingData: Product[] = [
 
 export const relatedProductData: Product[] = [
   {
-    id: 12,
+    id: 38,
     title: "Mascarilla Capilar Revitalizante",
     description:
       "Tratamiento intensivo que nutre y revitaliza el cabello seco y maltratado, aportando brillo y fuerza.",
@@ -127,7 +144,7 @@ export const relatedProductData: Product[] = [
     stock: 6,
   },
   {
-    id: 13,
+    id: 39,
     title: "Tónico Facial Refrescante",
     description:
       "Tónico que ayuda a cerrar poros y refrescar la piel, manteniéndola hidratada durante todo el día.",
@@ -143,7 +160,7 @@ export const relatedProductData: Product[] = [
     stock: 0,
   },
   {
-    id: 14,
+    id: 40,
     title: "Aceite Corporal Relajante",
     description:
       "Aceite con efecto relajante que hidrata profundamente la piel, ideal para masajes corporales.",
@@ -159,7 +176,7 @@ export const relatedProductData: Product[] = [
     stock: 9,
   },
   {
-    id: 15,
+    id: 41,
     title: "Bálsamo Labial Hidratante",
     description:
       "Bálsamo que protege e hidrata los labios, ideal para climas fríos o secos.",
@@ -177,6 +194,21 @@ export const relatedProductData: Product[] = [
   },
 ];
 
+export const productPage = Array.from({ length: 120 }, (_, i) => ({
+  id: i + 1,
+  title: `Producto ${i + 1}`,
+  description: `Descripción del producto ${i + 1}, ideal para probar la paginación y el filtrado en la tienda en línea.`,
+  srcUrl: `/images/pic${(i % 15) + 1}.png`,
+  gallery: [`/images/pic${(i % 10) + 1}.png`],
+  rating: (Math.random() * 2 + 3).toFixed(1),
+  quantity: undefined,
+  attributes: undefined,
+  colors: [],
+  sizes: {
+    "100ml": { price: 10000 + i * 500, discount: { amount: 0, percentage: 10 }, stock: (i % 10) + 1 },
+  },
+  stock: (i % 10) + 1,
+}));
 
 export const reviewsData: Review[] = [
   {
