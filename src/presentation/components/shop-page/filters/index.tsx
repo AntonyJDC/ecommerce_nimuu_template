@@ -10,7 +10,7 @@ interface FiltersProps {
 }
 
 const Filters: React.FC<FiltersProps> = ({ onFilterChange }) => {
-  const [priceRange, setPriceRange] = useState([0, 50000]);
+  const [priceRange, setPriceRange] = useState([0, 100000]);
 
   const applyFilters = () => {
     onFilterChange({ priceRange });

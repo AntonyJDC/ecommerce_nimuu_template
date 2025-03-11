@@ -30,7 +30,7 @@ const PriceSection: React.FC<PriceSectionProps> = ({ priceRange, onChange }) => 
             value={priceRange}
             onValueChange={onChange}
             min={0}
-            max={50000} // Ajusta el máximo según tus productos
+            max={100000} // Ajusta el máximo según tus productos
             step={1}
             label="$"
           />
