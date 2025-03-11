@@ -18,6 +18,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "../../components/ui/pagination";
+import { Boxes } from "lucide-react";
 
 export default function ShopPage() {
   const [priceRange, setPriceRange] = useState([0, 50000]);
@@ -62,7 +63,7 @@ export default function ShopPage() {
         <div className="flex flex-col w-full space-y-5 px-3">
           <div className="flex flex-col lg:flex-row lg:justify-between">
             <h1 className="font-bold text-2xl md:text-[32px]">Casual</h1>
-            <MobileFilters />
+            <MobileFilters onFilterChange={({ priceRange }) => setPriceRange(priceRange)} />
           </div>
 
           <div className="w-full grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-5">
@@ -71,7 +72,8 @@ export default function ShopPage() {
                 <ProductCard key={product.id} data={product} />
               ))
             ) : (
-              <p className="text-base-content/60 text-center col-span-full">
+              <p className="text-base-content/60 text-lg text-center flex flex-col items-center justify-center col-span-full py-8">
+                <Boxes className="w-28 h-28 mb-4"/>
                 No products found in this price range.
               </p>
             )}
