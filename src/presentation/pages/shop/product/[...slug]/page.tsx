@@ -1,7 +1,6 @@
 import {
-  newArrivalsData,
   relatedProductData,
-  topSellingData,
+  productPage
 } from "../../../Home/HomePage";
 import ProductListSec from "../../../../components/common/ProductListSec";
 import BreadcrumbProduct from "../../../../components/product-page/BreadcrumbProduct";
@@ -11,9 +10,10 @@ import { Product } from "@/types/product.types";
 import { useParams } from "react-router-dom";
 
 const data: Product[] = [
-  ...newArrivalsData,
-  ...topSellingData,
-  ...relatedProductData,
+  ...productPage.map(product => ({
+    ...product,
+    rating: Number(product.rating)
+  }))
 ];
 
 export default function ProductPage() {
