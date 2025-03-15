@@ -49,16 +49,16 @@ export function NavigationMenuDemo() {
 								</NavigationMenuLink>
 							</li>
 
-							<ListItem title={t("nav.button.products.relax.title")} href="/shop">
+							<ListItem title={t("nav.button.products.relax.title")} href="/shop#relax">
 								{t("nav.button.products.relax.description")}
 							</ListItem>
-							<ListItem title={t("nav.button.products.facial_care.title")} href="/shop">
+							<ListItem title={t("nav.button.products.facial_care.title")} href="/shop#facial-care">
 								{t("nav.button.products.facial_care.description")}
 							</ListItem>
-							<ListItem title={t("nav.button.products.body_care.title")} href="/shop">
+							<ListItem title={t("nav.button.products.body_care.title")} href="/shop#body-care">
 								{t("nav.button.products.body_care.description")}
 							</ListItem>
-							<ListItem title={t("nav.button.products.hair_care.title")} href="/shop">
+							<ListItem title={t("nav.button.products.hair_care.title")} href="/shop#hair-care">
 								{t("nav.button.products.hair_care.description")}
 							</ListItem>
 
