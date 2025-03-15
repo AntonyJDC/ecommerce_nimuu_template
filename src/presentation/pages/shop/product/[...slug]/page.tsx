@@ -1,6 +1,8 @@
 import {
   relatedProductData,
-  productPage
+  productPage,
+  newArrivalsData,
+  topSellingData,
 } from "../../../Home/HomePage";
 import ProductListSec from "../../../../components/common/ProductListSec";
 import BreadcrumbProduct from "../../../../components/product-page/BreadcrumbProduct";
@@ -13,7 +15,9 @@ const data: Product[] = [
   ...productPage.map(product => ({
     ...product,
     rating: Number(product.rating)
-  }))
+  })),
+  ...newArrivalsData,
+  ...topSellingData,
 ];
 
 export default function ProductPage() {
