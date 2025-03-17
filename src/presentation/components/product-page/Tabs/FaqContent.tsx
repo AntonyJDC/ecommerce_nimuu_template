@@ -1,9 +1,11 @@
+import { cn } from "@lib/utils";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../../components/ui/accordion";
+} from "@components/ui/accordion";
+import { useState } from "react";
 
 type FaqItem = {
   question: string;
@@ -44,6 +46,8 @@ const faqsData: FaqItem[] = [
 ];
 
 const FaqContent = () => {
+
+  const [active, setActive] = useState<number>(1);
   return (
     <section>
       <h3 className="text-xl sm:text-2xl font-bold text-base-content mb-5 sm:mb-6">
@@ -52,8 +56,16 @@ const FaqContent = () => {
       <Accordion type="single" collapsible>
         {faqsData.map((faq, idx) => (
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-<AccordionItem key={idx} value={`item-${idx + 1}`}>
-            <AccordionTrigger className="text-left">
+          <AccordionItem key={idx} value={`item-${idx + 1}`}>
+            <AccordionTrigger
+              onClick={() => setActive(idx)}
+              className={cn([
+                active === idx
+                  ? "text-primary"
+                  : "text-base-content animate-in duration-200",
+                "text-left transition-all duration-200 ",
+              ])}
+            >
               {faq.question}
             </AccordionTrigger>
             <AccordionContent>{faq.answer}</AccordionContent>
