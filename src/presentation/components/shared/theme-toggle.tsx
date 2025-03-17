@@ -1,4 +1,4 @@
-import { useGlobalStore } from "@/store/global/global.store";
+import { useGlobalStore } from "@store/global/global.store";
 
 export const ThemeToggle = () => {
 	const { theme, setTheme } = useGlobalStore();

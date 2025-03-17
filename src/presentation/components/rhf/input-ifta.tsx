@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@lib/utils";
 import { type VariantProps, cva } from "class-variance-authority";
 import { type InputHTMLAttributes, useState } from "react";
 import { type Control, Controller, type FieldValues } from "react-hook-form";

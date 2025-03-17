@@ -1,9 +1,9 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@lib/utils";
 import * as React from "react";
 import { Control, Controller, FieldValues } from "react-hook-form";
-import { colorVariants, styles } from "../theme/InputStyles";
-import { TooltipResponsive } from "../ui";
-import { ErrorMessageAdapter } from "./error-message-adapter";
+import { colorVariants, styles } from "@components/theme/InputStyles";
+import { TooltipResponsive } from "@components/ui";
+import { ErrorMessageAdapter } from "@components/rhf/error-message-adapter";
 
 export interface InputProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {

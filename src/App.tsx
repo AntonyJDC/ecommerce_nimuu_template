@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { RouterProvider } from "react-router";
-import MotionLazyContainer from "./presentation/components/animate/motion-lazy-container";
-import { router } from "./presentation/routes/router";
+import MotionLazyContainer from "@components/animate/motion-lazy-container";
+import { router } from "@presentation/routes/router";
 import Providers from "./providers";
 import { Toaster } from 'sonner';
 

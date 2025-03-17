@@ -1,9 +1,9 @@
 import { useState } from "react";
-import CategoriesSection from "../../../components/shop-page/filters/CategoriesSection";
-import DressStyleSection from "../../../components/shop-page/filters/DressStyleSection";
-import PriceSection from "../../../components/shop-page/filters/PriceSection";
-import SizeSection from "../../../components/shop-page/filters/SizeSection";
-import { Button } from "../../ui/button";
+import CategoriesSection from "@components/shop-page/filters/CategoriesSection";
+import DressStyleSection from "@components/shop-page/filters/DressStyleSection";
+import PriceSection from "@components/shop-page/filters/PriceSection";
+import SizeSection from "@components/shop-page/filters/SizeSection";
+import { Button } from "@components/ui/button";
 
 interface FiltersProps {
   onFilterChange: (filters: { priceRange: number[] }) => void;

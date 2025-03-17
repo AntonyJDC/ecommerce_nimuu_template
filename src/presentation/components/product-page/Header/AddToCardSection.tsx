@@ -1,4 +1,4 @@
-import CartCounter from "../../ui/CartCounter";
+import CartCounter from "@components/ui/CartCounter";
 import { useState } from "react";
 import AddToCartBtn from "./AddToCartBtn";
 import { Product } from "@/types/product.types";

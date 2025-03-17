@@ -1,5 +1,5 @@
-import { useAppSelector } from "../hooks/redux";
-import { RootState } from "../../lib/store";
+import { useAppSelector } from "@hooks/redux";
+import { RootState } from "@lib/store";
 import { Link } from "react-router-dom";
 import { BsCart4 } from "react-icons/bs";
 

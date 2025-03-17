@@ -1,13 +1,13 @@
 import { PiTrashFill } from "react-icons/pi";
-import CartCounter from "../../../../components/ui/CartCounter";
-import { Button } from "../../../../components/ui/button";
+import CartCounter from "@components/ui/CartCounter";
+import { Button } from "@components/ui/button";
 import {
   addToCart,
   CartItem,
   remove,
   removeCartItem,
-} from "../../../../../lib/features/carts/cartsSlice";
-import { useAppDispatch } from "../../../../hooks/redux";
+} from "@lib/features/carts/cartsSlice";
+import { useAppDispatch } from "@hooks/redux";
 import { NavLink } from "react-router-dom";
 
 type ProductCardProps = {

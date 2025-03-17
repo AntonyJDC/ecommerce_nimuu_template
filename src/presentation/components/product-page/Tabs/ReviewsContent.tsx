@@ -1,13 +1,13 @@
-import { Button } from "../../../components/ui/button";
+import { Button } from "@components/ui/button";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../../components/ui/select";
-import ReviewCard from "../../../components/common/ReviewCard";
-import { reviewsData } from "../../../pages/Home/HomePage";
+} from "@components/ui/select";
+import ReviewCard from "@components/common/ReviewCard";
+import { reviewsData } from "@pages/Home/HomePage";
 const ReviewsContent = () => {
   return (
     <section>

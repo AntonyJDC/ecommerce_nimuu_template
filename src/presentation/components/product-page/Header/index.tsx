@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import PhotoSection from "./PhotoSection";
 import { Product } from "@/types/product.types";
-import { cn } from "@/lib/utils";
+import { cn } from "@lib/utils";
 import ColorSelection from "./ColorSelection";
 import SizeSelection from "./SizeSelection";
 import AddToCardSection from "./AddToCardSection";
-import { setColorSelection, setSizeSelection } from "@/lib/features/products/productsSlice";
+import { setColorSelection, setSizeSelection } from "@lib/features/products/productsSlice";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
-import colorsData from "src/assets/colors.json";
+import colorsData from "@assets/colors.json";
 import { AnimatePresence, motion } from "framer-motion";
 
 // ✅ Formateador de moneda en COP sin mostrar "COP"

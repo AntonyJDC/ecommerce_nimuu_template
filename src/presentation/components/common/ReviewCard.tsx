@@ -1,10 +1,10 @@
 import React from "react";
-import Rating from "@/presentation/components/ui/Rating";
+import Rating from "@components/ui/Rating";
 import { IoEllipsisHorizontal } from "react-icons/io5";
-import { Button } from "../ui/button";
+import { Button } from "@components/ui/button";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { Review } from "@/types/review.types";
-import { cn } from "@/lib/utils";
+import { cn } from "@lib/utils";
 
 type ReviewCardProps = {
   blurChild?: React.ReactNode;

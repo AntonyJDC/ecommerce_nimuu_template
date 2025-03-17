@@ -1,9 +1,9 @@
-import { useGlobalStore } from "@/store/global/global.store";
+import { useGlobalStore } from "@store/global/global.store";
 import { AnimatePresence, m } from "motion/react";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
-import { LanguageSelector, ThemeToggle } from "../components/shared";
+import { LanguageSelector, ThemeToggle } from "@components/shared";
 import { NavigationMenuDemo } from "./components/navigation-menu";
 import CartBtn from "./CartBtn";
 import { LogoIcon } from "../components";

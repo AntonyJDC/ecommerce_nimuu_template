@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { LogoIcon } from "@/presentation/components";
+import { LogoIcon } from "@presentation/components";
 import { useTranslation } from "react-i18next";
 import {
 	NavigationMenu,
@@ -8,7 +8,7 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 	NavigationMenuTrigger,
-} from "@/presentation/components/ui/navigation-menu";
+} from "@components/ui/navigation-menu";
 
 import React from "react";
 import { Link, NavLink, useLocation } from "react-router";

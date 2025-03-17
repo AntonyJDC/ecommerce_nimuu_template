@@ -1,4 +1,4 @@
-import { compareArrays } from "@/lib/utils";
+import { compareArrays } from "@lib/utils";
 import { Discount } from "@/types/product.types";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";

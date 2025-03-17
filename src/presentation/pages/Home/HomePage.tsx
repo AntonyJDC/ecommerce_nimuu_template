@@ -1,4 +1,4 @@
-import ProductListSec from "../../components/common/ProductListSec";
+import ProductListSec from "@components/common/ProductListSec";
 import DressStyle from "./sections/DressStyle";
 import { Slideshow } from "./sections/Header";
 import Reviews from "./sections/Reviews";

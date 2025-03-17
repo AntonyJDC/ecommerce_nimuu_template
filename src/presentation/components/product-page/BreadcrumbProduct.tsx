@@ -6,7 +6,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "../../components/ui/breadcrumb";
+} from "@components/ui/breadcrumb";
 
 const BreadcrumbProduct = ({ title }: { title: string }) => {
   return (

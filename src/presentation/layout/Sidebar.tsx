@@ -1,7 +1,7 @@
-import { useGlobalStore } from "@/store/global/global.store";
+import { useGlobalStore } from "@store/global/global.store";
 import { FC } from "react";
 import { Link, NavLink, useLocation } from "react-router";
-import { ScrollArea } from "../components/ui/scroll-area";
+import { ScrollArea } from "@components/ui/scroll-area";
 import { useTranslation } from "react-i18next";
 
 const SOLUTIONS_MENU_ITEMS = [

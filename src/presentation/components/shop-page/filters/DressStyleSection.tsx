@@ -4,7 +4,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../ui/accordion";
+} from "@components/ui/accordion";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 type DressStyle = {

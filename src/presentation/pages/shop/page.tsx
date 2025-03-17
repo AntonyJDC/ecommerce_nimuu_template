@@ -1,8 +1,8 @@
 import { useState } from "react";
-import BreadcrumbShop from "../../components/shop-page/BreadcrumbShop";
-import Filters from "../../components/shop-page/filters";
-import MobileFilters from "../../components/shop-page/filters/MobileFilters";
-import ProductCard from "../../components/common/ProductCard";
+import BreadcrumbShop from "@components/shop-page/BreadcrumbShop";
+import Filters from "@components/shop-page/filters";
+import MobileFilters from "@components/shop-page/filters/MobileFilters";
+import ProductCard from "@components/common/ProductCard";
 import { FiSliders } from "react-icons/fi";
 import {
   productPage,

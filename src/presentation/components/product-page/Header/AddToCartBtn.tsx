@@ -1,5 +1,5 @@
-import { addToCart } from "@/lib/features/carts/cartsSlice";
-import { useAppDispatch } from "../../../hooks/redux";
+import { addToCart } from "@lib/features/carts/cartsSlice";
+import { useAppDispatch } from "@hooks/redux";
 import { Product } from "@/types/product.types";
 import { toast } from "sonner";
 

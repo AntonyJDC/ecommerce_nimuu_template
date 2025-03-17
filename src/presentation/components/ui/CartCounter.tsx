@@ -1,6 +1,6 @@
 import { Button } from "../../components/ui/button";
 import { FaMinus, FaPlus } from "react-icons/fa6";
-import { cn } from "@/lib/utils";
+import { cn } from "@lib/utils";
 import { useState } from "react";
 
 type CartCounterProps = {

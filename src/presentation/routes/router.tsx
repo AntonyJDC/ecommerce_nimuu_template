@@ -1,12 +1,12 @@
 import { Suspense, lazy } from "react";
 import { Navigate, createBrowserRouter } from "react-router";
 import { ErrorPage } from "../ErrorPage";
-import HomePage from "../pages/Home/HomePage";
-import CartPage from "../pages/cart/page";
-import ShopPage from "../pages/shop/page";
-import ProductPage from "../pages/shop/product/[...slug]/page"; // ✅ Importación de la página de producto
-import { BookingPage } from "../pages/Booking/BookingPage";
-import { ContactPage } from "../pages/Contact/ContactPage";
+import HomePage from "@pages/Home/HomePage";
+import CartPage from "@pages/cart/page";
+import ShopPage from "@pages/shop/page";
+import ProductPage from "@pages/shop/product/[...slug]/page"; // ✅ Importación de la página de producto
+import { BookingPage } from "@pages/Booking/BookingPage";
+import { ContactPage } from "@pages/Contact/ContactPage";
 
 const LandingLayout = lazy(() => import("../layout/LandingLayout"));
 const NotFoundPage = lazy(() => import("../NotFoundPage"));

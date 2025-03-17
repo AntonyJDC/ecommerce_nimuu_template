@@ -1,10 +1,10 @@
 import * as motion from "framer-motion/client";
-import { cn } from "@/lib/utils";
+import { cn } from "@lib/utils";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "@/presentation/components/ui/carousel";
+} from "@components/ui/carousel";
 import ProductCard from "./ProductCard";
 import { Product } from "@/types/product.types";
 import { NavLink } from "react-router-dom";

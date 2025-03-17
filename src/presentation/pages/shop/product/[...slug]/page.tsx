@@ -3,11 +3,11 @@ import {
   productPage,
   newArrivalsData,
   topSellingData,
-} from "../../../Home/HomePage";
-import ProductListSec from "../../../../components/common/ProductListSec";
-import BreadcrumbProduct from "../../../../components/product-page/BreadcrumbProduct";
-import Header from "../../../../components/product-page/Header";
-import Tabs from "../../../../components/product-page/Tabs";
+} from "@pages/Home/HomePage";
+import ProductListSec from "@components/common/ProductListSec";
+import BreadcrumbProduct from "@components/product-page/BreadcrumbProduct";
+import Header from "@components/product-page/Header";
+import Tabs from "@components/product-page/Tabs";
 import { Product } from "@/types/product.types";
 import { useParams } from "react-router-dom";
 

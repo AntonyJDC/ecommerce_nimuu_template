@@ -2,15 +2,15 @@
 
 import BreadcrumbCart from "./components/cart-page/BreadcrumbCart";
 import ProductCard from "./components/cart-page/ProductCard";
-import { Button } from "../../components/ui/button";
-import InputGroup from "../../components/ui/input-group";
+import { Button } from "@components/ui/button";
+import InputGroup from "@components/ui/input-group";
 import { FaArrowRight } from "react-icons/fa6";
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { TbBasketExclamation } from "react-icons/tb";
 import React from "react";
-import { RootState } from "../../../lib/store";
-import { useAppSelector } from "../../hooks/redux";
-import { CartItem } from "@/lib/features/carts/cartsSlice";
+import { RootState } from "@lib/store";
+import { useAppSelector } from "@hooks/redux";
+import { CartItem } from "@lib/features/carts/cartsSlice";
 import { NavLink } from "react-router-dom";
 
 export default function CartPage() {

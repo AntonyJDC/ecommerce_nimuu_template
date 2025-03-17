@@ -1,10 +1,8 @@
-"use client";
-
 import {
   setColorSelection,
-} from "@/lib/features/products/productsSlice";
-import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
-import { RootState } from "@/lib/store";
+} from "@lib/features/products/productsSlice";
+import { useAppDispatch, useAppSelector } from "@hooks/redux";
+import { RootState } from "@lib/store";
 import { IoMdCheckmark } from "react-icons/io";
 
 // ✅ Definición del tipo de props
